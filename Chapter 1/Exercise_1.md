@@ -9,7 +9,7 @@ Program design:
 2) Program organization:
 
     * Infinite request to enter a value in inches (until you enter, 
-    	for example a letter, that is, a non-numeric value);
+    	for example, a letter, that is a non-numeric value);
 
     * Output appropriate value;
 
