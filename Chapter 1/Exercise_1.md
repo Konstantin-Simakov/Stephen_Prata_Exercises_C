@@ -1,6 +1,6 @@
 Objectives of the program:
 
-    * Convert inches to centimeters when entering any value in inches;
+* Convert inches to centimeters when entering any value in inches;
 
 Program design: 
 
