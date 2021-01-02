@@ -10,7 +10,7 @@
 #define OVERTIME 	1.5f			// over 40 hours per week
 // tax rates
 #define TAX_RATE_1 	0.15			// tax rate from the first $300
-#define TAX_RATE_2 	0.2				// tax rate from the following $150
+#define TAX_RATE_2 0.2				// tax rate from the following $150
 #define TAX_RATE_3 	0.25			// tar rate from the ramainder (over $450)
 // money (dollars) for a week
 #define FIRST_SUM	300.0			// (dollars) per week ->
