@@ -1,6 +1,6 @@
 /* exercise6.c -- Chapter 8 */
 #include <stdio.h>
-#include <ctype.h>					// for isspace()
+#include <ctype.h>		/* for isspace() */
 
 #define HYPHEN "--------------------------------------------------"
 
