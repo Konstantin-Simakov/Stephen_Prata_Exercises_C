@@ -1,13 +1,13 @@
 /* exercise4.c -- Chapter 8 */
 #include <stdio.h>
 #include <ctype.h>			// for isspace()
-#include <stdbool.h>		// for bool, true, false
+#include <stdbool.h>			// for bool, true, false
 
 int main (void)
 {
-	int ch;						// input character
-	int letters = 0;			// number of letters
-	int words = 0;				// number of words
+	int ch;				// input character
+	int letters = 0;		// number of letters
+	int words = 0;			// number of words
 	bool word_in = false;		// for word definition
 
 	printf("Enter the text (or <Ctrl+D> to finish the program):\n");
