@@ -13,6 +13,7 @@ int main (void)
 	printf("This program outputs the first unspace character.\n");
 	printf("%s\n", HYPHEN);
 	printf("Enter the text (or <Ctrl+D> to finish the program):\n");
+	
 	while ((ch = get_first()) != EOF)
 	{
 		putchar(ch);
