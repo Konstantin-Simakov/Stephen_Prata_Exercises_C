@@ -20,8 +20,8 @@ int main (void)
 {
 	int status;
 	char choice;
-	float wage_rate;				// chosen tax rate
-	float hours;					// number of hours worked per week
+	float wage_rate;			// chosen tax rate
+	float hours;				// number of hours worked per week
 	double salary = 0.0;			// dirty salary
 	double sum_clean = 0.0;			// clean salary
 	double tax_rates = 0.0;			// tax rates sum
@@ -52,8 +52,10 @@ int main (void)
 
 			printf("Enter the number of hours worked per week:\n");
 			status = scanf("%f", &hours);
-			while (getchar() != '\n')	// due to scanf()
+			
+			while (getchar() != '\n')			// due to scanf()
 				continue;				// discard the rest of the line and '\n' (by <Enter>) too
+			
 			if (status == 1 && hours > 0)
 			{
 				// gross_salary
