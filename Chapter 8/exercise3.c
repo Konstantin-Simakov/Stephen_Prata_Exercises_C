@@ -1,18 +1,18 @@
 /* exercise3.c -- Chapter 8 */
 #include <stdio.h>
-#include <ctype.h>		/* for islower(), isupper() */
+#include <ctype.h>				/* for islower(), isupper() */
 
 int main (void)
 {
 	int ch;
-	int lc;				/* lower case characters amount */
-	int uc;				/* upper case characters amount */
-	int oc;				/* other characters amount */
+	int lc;					/* lower case characters amount */
+	int uc;					/* upper case characters amount */
+	int oc;					/* other characters amount */
 
 	lc = uc = oc = 0;
 
 	printf("Enter the text (of <Ctrl+D> to finish the program):\n");
-	// character-by-character input
+	/* character-by-character input */
 	while ((ch = getchar()) != EOF)		/* '\n' character is counted too */
 	{
 		if (islower(ch))
