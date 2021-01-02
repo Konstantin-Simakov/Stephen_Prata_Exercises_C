@@ -20,9 +20,9 @@ int main (void)
 	
 	// algorithm
 	printf("Is your number %d (y/n)?\n", number);
-	while ((response = getchar()) != 'y')					// yes
+	while ((response = getchar()) != 'y')						// yes
 	{
-		if ('n' == response)								// no
+		if ('n' == response)							// no
 		{
 			while (getchar() != '\n')
 				continue;
@@ -68,7 +68,7 @@ int main (void)
 	}
 	// guessed
 	printf("I knew I could do it!\n");
-	printf("The program has been completed.\n");			// finish the program
+	printf("The program has been completed.\n");					// finish the program
 
 	return 0;
 }
