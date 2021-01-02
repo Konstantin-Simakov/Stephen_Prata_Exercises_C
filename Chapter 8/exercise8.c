@@ -3,7 +3,7 @@
 #include <ctype.h>			/* for isspace() in get_first() */
 
 char get_choice(void);	
-char get_first(void);		/* gets the first non-whitespace character character from data input */
+char get_first(void);			/* gets the first non-whitespace character character from data input */
 float get_float(void);
 void addition(void);
 void subtraction(void);
@@ -75,7 +75,7 @@ float get_float (void)
 	while (scanf("%f", &input) != 1)
 	{
 		while ((ch = getchar()) != '\n')
-			putchar(ch);			/* for any first number or with a letter input second number */
+			putchar(ch);				/* for any first number or with a letter input second number */
 		printf(" is not a number.\nEnter ");
 		printf("a number such as 2.5, -1.78.E8 or 3:\n");
 	}
@@ -142,12 +142,13 @@ void division (void)
 
 	printf("Enter the second number: ");
 	num_2 = get_float();
+	
 	while (num_2 == 0)
 	{
 		printf("Enter another number (not a zero):\n");
 		num_2 = get_float();
 	}
-
+	
 	if (num_2 < 0)
 		printf("%.2f / (%.2f) = %.2f\n", num_1, num_2, num_1 / num_2);
 	else
