@@ -19,7 +19,7 @@ int main (void)
 	char strs[LIM][SIZE];
 	int ct_strs = 0;
 	
-	printf("Enter up to %d strings:\n", LIM);
+	printf("Enter up to %d strings (or an empty line to finish the program):\n", LIM);
 	while (ct_strs < LIM && s_gets(strs[ct_strs], SIZE))		// while EOF won't be input
 	{
 		ct_strs++;
