@@ -24,7 +24,7 @@ char * str_word (char * str, int n)
 	int i = 0;
 	char temp;
 
-	while (i < n && (temp = getchar()) != EOF)
+	while (i < n - 1 && (temp = getchar()) != EOF)
 	{
 		if (!inword && !isspace(temp))
 			inword = true;
