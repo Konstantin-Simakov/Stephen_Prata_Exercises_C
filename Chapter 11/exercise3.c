@@ -36,7 +36,7 @@ char * str_word (char * str, int n)
 	}
 	if (EOF == temp)
 		str = NULL;
-	else	// it is important for any string in the C
+	else	// it is important for any string in C
 		str[i] = '\0';
 
 	return str;
