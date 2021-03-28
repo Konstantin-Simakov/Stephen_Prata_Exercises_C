@@ -13,7 +13,7 @@ int main (void)
 
 	printf("Enter words number: ");
 	scanf("%d", &num);
-	words = (char **) malloc(num * sizeof(char *));		// ??
+	words = (char **) malloc(num * sizeof(char *));
 	
 	printf("Now enter %d words:\n", num);
 	for (i = 0; i < num; i++)
