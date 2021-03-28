@@ -23,7 +23,7 @@ int main (void)
 		words[i] = temp;
 	}
 
-	printf("Here are all %d words you entered:\n", num);
+	puts("Here are words you entered:");
 	for (i = 0; i < num; i++)
 		puts(words[i]);
 
