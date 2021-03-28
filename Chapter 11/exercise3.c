@@ -5,26 +5,26 @@
 
 #define SIZE 10
 
-char * str_word (char * str);
+char * str_word (char * str, int n);
 
 int main (void)
 {
 	char str[SIZE];
 	char * ptr;
 
-	ptr = str_word(str);
+	ptr = str_word(str, SIZE);
 	puts(ptr);
 	
 	return 0;
 }
 
-char * str_word (char * str)
+char * str_word (char * str, int n)
 {
 	bool inword = false;
 	int i = 0;
 	char temp;
 
-	while ((temp = getchar()) != EOF)
+	while (i < n && (temp = getchar()) != EOF)
 	{
 		if (!inword && !isspace(temp))
 			inword = true;
