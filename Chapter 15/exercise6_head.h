@@ -4,12 +4,12 @@
 struct font {
 	unsigned id 			: 8;
 	unsigned size			: 7;
-	unsigned 				: 1;		/* aggregate -- up to 16 bits */
+	unsigned 			: 1;		/* aggregate -- up to 16 bits */
 	unsigned align			: 2;
-	bool bold				: 1;
-	bool italic				: 1;
+	bool bold			: 1;
+	bool italic			: 1;
 	bool underline			: 1;
-	unsigned 				: 11;		/* aggregate -- up to 32 bits -- unsigned int rigth side is achieved */
+	unsigned 			: 11;		/* aggregate -- up to 32 bits -- unsigned int rigth side is achieved */
 };
 
 #define MAX1	0xFF					/* == (256 - 1) == 255 */
