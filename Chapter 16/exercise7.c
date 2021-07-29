@@ -1,7 +1,7 @@
 /* exercise7.c -- Chapter 16 */
 #include <stdio.h>
 #include <stdlib.h>		/* for malloc(), free() */
-#include <stdarg.h>		/* for a function with a variable number of arguments */
+#include <stdarg.h>		/* to create functions with a variable number of arguments */
 
 void show_array (const double ar[], int n);
 double * new_d_array (int n, ...);
