@@ -7,13 +7,13 @@
 typedef struct rect_v {
 	double x;
 	double y;
-} RECT_V;
+} Rect_V;
 
 typedef struct polar_v {
 	double magnitude;
 	double angle;
-} POLAR_V;
+} Polar_V;
 
-void polar_to_rect (RECT_V *, const POLAR_V *);
+void polar_to_rect (Rect_V *, const Polar_V *);
 
 #endif
