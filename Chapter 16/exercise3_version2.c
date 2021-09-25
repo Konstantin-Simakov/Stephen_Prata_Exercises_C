@@ -5,8 +5,8 @@
 
 int main (void)
 {
-	POLAR_V input;
-	RECT_V result;
+	Polar_V input;
+	Rect_V result;
 
 	printf("Enter polar coordinates: r (magnitude), A (angle).\n"
 		"(or \'q\' to quit the program)\n");
@@ -22,7 +22,7 @@ int main (void)
 	return 0;
 }
 
-void polar_to_rect (RECT_V * rv, const POLAR_V * pv)
+void polar_to_rect (Rect_V * rv, const Polar_V * pv)
 {
 	const double radians = pv->angle * DEG_TO_RAD;
 
