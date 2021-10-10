@@ -1,29 +1,26 @@
-// ex6.c -- (Chapter 2), (Smiling), working with one function in the other function;
+/* exercise7.c -- Chapter 2 */
 #include <stdio.h>
 
-void smiling (void);
+void smiling(void);
 
-int main (void)
+int main(void)
 {
 	smiling();
 	smiling();
 	smiling();
-
 	printf("\n");
 
 	smiling();
 	smiling();
-
 	printf("\n");
 
 	smiling();
-
 	printf("\n");
 
 	return 0;
 }
 
-void smiling (void)
+void smiling(void)
 {
 	printf("Smiling! ");
 }
