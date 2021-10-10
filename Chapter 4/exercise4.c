@@ -1,7 +1,7 @@
 /* exercise4.c -- Chapter 4 */
 #include <stdio.h>
 
-int main (void)
+int main(void)
 {
 	char name[30];
 	float growth = 0.0F;
