@@ -1,9 +1,9 @@
 /* exercise2_vers2.c -- Chapter 3 */
 #include <stdio.h>
 
-char dec_to_ch (signed char);
+char dec_to_ch(signed char);
 
-int main (void)
+int main(void)
 {
 	signed char ch = 0;
 	char ch1 = 0;
@@ -17,7 +17,7 @@ int main (void)
 	return 0;
 }
 
-char dec_to_ch (signed char var)
+char dec_to_ch(signed char var)
 {
 	scanf("%hhd", &var);
 
