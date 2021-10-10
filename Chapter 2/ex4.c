@@ -1,10 +1,10 @@
 // ex4.c -- (Chapter 2);
 #include <stdio.h>
 
-void goodBoy (void);
-void bestBoy (void);
+void goodBoy(void);
+void bestBoy(void);
 
-int main (void)
+int main(void)
 {
 	goodBoy();
 	goodBoy();
@@ -14,12 +14,12 @@ int main (void)
 	return 0;
 }
 
-void goodBoy (void)
+void goodBoy(void)
 {
 	printf("Our Billy is a good boy.\n");
 }
 
-void bestBoy (void)
+void bestBoy(void)
 {
 	printf("Our Billy is the best!\n");
 }
