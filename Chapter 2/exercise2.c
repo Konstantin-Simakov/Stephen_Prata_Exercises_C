@@ -1,4 +1,4 @@
-// ex2.c -- (Chapter 2);
+/* exercise2.c -- Chapter 2 */
 #include <stdio.h>
 
 int main(void)
