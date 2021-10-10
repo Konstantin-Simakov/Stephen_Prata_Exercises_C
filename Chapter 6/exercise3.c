@@ -3,7 +3,7 @@
 
 #define SIZE 6			// lines number
 
-int main (void)
+int main(void)
 {
 	int i, j;
 

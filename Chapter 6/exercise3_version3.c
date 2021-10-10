@@ -4,7 +4,7 @@
 
 #define SIZE 26 + 1		// 26 alphabet characters and 1 '\0' character on the end of a string
 
-int main (void)
+int main(void)
 {
 	const char lets[SIZE] = "ABCDEFGHIJKLMNOPQRSTYVWXYZ";		// index: from 0 to 26
 	int i, j;

@@ -3,7 +3,7 @@
 
 #define SIZE 26			// number of characters in the English alphabet
 
-int main (void)
+int main(void)
 {
 	char alph_eng[SIZE];
 	int index;

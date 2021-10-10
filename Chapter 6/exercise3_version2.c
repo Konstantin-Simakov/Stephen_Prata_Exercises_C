@@ -3,7 +3,7 @@
 
 #define LETTER 'Z'		// to what letter to draw an output; you can change this parameter
 
-int main (void)
+int main(void)
 {
 	int i, j;
 

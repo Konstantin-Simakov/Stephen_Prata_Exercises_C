@@ -8,7 +8,7 @@ How many years will it be before Chucky has no money left in his account?
 #define DEPOSIT 1000000.0
 #define RATE	0.08
 
-int main (void)
+int main(void)
 {
 	const double WITHDRAW = 100000.0;
 

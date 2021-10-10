@@ -5,7 +5,7 @@
 #define SIZE 255			// the max array size (by problem statement)
 #define NEW_LINE_CH '\n'	// loop check condition
 
-int main (void)
+int main(void)
 {
 	int i;
 	char arr_ch[SIZE];

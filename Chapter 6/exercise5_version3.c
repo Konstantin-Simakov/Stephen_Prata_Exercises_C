@@ -4,7 +4,7 @@
 #define SIZE 26 + 1				// 26 english alphabet letters + 1 character '\0' (null-terminated sign (NUL)) 
 #define SPACE ' '
 
-int main (void)
+int main(void)
 {
 	int i, j;
 	int rows;					// == the number of a letter in an ordered sequence of letters in the English alphabet!

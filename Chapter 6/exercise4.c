@@ -7,7 +7,7 @@ using the scanf () and printf () functions... */
 
 #define R_AND_C 6		/* the number of rows and columns in the program ouput */
 
-int main (void)
+int main(void)
 {
 	int i, j;
 	char ch = 'A';

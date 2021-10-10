@@ -1,7 +1,7 @@
 /* exercise6.c -- Chapter 6 */
 #include <stdio.h>
 
-int main (void)
+int main(void)
 {
 	int n;			// counter, number
 	int a, b;		// limits

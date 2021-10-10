@@ -3,7 +3,7 @@
 
 #define SIZE 8
 
-int main (void)
+int main(void)
 {
 	int integer[SIZE];
 	int i;

@@ -1,7 +1,7 @@
 /* exercise8.c -- Chapter 6 */
 #include <stdio.h>
 
-int main (void)
+int main(void)
 {
 	double f1, f2;
 	double res;			// calculating result

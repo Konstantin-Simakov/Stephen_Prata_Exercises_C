@@ -4,7 +4,7 @@
 #define DUNBAR 	150		// Dunbar number
 #define START 	5		// days number per 1 week
 
-int main (void)
+int main(void)
 {
 	int friends = START;
 	int week = 1;

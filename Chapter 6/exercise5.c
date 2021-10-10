@@ -4,7 +4,7 @@
 
 #define SPACE ' '	// space character. Yes! Without any semicolons (;)
 
-int main (void)
+int main(void)
 {
 	char cap_let;
 	int i, j;

@@ -3,7 +3,7 @@
 
 #define SIZE 8
 
-int main (void)
+int main(void)
 {
 	double ar1[SIZE], ar2[SIZE];
 	int i, j;

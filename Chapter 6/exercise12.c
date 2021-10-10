@@ -1,7 +1,7 @@
 /* exercise12.c -- Chapter 6 */
 #include <stdio.h>
 
-int main (void)
+int main(void)
 {
 	int i, lim;
 	double sum1;

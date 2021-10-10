@@ -6,7 +6,7 @@
 #define R_AND_C 6
 #define SIZE 26 + 1 	 	// 26 english alphabet characters + 1 character '\0' for string ending 
 
-int main (void)
+int main(void)
 {
 	char lets[SIZE] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	int i, j;

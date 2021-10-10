@@ -3,7 +3,7 @@
 
 #define SIZE 5		// isosceles dollar-sign triangle -- output
 
-int main (void)
+int main(void)
 {
 	int i, j;
 

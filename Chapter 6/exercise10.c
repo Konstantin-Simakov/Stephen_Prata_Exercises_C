@@ -1,9 +1,9 @@
 /* exercise10.c -- Chapter 6 */
 #include <stdio.h>
 
-long sum_squares (int a, int b);	// function prototype
+long sum_squares(int a, int b);		// function prototype
 
-int main (void)
+int main(void)
 {
 	int lower, upper;		// 2 variable for main() function as fact arguments
 	long result;
@@ -24,7 +24,7 @@ int main (void)
 	return 0;
 }
 
-long sum_squares (int a, int b)		// formal parameters
+long sum_squares(int a, int b)		// formal parameters
 {
 	int num;
 	long sum = 0L;		// 0 (zero) long int type for long int sum variable

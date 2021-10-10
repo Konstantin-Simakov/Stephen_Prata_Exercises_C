@@ -9,7 +9,7 @@ the amount in Daphne's?
 #define RATE_DAPHNE			0.1			// Daphne's percentage rate
 #define RATE_DEIRDRE		0.05		// Deirdra's percentage rate
 
-int main (void)
+int main(void)
 {
 	int years = 0;
 	float sum_daphne = DEPOSIT;

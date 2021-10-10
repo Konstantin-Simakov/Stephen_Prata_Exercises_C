@@ -4,7 +4,7 @@
 
 #define SIZE 100		// (just in case)
 
-int main (void)
+int main(void)
 {
 	char str[SIZE];		// array initialization
 	int index, len_str_i;
