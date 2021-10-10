@@ -1,5 +1,7 @@
 #include <stdio.h>
 
+#define INCH_TO_CM 2.54
+
 float inch_to_cm(float);
 
 int main(void)
@@ -23,5 +25,5 @@ int main(void)
 
 float inch_to_cm(float inches)
 {
-	return inches * 2.54;
+	return inches * INCH_TO_CM;
 }
