@@ -1,7 +1,7 @@
 /* exerise8.c -- Chapter 3 */
 #include <stdio.h>
 
-int main (void)
+int main(void)
 {
 	float cups = 0.0f;
 
