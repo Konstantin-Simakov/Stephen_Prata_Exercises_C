@@ -1,7 +1,7 @@
 /* exercise3.c -- Chapter 4 */
 #include <stdio.h>
 
-int main (void)
+int main(void)
 {
 	float number_fl = 0.0f;
 
