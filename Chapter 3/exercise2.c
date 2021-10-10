@@ -1,7 +1,7 @@
 /* exercise2.c -- Chapter 3 */
 #include <stdio.h>
 
-int main (void)
+int main(void)
 {
 	signed char ch = 0;
 
