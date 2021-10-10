@@ -1,7 +1,7 @@
 /* exercise2.c -- Chaptrer 7 */
 #include <stdio.h>
 
-int main (void)
+int main(void)
 {
 	int count = 1;		// for modulo 8
 	char ch;

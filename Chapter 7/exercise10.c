@@ -13,7 +13,7 @@
 #define JOINT			29750		// married, joint housekeeping	
 #define SEPARATE		14875		// married, separate housekeeping
 
-int main (void)
+int main(void)
 {
 	int status;						// for scanf() status saving
 	int category;

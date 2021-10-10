@@ -1,7 +1,7 @@
 /* exercise3.c -- Chapter 7 */
 #include <stdio.h>
 
-int main (void)
+int main(void)
 {
 	int num;
 	int evens = 0;

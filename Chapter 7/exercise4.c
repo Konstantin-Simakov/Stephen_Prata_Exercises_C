@@ -4,7 +4,7 @@
 #define PERIOD '.'
 #define EXCLAM '!'
 
-int main (void)
+int main(void)
 {
 	char ch;
 	int period_count = 0;			// one exlamation mark counter

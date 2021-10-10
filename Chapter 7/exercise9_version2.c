@@ -2,9 +2,9 @@
 #include <stdio.h>
 #include <stdbool.h>							// for bool variable
 
-unsigned prime_num (unsigned num_prime);		// n is the number of a number that is prime
+unsigned prime_num(unsigned num_prime);			// n is the number of a number that is prime
 
-int main (void)
+int main(void)
 {
 	unsigned num_prime;							// the number of a number that is prime
 
@@ -23,7 +23,7 @@ int main (void)
 	return 0;
 }
 
-unsigned prime_num (unsigned num_prime)			// n is the number of a number that is prime
+unsigned prime_num(unsigned num_prime)			// n is the number of a number that is prime
 {
 	unsigned number;
 	unsigned div;

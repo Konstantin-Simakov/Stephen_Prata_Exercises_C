@@ -4,7 +4,7 @@
 #define NEWLINE '\n'
 #define SPACE 	' '
 
-int main (void)
+int main(void)
 {
 	char ch;
 	int nc = 0;		/* newline characters counter */

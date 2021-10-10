@@ -1,7 +1,7 @@
 /* exercise6.c -- Chapter 7  */
 #include <stdio.h>
 
-int main (void)
+int main(void)
 {
 	char ch;				// current input character
 	char prev;				// previous input character

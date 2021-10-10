@@ -2,9 +2,9 @@
 #include <stdio.h>
 #include <stdbool.h>				// for bool variable
 
-void prime_nums (unsigned upper);	// outputs all prime numbers less than or equal to the given one
+void prime_nums(unsigned upper);	// outputs all prime numbers less than or equal to the given one
 
-int main (void)
+int main(void)
 {
 	int upper;						// input data
 
@@ -23,7 +23,7 @@ int main (void)
 	return 0;
 }
 
-void prime_nums (unsigned upper)
+void prime_nums(unsigned upper)
 {
 	unsigned num = 2;
 	unsigned div;

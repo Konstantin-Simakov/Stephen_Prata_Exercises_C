@@ -12,7 +12,7 @@
 #define FIRST_SUM	300
 #define SECOND_SUM	450				// for a both TAX_RATE2 and TAX_RATE3
 
-int main (void)
+int main(void)
 {
 	float hours;					// number of hours worked per week
 	double salary = 0.0;			// dirty salary

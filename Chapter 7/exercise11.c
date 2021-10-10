@@ -16,7 +16,7 @@
 #define WEIGHT_2	20		// (see above ^)
 
 
-int main (void)
+int main(void)
 {
 	char ch;
 	int status;							// for scanf() return value

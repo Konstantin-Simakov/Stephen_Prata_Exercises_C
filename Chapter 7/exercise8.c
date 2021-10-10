@@ -16,7 +16,7 @@
 #define FIRST_SUM	300.0			// (dollars) per week ->
 #define SECOND_SUM	450.0			// -> for a both TAX_RATE_2 and TAX_RATE_3
 
-int main (void)
+int main(void)
 {
 	int status;						// for scanf() return value saving
 	int choice;
