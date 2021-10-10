@@ -1,10 +1,10 @@
 /* ex4.c -- (Chapter 2) */
 #include <stdio.h>
 
-void jolly (void);
-void deny (void);
+void jolly(void);
+void deny(void);
 
-int main (void)
+int main(void)
 {
 	jolly();
 	jolly();
@@ -15,14 +15,14 @@ int main (void)
 	return 0;
 }
 
-void jolly (void)
+void jolly(void)
 {
 	printf("He is a jolly fellow!\n");
 
 	return;
 }
 
-void deny (void)
+void deny(void)
 {
 	printf("Nobody can deny it!\n");
 
