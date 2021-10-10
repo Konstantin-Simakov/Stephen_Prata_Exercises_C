@@ -1,7 +1,7 @@
 /* exercise7.c -- Chapter 3 */
 #include <stdio.h>
 
-int main (void)
+int main(void)
 {
 	float inch_cm = 2.54f;		// constant variable
 	float growth_cm = 0.0f;		// ??
