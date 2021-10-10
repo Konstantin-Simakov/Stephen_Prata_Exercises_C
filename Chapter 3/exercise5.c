@@ -1,7 +1,7 @@
 /* exercise5.c -- Chapter 3 */
 #include <stdio.h>
 
-int main (void)
+int main(void)
 {
 	double sec_year = 3.156e+7;
 	short int years = 0;
