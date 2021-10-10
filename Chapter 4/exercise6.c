@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <string.h>
 
-int main (void)
+int main(void)
 {
 	char name[30], family[30];
 	int length_name, length_family;
