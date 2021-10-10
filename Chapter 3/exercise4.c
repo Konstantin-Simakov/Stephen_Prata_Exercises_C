@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 // this program is not large!!!
-int main (void)
+int main(void)
 {
 	float num = 0.0f;		// <<< max fast calculates
 
