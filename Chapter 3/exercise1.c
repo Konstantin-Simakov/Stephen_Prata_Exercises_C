@@ -3,7 +3,7 @@
 #include <limits.h>
 #include <float.h>
 
-int main (void)
+int main(void)
 {
 	int type_overflow = INT_MAX;
 	long int type = LONG_MIN;
