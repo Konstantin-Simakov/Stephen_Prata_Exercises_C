@@ -1,4 +1,4 @@
-/* exercise2_vers2.c -- Chapter 3 */
+/* exercise2_version2.c -- Chapter 3 */
 #include <stdio.h>
 
 char dec_to_ch(signed char);
