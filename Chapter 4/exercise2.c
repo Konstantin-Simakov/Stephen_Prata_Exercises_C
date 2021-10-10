@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <string.h>
 
-int main (void)
+int main(void)
 {
 	char name[20];
 	int length_string = 0;
