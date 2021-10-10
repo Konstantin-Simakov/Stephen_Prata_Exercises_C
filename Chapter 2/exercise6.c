@@ -1,7 +1,7 @@
-// ex5.c -- (Chapter 2) calculate and output toes, squared toes, cubed and toes;
+/* exercise6.c -- Chapter 2 */
 #include <stdio.h>
 
-int main (void)
+int main(void)
 {
 	int toes = 10;
 	int toes_2 = 2 * toes;
