@@ -1,4 +1,4 @@
-/* ex4.c -- (Chapter 2) */
+/* exercise4.c -- Chapter 2 */
 #include <stdio.h>
 
 void jolly(void);
