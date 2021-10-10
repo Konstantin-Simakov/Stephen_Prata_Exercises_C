@@ -1,10 +1,10 @@
-/* ex5.c -- (Chapter 2) */
+/* exercise5.c -- Chapter 2 */
 #include <stdio.h>
 
-void br (void);
-void ic (void);
+void br(void);
+void ic(void);
 
-int main (void)
+int main(void)
 {
 	br();				/* line 1 */
 	printf(", ");
@@ -20,12 +20,12 @@ int main (void)
 	return 0;
 }
 
-void br (void)
+void br(void)
 {
 	printf("Brazilia, Russia");
 }
 
-void ic (void)
+void ic(void)
 {
 	printf("India, China");
 }
