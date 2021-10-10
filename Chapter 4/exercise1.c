@@ -1,7 +1,7 @@
 /* exercise1.c -- Chapter 4 */
 #include <stdio.h>
 
-int main (void)
+int main(void)
 {
 	char name[25];
 	char family[30];
