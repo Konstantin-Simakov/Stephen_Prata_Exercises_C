@@ -3,14 +3,14 @@
 #include <ctype.h>			/* for isspace() in get_first() */
 
 char get_choice(void);	
-char get_first(void);			/* gets the first non-whitespace character character from data input */
+char get_first(void);		/* gets the first non-whitespace character character from data input */
 float get_float(void);
 void addition(void);
 void subtraction(void);
 void multiplication(void);
 void division(void);
 
-int main (void)
+int main(void)
 {
 	char choice;
 
@@ -34,7 +34,7 @@ int main (void)
 	return 0;
 }
 
-char get_first (void)
+char get_first(void)
 {
 	char ch;
 	
@@ -48,7 +48,7 @@ char get_first (void)
 	return ch;
 }
 
-char get_choice (void)
+char get_choice(void)
 {
 	char ch;
 
@@ -67,7 +67,7 @@ char get_choice (void)
 	return ch;
 }
 
-float get_float (void)
+float get_float(void)
 {
 	float input;
 	char ch;
@@ -75,7 +75,7 @@ float get_float (void)
 	while (scanf("%f", &input) != 1)
 	{
 		while ((ch = getchar()) != '\n')
-			putchar(ch);				/* for any first number or with a letter input second number */
+			putchar(ch);			/* for any first number or with a letter input second number */
 		printf(" is not a number.\nEnter ");
 		printf("a number such as 2.5, -1.78.E8 or 3:\n");
 	}
@@ -85,7 +85,7 @@ float get_float (void)
 	return input;
 }
 
-void addition (void)
+void addition(void)
 {
 	float num_1, num_2;
 	
@@ -101,7 +101,7 @@ void addition (void)
 		printf("%.2f + %.2f = %.2f\n", num_1, num_2, num_1 + num_2);
 }
 
-void subtraction (void)
+void subtraction(void)
 {
 	float num_1, num_2;
 	
@@ -117,7 +117,7 @@ void subtraction (void)
 		printf("%.2f - %.2f = %.2f\n", num_1, num_2, num_1 - num_2);
 }
 
-void multiplication (void)
+void multiplication(void)
 {
 	float num_1, num_2;
 	
@@ -133,7 +133,7 @@ void multiplication (void)
 		printf("%.2f * %.2f = %.2f\n", num_1, num_2, num_1 * num_2);
 }
 
-void division (void)
+void division(void)
 {
 	float num_1, num_2;
 	
@@ -142,13 +142,12 @@ void division (void)
 
 	printf("Enter the second number: ");
 	num_2 = get_float();
-	
 	while (num_2 == 0)
 	{
 		printf("Enter another number (not a zero):\n");
 		num_2 = get_float();
 	}
-	
+
 	if (num_2 < 0)
 		printf("%.2f / (%.2f) = %.2f\n", num_1, num_2, num_1 / num_2);
 	else

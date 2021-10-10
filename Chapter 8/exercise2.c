@@ -2,12 +2,12 @@
 #include <stdio.h>
 
 #define SPACE 	' '
-#define HT 	'\t'
-#define NL	'\n'
-#define DEL 	127		// the last character of the standard ASCII endoding
-#define NUL	 0		// the first character of the standard ASCII endoding
+#define HT 		'\t'
+#define NL		'\n'
+#define DEL 	127		// tha last character of the standard ASCII endoding
+#define NUL		 0		// the first character of the standard ASCII endoding
 
-int main (void)
+int main(void)
 {
 	int ch;
 	int count = 0;
@@ -25,7 +25,7 @@ int main (void)
 				case HT: printf("%s %d  ", "\\t", ch);
 					break;
 				case NL: printf("%s %d\n", "\\n", ch);
-					count = -1;						// due to ++count below
+						count = -1;									// due to ++count below
 					break;
 				case SPACE: printf("%s %d  ", "SP", ch);
 					break;
@@ -44,11 +44,11 @@ int main (void)
 		// error processing
 		else
 		{
-			printf("%c (%d)  ", ch, ch);						// output incorrect character
+			printf("%c (%d)  ", ch, ch);							// output incorrect character
 			while (getchar() != '\n')
-				continue;							// (discard the rest of the input string)
-			printf(" is incorrect input character. Try again:\n");			// and imform the user
-		}										// that this character is invalid
+				continue;											// (discard the rest of the input string)
+			printf(" is incorrect input character. Try again:\n");	// and imform the user
+		}															// that this character is invalid
 	}
 	printf("The program has been completed.\n");
 

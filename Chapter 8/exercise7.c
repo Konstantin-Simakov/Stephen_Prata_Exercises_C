@@ -10,18 +10,18 @@
 #define OVERTIME 	1.5f			// over 40 hours per week
 // tax rates
 #define TAX_RATE_1 	0.15			// tax rate from the first $300
-#define TAX_RATE_2 0.2				// tax rate from the following $150
+#define TAX_RATE_2 	0.2				// tax rate from the following $150
 #define TAX_RATE_3 	0.25			// tar rate from the ramainder (over $450)
 // money (dollars) for a week
 #define FIRST_SUM	300.0			// (dollars) per week ->
 #define SECOND_SUM	450.0			// -> for a both TAX_RATE_2 and TAX_RATE_3
 
-int main (void)
+int main(void)
 {
 	int status;
 	char choice;
-	float wage_rate;			// chosen tax rate
-	float hours;				// number of hours worked per week
+	float wage_rate;				// chosen tax rate
+	float hours;					// number of hours worked per week
 	double salary = 0.0;			// dirty salary
 	double sum_clean = 0.0;			// clean salary
 	double tax_rates = 0.0;			// tax rates sum
@@ -52,10 +52,8 @@ int main (void)
 
 			printf("Enter the number of hours worked per week:\n");
 			status = scanf("%f", &hours);
-			
-			while (getchar() != '\n')			// due to scanf()
+			while (getchar() != '\n')	// due to scanf()
 				continue;				// discard the rest of the line and '\n' (by <Enter>) too
-			
 			if (status == 1 && hours > 0)
 			{
 				// gross_salary

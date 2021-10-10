@@ -1,7 +1,7 @@
 /* exercise1.c -- Chapter 8 */
 #include <stdio.h>
 
-int main (void)
+int main(void)
 {
 	int count = 0;
 
