@@ -1,4 +1,4 @@
-/* exercise3_vers2.c -- Chapter 3 */
+/* exercise3_version2.c -- Chapter 3 */
 #include <stdio.h>
 
 void warning(void);
