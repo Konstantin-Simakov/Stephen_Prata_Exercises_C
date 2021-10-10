@@ -4,7 +4,7 @@
 #define GAL_LITR 	3.785		/* litres amount in 1 gallon */
 #define MIL_KM		1.609		/* kilometres amount in 1 mile */
 
-int main (void)
+int main(void)
 {
 	float mile = 0.0f, gallon = 0.0f;
 /*	float km = 0.0f, litr = 0.0f;
@@ -32,5 +32,5 @@ int main (void)
 }
 
 /* If you will want to uncomment commented out the code upper you are showed 
-kilometres and litres amount. 
+   kilometres and litres amount. 
 */
