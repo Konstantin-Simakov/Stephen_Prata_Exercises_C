@@ -3,7 +3,7 @@
 
 #define BYTE_BIT 8			/* bit amount in one byte */
 
-int main (void)
+int main(void)
 {
 	float v_mbit_sec;
 	float s_file_size_mbyte;
