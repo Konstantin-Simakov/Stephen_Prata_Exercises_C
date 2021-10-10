@@ -1,7 +1,7 @@
 /* exercise6.c -- Chapter 3 */
 #include <stdio.h>
 
-int main (void)
+int main(void)
 {
 	long double weight_m0 = 3.0e-23;	// gram
 	short int weight_water = 950;		// gram; short int type is allowed
