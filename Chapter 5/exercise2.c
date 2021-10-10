@@ -3,7 +3,7 @@
 
 #define TEN 10
 
-int main (void)
+int main(void)
 {
 	int num, num_s;			/* num_s is the result of adding the original 
 							 variable (num) and the symbolic constant TEN */

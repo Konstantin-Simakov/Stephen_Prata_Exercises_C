@@ -1,9 +1,9 @@
 /* exercise7.c -- Chapter 7 */
 #include <stdio.h>
 
-double cube (double fl);		// prototype for my own function
+double cube(double fl);			// prototype for my own function
 
-int main (void)
+int main(void)
 {
 	double num, res;
 
@@ -19,7 +19,7 @@ int main (void)
 	return 0;
 }
 
-double cube (double fl)
+double cube(double fl)
 {
 	double res;
 

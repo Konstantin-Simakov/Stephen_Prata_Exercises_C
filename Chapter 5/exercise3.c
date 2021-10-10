@@ -3,7 +3,7 @@
 
 const int WEEK = 7;			// days number in a week
 
-int main (void)
+int main(void)
 {
 	int day, week, left_d;
 

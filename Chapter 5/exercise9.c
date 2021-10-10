@@ -1,9 +1,9 @@
 /* exercise9.c -- Chapter 5 */
 #include <stdio.h>
 
-void temperatures (double fahr);
+void temperatures(double fahr);
 
-int main (void)
+int main(void)
 {
 	double fahr;
 
@@ -12,8 +12,8 @@ int main (void)
 	printf("Please enter the Fahrenheit value "
 		"(or q to exit the program): ");
 	while (scanf("%lf", &fahr) == 1)			// %lf for double to scanf()
-	{							// scanf() is used once in this program in this ^^^ case
-		temperatures(fahr);				// calculates Celsius, Kelvin from Fahrenheit
+	{											// scanf() is used once in this program in this ^^^ case
+		temperatures(fahr);						// calculates Celsius, Kelvin from Fahrenheit
 
 		printf("Please enter the next Fahrenheit value "
 			"(or q to exit the program): ");
@@ -23,10 +23,10 @@ int main (void)
 	return 0;
 }
 
-void temperatures (double fahr)
+void temperatures(double fahr)
 {
 	const float CELS_1 = 5.0f / 9.0f;			// the first coefficient for Celsius
-	const float CELS_2 = 32.0f;				// the second coefficient for Celsius
+	const float CELS_2 = 32.0f;					// the second coefficient for Celsius
 	const float KELV_1 = 273.16f;				// the first and only coefficient for Kelvin
 
 	double kelv, cels;

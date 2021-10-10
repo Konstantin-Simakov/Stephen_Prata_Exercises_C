@@ -4,7 +4,7 @@
 const float FOOT_CM = 30.48; 	// cm number per one foot
 const int FOOT_INCH = 12;		// ineches number per one foot
 
-int main (void)
+int main(void)
 {
 	float cm, inch_left;
 	int foot;

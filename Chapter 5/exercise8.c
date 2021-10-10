@@ -1,7 +1,7 @@
 /* exercise8.c -- Chapter 5 */
 #include <stdio.h>
 
-int main (void)
+int main(void)
 {
 	int first, second, modulo;
 

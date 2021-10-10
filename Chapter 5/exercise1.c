@@ -3,7 +3,7 @@
 
 const int M_PER_H = 60;		// minutes number in one hour
 
-int main (void)
+int main(void)
 {
 	int min, hour, left_m;
 

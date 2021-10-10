@@ -1,7 +1,7 @@
 /* exercise6.c -- Chapter 5 */
 #include <stdio.h>
 
-int main (void)
+int main(void)
 {
 	int sum, count, val;
 
