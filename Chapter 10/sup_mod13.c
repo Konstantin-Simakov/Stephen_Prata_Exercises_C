@@ -5,7 +5,7 @@
 #include <stdio.h>
 #include "head13.h"
 
-void input (double ar[][COLS], int rows)
+void input(double ar[][COLS], int rows)
 {
 	int i, j;
 
@@ -17,7 +17,7 @@ void input (double ar[][COLS], int rows)
 	printf("OK. You have filled the entire array.\n");
 }
 
-double average (const double ar[], int n)
+double average(const double ar[], int n)
 {
 	int i;
 	double sum = 0.0;
@@ -28,7 +28,7 @@ double average (const double ar[], int n)
 	return sum / n;
 }
 
-double average_all (const double ar[][COLS], int rows)
+double average_all(const double ar[][COLS], int rows)
 {
 	int i, j;
 	double sum = 0.0;
@@ -41,7 +41,7 @@ double average_all (const double ar[][COLS], int rows)
 }
 
 // one test is known to be false for array element ar[0][0]
-double biggest (const double ar[][COLS], int rows)
+double biggest(const double ar[][COLS], int rows)
 {
 	int i, j;
 	double max = ar[0][0];
@@ -54,7 +54,7 @@ double biggest (const double ar[][COLS], int rows)
 	return max;
 }
 
-void show_results (const double ar[][COLS], int rows)
+void show_results(const double ar[][COLS], int rows)
 {
 	int i, j;
 

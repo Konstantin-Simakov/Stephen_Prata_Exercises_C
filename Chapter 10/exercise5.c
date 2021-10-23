@@ -3,7 +3,7 @@
 #include "head5.h"		// header file for exercise5.c
 						// + you need to compile add_file5.c -> compilation of two files
 
-int main (void)
+int main(void)
 {
 	double ar[SIZE] = {5.2, -9.3, 4.4, 5.5, -6.5, 7.5, 8.1, 0.0};
 	double max, min;

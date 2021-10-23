@@ -8,7 +8,7 @@
 #include <stdio.h>
 #include "head13.h"
 
-int main (void)
+int main(void)
 {
 	double array[ROWS][COLS];
 

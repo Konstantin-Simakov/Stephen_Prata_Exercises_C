@@ -4,7 +4,7 @@ gcc exercise10.c sup_mod10.c -o exercise10 -Wall */
 #include <stdio.h>
 #include "head10.h"
 
-int main (void)
+int main(void)
 {
 	int ar1[SIZE] = {1, 3, 5, 7};
 	int ar2[SIZE] = {2, 4, 6, 8};

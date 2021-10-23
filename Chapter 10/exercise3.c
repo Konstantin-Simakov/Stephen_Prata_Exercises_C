@@ -1,9 +1,9 @@
 /* exercise3.c -- Chapter 10 */
 #include <stdio.h>
 
-int biggest (int ar[], int n);
+int biggest(int ar[], int n);
 
-int main (void)
+int main(void)
 {
 	int ar[] = {5, 6, 7, 8, 12, 9, 10, 11};
 
@@ -13,7 +13,7 @@ int main (void)
 	return 0;
 }
 
-int biggest (int ar[], int n)
+int biggest(int ar[], int n)
 {
 	int i;
 	int max = ar[0];

@@ -5,12 +5,12 @@
 #define YEARS 	5
 
 // displays rainfall data for each year and returns the average rainfall for a year
-float average_year (const float (*ar)[MONTHS], int years);
+float average_year(const float (*ar)[MONTHS], int years);
 
 // displays the average rainfall for each month over five years
-float average_months (const float (*ar)[MONTHS], int years);
+float average_months(const float (*ar)[MONTHS], int years);
 
-int main (void)
+int main(void)
 {
 	const float rain[YEARS][MONTHS] = {
 		{4.3, 4.3, 4.3, 3.0, 2.0, 1.2, 0.2, 0.2, 0.4, 2.4, 3.5, 6.6},
@@ -30,7 +30,7 @@ int main (void)
 	return 0;
 }
 
-float average_year (const float (*ar)[MONTHS], int years)
+float average_year(const float (*ar)[MONTHS], int years)
 {
 	float subtot, total;
 	int year, month;
@@ -50,7 +50,7 @@ float average_year (const float (*ar)[MONTHS], int years)
 	return total / years;	
 }
 
-float average_months (const float (*ar)[MONTHS], int years)
+float average_months(const float (*ar)[MONTHS], int years)
 {
 	float subtot, total;
 	int month, year;

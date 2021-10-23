@@ -4,9 +4,9 @@
 #define SIZE1 2
 #define SIZE2 5
 
-void copy_arr (double * tar, const double * source, int n);
+void copy_arr(double * tar, const double * source, int n);
 
-int main (void)
+int main(void)
 {
 	const double source[SIZE1][SIZE2] = {
 		{1.0, 3.0, 5.0, 7.0, 9.0}, 
@@ -34,7 +34,7 @@ int main (void)
 	return 0;
 }
 
-void copy_arr (double * target, const double * source, int size)
+void copy_arr(double * target, const double * source, int size)
 {
 	int i;
 

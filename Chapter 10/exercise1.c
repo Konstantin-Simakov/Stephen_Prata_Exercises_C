@@ -4,7 +4,7 @@
 #define MONTHS 12	/* number of months in a year */
 #define YEARS 5		/* number of years for which data is available */
 
-int main (void)
+int main(void)
 {
 	/* initialization with precipitation data for the period from 2010 to 2014 */	
 	const float rain[YEARS][MONTHS] = 

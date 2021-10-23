@@ -1,11 +1,10 @@
-/* sup_mod14.c -- 	module support for exercise13.c; 
+/* sup_mod14.c -- 	module support for exercise14.c; 
 					processing arrays by using arrays of variable length;
 					all function definitions;
 */
 #include <stdio.h>
-#include "head14.h"
 
-void input (int rows, int cols,  double ar[rows][cols])
+void input(int rows, int cols,  double ar[rows][cols])
 {
 	int i, j;
 
@@ -17,7 +16,7 @@ void input (int rows, int cols,  double ar[rows][cols])
 	printf("OK. You have filled the entire array.\n");
 }
 
-double average (int n, const double ar[n])
+double average(int n, const double ar[n])
 {
 	int i;
 	double sum = 0.0;
@@ -28,7 +27,7 @@ double average (int n, const double ar[n])
 	return sum / n;
 }
 
-double average_all (int rows, int cols, const double ar[rows][cols])
+double average_all(int rows, int cols, const double ar[rows][cols])
 {
 	int i, j;
 	double sum = 0.0;
@@ -41,7 +40,7 @@ double average_all (int rows, int cols, const double ar[rows][cols])
 }
 
 // one test is known to be false for array element ar[0][0]
-double biggest (int rows, int cols, const double ar[rows][cols])
+double biggest(int rows, int cols, const double ar[rows][cols])
 {
 	int i, j;
 	double max = ar[0][0];
@@ -54,7 +53,7 @@ double biggest (int rows, int cols, const double ar[rows][cols])
 	return max;
 }
 
-void show_results (int rows, int cols, const double ar[rows][cols])
+void show_results(int rows, int cols, const double ar[rows][cols])
 {
 	int i, j;
 

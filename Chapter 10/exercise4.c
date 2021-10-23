@@ -1,9 +1,9 @@
 /* exercise4.c -- Chapter 10 */
 #include <stdio.h>
 
-int big_index (double * ar, int n);
+int big_index(double * ar, int n);
 
-int main (void)
+int main(void)
 {
 	double ar[] = {2.0, 5.0, 3.5, -4.8, 5.2, 0.1, 10.9, 11.0};
 
@@ -13,7 +13,7 @@ int main (void)
 	return 0;
 }
 
-int big_index (double * ar, int n)
+int big_index(double * ar, int n)
 {
 	int i;
 	int max_i = 0;

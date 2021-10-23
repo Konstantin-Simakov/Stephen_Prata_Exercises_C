@@ -1,7 +1,7 @@
 /* support module for exercise10.c */
 #include <stdio.h>
 
-void sum_arrs (int * target, int * s1, int * s2, int size_all)
+void sum_arrs(int * target, int * s1, int * s2, int size_all)
 {
 	int i;
 
@@ -9,7 +9,7 @@ void sum_arrs (int * target, int * s1, int * s2, int size_all)
 		target[i] = s1[i] + s2[i];
 }
 
-void show_arr (int * ar, int n)
+void show_arr(int * ar, int n)
 {
 	int i;
 

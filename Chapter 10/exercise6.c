@@ -4,9 +4,9 @@
 #define SIZE 6
 
 /* reverses the order of the contents of the array */
-void exchange (double ar[], int n);
+void exchange(double ar[], int n);
 
-int main (void)
+int main(void)
 {
 	double ar[SIZE] = {1.0, 2.0, 3.0, 4.0, 5.0};
 	int i;
@@ -26,7 +26,7 @@ int main (void)
 	return 0;
 }
 
-void exchange (double ar[], int n)
+void exchange(double ar[], int n)
 {
 	double temp;
 	int i;

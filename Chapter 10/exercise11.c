@@ -4,10 +4,10 @@
 #define COLS 5
 #define ROWS 3
 
-void show_arr (const int (*ar)[COLS], int rows);
-void doubling_arr (int ar[][COLS], int rows);
+void show_arr(const int (*ar)[COLS], int rows);
+void doubling_arr(int ar[][COLS], int rows);
 
-int main (void)
+int main(void)
 {
 	int array[ROWS][COLS];
 	int i, j;
@@ -26,7 +26,7 @@ int main (void)
 	return 0;
 }
 
-void show_arr (const int ar[][COLS], int rows)
+void show_arr(const int ar[][COLS], int rows)
 {
 	int i, j;
 
@@ -39,7 +39,7 @@ void show_arr (const int ar[][COLS], int rows)
 	printf("\n");
 }
 
-void doubling_arr (int (*ar)[COLS], int rows)
+void doubling_arr(int (*ar)[COLS], int rows)
 {
 	int i, j;
 

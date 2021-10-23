@@ -4,11 +4,11 @@
 #define SIZE1 3
 #define SIZE2 5
 
-void copy_arr (int rows, int cols, double target[rows][cols], 
+void copy_arr(int rows, int cols, double target[rows][cols], 
 				const double source[rows][cols]);
-void show_arr (int rows, int cols, const double array[rows][cols]);
+void show_arr(int rows, int cols, const double array[rows][cols]);
 
-int main (void)
+int main(void)
 {
 	double ar1[SIZE1][SIZE2];
 	double ar2[SIZE1][SIZE2];
@@ -28,7 +28,7 @@ int main (void)
 	return 0;
 }
 
-void copy_arr (int rs, int cs, double t[rs][cs], 
+void copy_arr(int rs, int cs, double t[rs][cs], 
 				const double s[rs][cs])
 {
 	int i, j;
@@ -38,7 +38,7 @@ void copy_arr (int rs, int cs, double t[rs][cs],
 			t[i][j] = s[i][j];
 }
 
-void show_arr (int rs, int cs, const double ar[rs][cs])
+void show_arr(int rs, int cs, const double ar[rs][cs])
 {
 	int i, j;
 

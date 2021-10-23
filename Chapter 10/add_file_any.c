@@ -1,5 +1,5 @@
 // support module
-void copy_arr (int rs, int cs, double t[rs][cs], 
+void copy_arr(int rs, int cs, double t[rs][cs], 
 				const double s[rs][cs])
 {
 	int i, j;
@@ -9,7 +9,7 @@ void copy_arr (int rs, int cs, double t[rs][cs],
 			t[i][j] = s[i][j];
 }
 
-void show_arr (int rs, int cs, const double ar[rs][cs])
+void show_arr(int rs, int cs, const double ar[rs][cs])
 {
 	int i, j;
 

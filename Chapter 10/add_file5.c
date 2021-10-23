@@ -1,12 +1,12 @@
 // add_file5.c -- for exercise5.c support module,
 // function definition
 
-double difference (double x, double y)
+double difference(double x, double y)
 {
 	return x - y;
 }
 
-double biggest (double ar[], int n)
+double biggest(double ar[], int n)
 {
 	int i;
 	double max;
@@ -20,7 +20,7 @@ double biggest (double ar[], int n)
 	return max;
 }
 
-double smallest (double ar[], int n)
+double smallest(double ar[], int n)
 {
 	int i;
 	double min;
