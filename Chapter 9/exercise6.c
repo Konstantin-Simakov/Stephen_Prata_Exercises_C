@@ -1,9 +1,9 @@
 /* exercise6.c -- Chapter 9 */
 #include <stdio.h>
 
-void three (double * x, double * y, double * z);
+void three(double * x, double * y, double * z);
 
-int main (void)
+int main(void)
 {
 	double x, y, z;
 
@@ -20,7 +20,7 @@ int main (void)
 	return 0;
 }
 
-void three (double * first, double * second, double * third)
+void three(double * first, double * second, double * third)
 {
 	double temp;
 

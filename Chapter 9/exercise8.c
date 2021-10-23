@@ -1,9 +1,9 @@
 /* exercise8.c -- Chapter 9 */
 #include <stdio.h>
 
-double power (double, int);
+double power(double, int);
 
-int main (void)
+int main(void)
 {
 	double result;
 	double base;
@@ -26,7 +26,7 @@ int main (void)
 	return 0;
 }
 
-double power (double base, int n)
+double power(double base, int n)
 {
 	double res;
 	int i;

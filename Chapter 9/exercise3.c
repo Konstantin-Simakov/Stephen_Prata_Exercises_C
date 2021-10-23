@@ -4,9 +4,9 @@
 #define ROWS 5
 #define COLS 3
 
-void ch_col_row (char, int, int);
+void ch_col_row(char, int, int);
 
-int main (void)
+int main(void)
 {
 	char ch;
 
@@ -19,7 +19,7 @@ int main (void)
 	return 0;
 }
 
-void ch_col_row (char ch, int row, int col)
+void ch_col_row(char ch, int row, int col)
 {
 	int i, j;
 

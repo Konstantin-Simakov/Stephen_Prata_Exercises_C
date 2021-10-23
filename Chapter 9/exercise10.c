@@ -3,9 +3,9 @@
 
 #define ZERO 48			/* zero in the ASCII table; for alpha-numeric character output */
 
-void to_base_n (int num, int base);
+void to_base_n(int num, int base);
 
-int main (void)
+int main(void)
 {
 	int num, base;
 
@@ -26,7 +26,7 @@ int main (void)
 	return 0;
 }
 
-void to_base_n (int number, int base)
+void to_base_n(int number, int base)
 {
 	int res;
 

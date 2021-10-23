@@ -1,9 +1,9 @@
 /* exercise11.c -- Chapter 9 */
 #include <stdio.h>
 
-unsigned long long fibonacci (unsigned short n);
+unsigned long long fibonacci(unsigned short n);
 
-int main (void)
+int main(void)
 {
 	unsigned long long res;
 	unsigned short num;		// argument of fibonacci()
@@ -23,7 +23,7 @@ int main (void)
 	return 0;
 }
 
-unsigned long long fibonacci (unsigned short number)
+unsigned long long fibonacci(unsigned short number)
 {
 	unsigned long long res;
 	unsigned long long prev1, prev2;

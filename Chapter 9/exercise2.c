@@ -4,10 +4,10 @@
 
 #define SPACE ' '
 
-void chline (char ch, int i, int j);
-void get_two_int (int *, int *);
+void chline(char ch, int i, int j);
+void get_two_int(int *, int *);
 
-int main (void)
+int main(void)
 {
 	int ch;
 	int low, up;
@@ -35,7 +35,7 @@ int main (void)
 }
 
 /* desired function */
-void chline (char ch, int i, int j)
+void chline(char ch, int i, int j)
 {
 	int col;		/* column number */
 
@@ -47,7 +47,7 @@ void chline (char ch, int i, int j)
 }
 
 /* gets two integers */
-void get_two_int (int * plow, int * pup)
+void get_two_int(int * plow, int * pup)
 {
 	char ch;
 

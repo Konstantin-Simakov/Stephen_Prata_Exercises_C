@@ -1,9 +1,9 @@
 /* exercise4.c -- Chapter 9 */
 #include <stdio.h>
 
-double harmonic_mean (double, double);		// for two numbers
+double harmonic_mean(double, double);		// for two numbers
 
-int main (void)
+int main(void)
 {
 	double n1, n2;
 
@@ -16,7 +16,7 @@ int main (void)
 	return 0;
 }
 
-double harmonic_mean (double x, double y)
+double harmonic_mean(double x, double y)
 {
 	return 2.0 / (1.0 / x + 1.0 / y);
 }

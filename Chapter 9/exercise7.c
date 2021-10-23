@@ -2,9 +2,9 @@
 #include <stdio.h>
 #include <ctype.h>				/* for isalpha() */
 
-int char_number (int ch);		/* int ch -- for EOF == (-1) */
+int char_number(int ch);		/* int ch -- for EOF == (-1) */
 
-int main (void)
+int main(void)
 {
 	int ch;
 	int ans;		/* for char_number() answer */
@@ -33,7 +33,7 @@ int main (void)
 }
 
 /* only for ASCII-code table */
-int char_number (int ch)
+int char_number(int ch)
 {
 	int ser_num;		/* a serial number of the letter */
 

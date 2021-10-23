@@ -1,9 +1,9 @@
 /* exercise1.c -- Chapter 9 */
 #include <stdio.h>
 
-double min (double a, double b);
+double min(double a, double b);
 
-int main (void)
+int main(void)
 {
 	double n1, n2;
 
@@ -19,7 +19,7 @@ int main (void)
 	return 0;
 }
 
-double min (double a, double b)
+double min(double a, double b)
 {
 	double res = a;
 
