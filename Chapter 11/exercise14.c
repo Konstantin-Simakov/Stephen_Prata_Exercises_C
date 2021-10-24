@@ -2,9 +2,9 @@
 #include <stdio.h>
 #include <stdlib.h>		// for atof() -- double, atoi() -- int
 
-double power (double base, int exponent);
+double power(double base, int exponent);
 
-int main (int argc, char ** argv)
+int main(int argc, char ** argv)
 {
 	double base;		// for atof() -- double
 	int n;				// for atoi() -- int
@@ -23,7 +23,7 @@ int main (int argc, char ** argv)
 }
 
 /* for positive exponent only (for now...) */
-double power (double base, int n)
+double power(double base, int n)
 {
 	int i;
 	double res;

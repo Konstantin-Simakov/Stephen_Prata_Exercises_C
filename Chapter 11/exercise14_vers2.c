@@ -2,9 +2,9 @@
 #include <stdio.h>
 #include <stdlib.h>		// for strtod() -- double, strtol() -- long
 
-double power (double base, long exponent);		// long is for strtol()
+double power(double base, long exponent);		// long is for strtol()
 
-int main (int argc, char ** argv)
+int main(int argc, char ** argv)
 {
 	double base;		// for double -- strtod()
 	long n;				// for long -- strtol()
@@ -26,7 +26,7 @@ int main (int argc, char ** argv)
 }
 
 /* for positive exponent only (for now...) */
-double power (double base, long n)
+double power(double base, long n)
 {
 	long i;
 	double res;

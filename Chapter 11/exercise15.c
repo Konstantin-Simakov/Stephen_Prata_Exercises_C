@@ -5,10 +5,10 @@
 
 #define SIZE 20
 
-int my_atoi (const char * str);
-char * s_gets (char *, int);
+int my_atoi(const char * str);
+char * s_gets(char *, int);
 
-int main (void)
+int main(void)
 {
 	char str[SIZE];
 	int num;
@@ -29,7 +29,7 @@ int main (void)
 }
 
 // for decimal number system only
-int my_atoi (const char * str)
+int my_atoi(const char * str)
 {
 	int num;
 	bool negative;
@@ -60,7 +60,7 @@ int my_atoi (const char * str)
 	return num;
 }
 
-char * s_gets (char * str, int n)
+char * s_gets(char * str, int n)
 {
 	char * ret_val;
 

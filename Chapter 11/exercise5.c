@@ -1,9 +1,9 @@
 /* exercise5.c -- Chapter 11 */
 #include <stdio.h>
 
-char * my_strchr (const char * str, int ch);
+char * my_strchr(const char * str, int ch);
 
-int main (void)
+int main(void)
 {
 	char str[] = "Hello, my friends!\nHow are you?\n";
 	char * find;
@@ -14,7 +14,7 @@ int main (void)
 	return 0;
 }
 
-char * my_strchr (const char * str, int ch)
+char * my_strchr(const char * str, int ch)
 {
 	char * ret_val;
 

@@ -4,10 +4,10 @@
 
 #define SIZE 50
 
-void str_change (char *);
-char * s_gets (char *, int);
+void str_change(char *);
+char * s_gets(char *, int);
 
-int main (void)
+int main(void)
 {
 	char str[SIZE];
 
@@ -24,7 +24,7 @@ int main (void)
 	return 0;
 }
 
-void str_change (char * str)
+void str_change(char * str)
 {
 	const int STLEN = strlen(str);		// without '\0'!!!
 

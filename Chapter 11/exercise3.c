@@ -5,9 +5,9 @@
 
 #define SIZE 10
 
-char * str_word (char * str, int n);
+char * str_word(char * str);
 
-int main (void)
+int main(void)
 {
 	char str[SIZE];
 	char * ptr;
@@ -18,7 +18,7 @@ int main (void)
 	return 0;
 }
 
-char * str_word (char * str, int n)
+char * str_word(char * str, int n)
 {
 	bool inword = false;
 	int i = 0;
@@ -36,7 +36,7 @@ char * str_word (char * str, int n)
 	}
 	if (EOF == temp)
 		str = NULL;
-	else	// it is important for any string in C
+	else	// it is important for any string in the C
 		str[i] = '\0';
 
 	return str;

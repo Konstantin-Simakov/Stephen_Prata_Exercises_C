@@ -3,9 +3,9 @@
 
 #define SIZE 10
 
-char * str_input (char * str, int n);
+char * str_input(char * str, int n);
 
-int main (void)
+int main(void)
 {
 	char str[SIZE];
 
@@ -16,7 +16,7 @@ int main (void)
 }
 
 /* reads n - 1 characters, n-th character is '\0' */
-char * str_input (char * str, int n)
+char * str_input(char * str, int n)
 {
 	int i = 0;
 

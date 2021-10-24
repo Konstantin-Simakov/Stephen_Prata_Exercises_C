@@ -4,10 +4,10 @@
 
 #define SIZE 40			/* you can change this value but it should be only positive */
 
-char * s_gets (char *, int);
-void str_delete_space (char *);
+char * s_gets(char *, int);
+void str_delete_space(char *);
 
-int main (void)
+int main(void)
 {
 	char str[SIZE];
 
@@ -24,7 +24,7 @@ int main (void)
 	return 0;
 }
 
-void str_delete_space (char * str)
+void str_delete_space(char * str)
 {
 	char * temp;
 
@@ -44,7 +44,7 @@ void str_delete_space (char * str)
 	}
 }
 
-char * s_gets (char * st, int n)
+char * s_gets(char * st, int n)
 {
 	char * ret_val;
 

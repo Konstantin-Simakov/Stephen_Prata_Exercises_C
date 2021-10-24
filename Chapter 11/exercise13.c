@@ -1,7 +1,7 @@
 /* exercise13.c -- Chapter 11 */
 #include <stdio.h>
 
-int main (int argc, char ** argv)
+int main(int argc, char ** argv)
 {
 	int i;
 

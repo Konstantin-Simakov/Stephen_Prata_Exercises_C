@@ -6,20 +6,21 @@
 #define LIM 20							// saficiently number of input characters
 #define SIZE 40							// saficiently number of input characters
 
-char * s_gets (char * st, int n);
+char * s_gets(char * st, int n);
 // ct == lim
-int words_strs (const char (*strs)[SIZE], int lim);
-int upper_strs (const char (*strs)[SIZE], int lim);
-int lower_strs (const char (*strs)[SIZE], int lim);
-int punct_strs (const char (*strs)[SIZE], int lim);
-int digit_strs (const char (*strs)[SIZE], int lim);
+int words_strs(const char (*strs)[SIZE], int lim);
+int upper_strs(const char (*strs)[SIZE], int lim);
+int lower_strs(const char (*strs)[SIZE], int lim);
+int punct_strs(const char (*strs)[SIZE], int lim);
+int digit_strs(const char (*strs)[SIZE], int lim);
 
-int main (void)
+int main(void)
 {
 	char strs[LIM][SIZE];
 	int ct_strs = 0;
-	
-	printf("Enter up to %d strings (or an empty line to finish the program):\n", LIM);
+
+	printf("Enter up to %d strings "
+		"(or an empty line to finish the program):\n", LIM);
 	while (ct_strs < LIM && s_gets(strs[ct_strs], SIZE))		// while EOF won't be input
 	{
 		ct_strs++;
@@ -40,7 +41,7 @@ int main (void)
 }
 
 // processing functions
-int words_strs (const char (*strs)[SIZE], int lim)
+int words_strs(const char (*strs)[SIZE], int lim)
 {
 	int ct_wds = 0;
 	bool in_word;
@@ -64,7 +65,7 @@ int words_strs (const char (*strs)[SIZE], int lim)
 	return ct_wds;
 }
 
-int upper_strs (const char (*strs)[SIZE], int lim)
+int upper_strs(const char (*strs)[SIZE], int lim)
 {
 	int uc = 0;
 	int i, j;
@@ -77,7 +78,7 @@ int upper_strs (const char (*strs)[SIZE], int lim)
 	return uc;
 }
 
-int lower_strs (const char (*strs)[SIZE], int lim)
+int lower_strs(const char (*strs)[SIZE], int lim)
 {
 	int lc = 0;
 	int i, j;
@@ -90,7 +91,7 @@ int lower_strs (const char (*strs)[SIZE], int lim)
 	return lc;
 }
 
-int punct_strs (const char (*strs)[SIZE], int lim)
+int punct_strs(const char (*strs)[SIZE], int lim)
 {
 	int pc = 0;
 	int i, j;
@@ -103,7 +104,7 @@ int punct_strs (const char (*strs)[SIZE], int lim)
 	return pc;
 }
 
-int digit_strs (const char (*strs)[SIZE], int lim)
+int digit_strs(const char (*strs)[SIZE], int lim)
 {
 	int dc = 0;
 	int i, j;
@@ -116,7 +117,7 @@ int digit_strs (const char (*strs)[SIZE], int lim)
 	return dc;
 }
 
-char * s_gets (char * str, int n)
+char * s_gets(char * str, int n)
 {
 	char * ret_val;
 

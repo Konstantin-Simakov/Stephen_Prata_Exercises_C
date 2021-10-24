@@ -4,11 +4,11 @@
 
 #define SIZE 100
 
-bool is_within (const char * s, int c);
-char * s_gets (char * str, int n);
-int get_char (void);
+bool is_within(const char * s, int c);
+char * s_gets(char * str, int n);
+int get_char(void);
 
-int main (void)
+int main(void)
 {
 	char str[SIZE];
 	int ch;
@@ -31,7 +31,7 @@ int main (void)
 	return 0;
 }
 
-bool is_within (const char * s, int c)
+bool is_within(const char * s, int c)
 {
 	bool in_str;
 
@@ -47,7 +47,7 @@ bool is_within (const char * s, int c)
 	return in_str;
 }
 
-char * s_gets (char * str, int n)
+char * s_gets(char * str, int n)
 {
 	char * ret_val;
 
@@ -68,7 +68,7 @@ char * s_gets (char * str, int n)
 	return ret_val;
 }
 
-int get_char (void)
+int get_char(void)
 {
 	int ch;
 

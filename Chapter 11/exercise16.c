@@ -6,13 +6,13 @@
 #define LIM 5
 #define SIZE 20
 
-char * s_gets (char *, int);
+char * s_gets(char *, int);
 // ct == lim
-void to_upper (char (*pt)[SIZE], int lim);
-void to_lower (char (*pt)[SIZE], int lim);
-void output (const char (*pt)[SIZE], int lim);
+void to_upper(char (*pt)[SIZE], int lim);
+void to_lower(char (*pt)[SIZE], int lim);
+void output(const char (*pt)[SIZE], int lim);
 
-int main (int argc, char * argv[])
+int main(int argc, char * argv[])
 {
 	char strings[LIM][SIZE];
 	int ct = 0;
@@ -39,7 +39,7 @@ int main (int argc, char * argv[])
 	return 0;
 }
 
-char * s_gets (char * st, int n)
+char * s_gets(char * st, int n)
 {
 	char * ret_val;
 
@@ -60,7 +60,7 @@ char * s_gets (char * st, int n)
 	return ret_val;
 }
 
-void to_upper (char (*strings)[SIZE], int lim)
+void to_upper(char (*strings)[SIZE], int lim)
 {
 	int i, j;
 
@@ -69,7 +69,7 @@ void to_upper (char (*strings)[SIZE], int lim)
 			strings[i][j] = toupper(strings[i][j]);
 }
 
-void to_lower (char (*strings)[SIZE], int lim)
+void to_lower(char (*strings)[SIZE], int lim)
 {
 	int i, j;
 
@@ -78,7 +78,7 @@ void to_lower (char (*strings)[SIZE], int lim)
 			strings[i][j] = tolower(strings[i][j]);
 }
 
-void output (const char (*strings)[SIZE], int lim)
+void output(const char (*strings)[SIZE], int lim)
 {
 	int i;
 

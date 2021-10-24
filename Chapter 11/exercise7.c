@@ -5,10 +5,10 @@
 #define SIZE_SRC 8
 #define SIZE_TRG 7
 
-char * s_gets (char *, int);
-char * my_strncpy (char *, const char *, int);
+char * s_gets(char *, int);
+char * my_strncpy(char *, const char *, int);
 
-int main (void)
+int main(void)
 {
 	char str_src[SIZE_SRC];
 	char str_trg[SIZE_TRG];
@@ -43,7 +43,7 @@ int main (void)
 	return 0;
 }
 
-char * my_strncpy (char * s1, const char * s2, int n)
+char * my_strncpy(char * s1, const char * s2, int n)
 {
 	int i = 0;
 
@@ -56,7 +56,7 @@ char * my_strncpy (char * s1, const char * s2, int n)
 	return s1;
 }
 
-char * s_gets (char * str, int n)
+char * s_gets(char * str, int n)
 {
 	char * ret_val;
 

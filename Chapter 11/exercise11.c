@@ -9,18 +9,18 @@
 #define SPACE ' '
 
 // prototypes of normal functions
-void menu (void);
-char get_choice (void);
-char get_first (void);
-char * s_gets (char *, int);
-void otpt_src (char **, int);			// output strings in source order
+void menu(void);
+char get_choice(void);
+char get_first(void);
+char * s_gets(char *, int);
+void otpt_src(char **, int);			// output strings in source order
 // prototypes of sort functions
-void otpt_ascii (char **, int);			// output strings in ASCII order
-void otpt_ln_str (char **, int);		// output strings in string length order
-void otpt_ln_1word (char **, int);		// output strings in the first word length order
-int len_1word (const char *);
+void otpt_ascii(char **, int);			// output strings in ASCII order
+void otpt_ln_str(char **, int);		// output strings in string length order
+void otpt_ln_1word(char **, int);		// output strings in the first word length order
+int len_1word(const char *);
 
-int main (void)
+int main(void)
 {
 	char input[LIM][SIZE];					// source strings array
 	char * ptstr[LIM];						// for sort of strings
@@ -58,7 +58,7 @@ int main (void)
 	return 0;
 }
 
-char * s_gets (char * str, int n)
+char * s_gets(char * str, int n)
 {
 	char * ret_val;
 
@@ -78,7 +78,7 @@ char * s_gets (char * str, int n)
 	return ret_val;
 }
 
-void menu (void)
+void menu(void)
 {
 	puts("Choose from five options:");
 	puts("1) output source strings list;");
@@ -88,7 +88,7 @@ void menu (void)
 	puts("5) quit program");
 }
 
-char get_choice (void)
+char get_choice(void)
 {
 	int ch;
 
@@ -102,7 +102,7 @@ char get_choice (void)
 	return ch;
 }
 
-char get_first (void)
+char get_first(void)
 {
 	int ch;
 
@@ -114,7 +114,7 @@ char get_first (void)
 }
 
 // strings functions
-void otpt_src (char ** strings, int num)
+void otpt_src(char ** strings, int num)
 {
 	int i;
 
@@ -124,7 +124,7 @@ void otpt_src (char ** strings, int num)
 	putchar('\n');
 }
 
-void otpt_ascii (char ** strings, int num)
+void otpt_ascii(char ** strings, int num)
 {
 	char * temp;
 	int top, seek;
@@ -143,7 +143,7 @@ void otpt_ascii (char ** strings, int num)
 	otpt_src(strings, num);
 }
 
-void otpt_ln_str (char ** strings, int num)
+void otpt_ln_str(char ** strings, int num)
 {
 	int seek, top;
 	char * temp;
@@ -161,7 +161,7 @@ void otpt_ln_str (char ** strings, int num)
 	otpt_src(strings, num);
 }
 
-void otpt_ln_1word (char ** strings, int num)
+void otpt_ln_1word(char ** strings, int num)
 {
 	int seek, top;
 	char * temp;
@@ -179,7 +179,7 @@ void otpt_ln_1word (char ** strings, int num)
 	otpt_src(strings, num);
 }
 
-int len_1word (const char * str)
+int len_1word(const char * str)
 {
 	int ct = 0;
 

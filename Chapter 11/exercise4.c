@@ -6,9 +6,9 @@
 
 #define SIZE (10 + 1)
 
-char * str_word (char * str, int n);
+char * str_word(char * str, int n);
 
-int main (void)
+int main(void)
 {
 	char str[SIZE];
 	char * ptr;
@@ -22,7 +22,7 @@ int main (void)
 }
 
 /* reads (SIZE - 1) characters because the last character is '\0' */
-char * str_word (char * str, int n)
+char * str_word(char * str, int n)
 {
 	bool inword = false;
 	int i = 0;

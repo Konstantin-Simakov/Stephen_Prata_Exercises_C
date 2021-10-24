@@ -5,10 +5,10 @@
 #define SIZE1 20
 #define SIZE2 (SIZE1 / 2)
 
-char * string_in (const char *, const char *);
-char * s_gets (char *, int);
+char * string_in(const char *, const char *);
+char * s_gets(char *, int);
 
-int main (void)
+int main(void)
 {
 	char str1[SIZE1];
 	char str2[SIZE2];
@@ -42,7 +42,7 @@ int main (void)
 }
 
 /* Does s1 consist string s2? */
-char * string_in (const char * s1, const char * s2)
+char * string_in(const char * s1, const char * s2)
 {
 	const int LEN_S2 = strlen(s2);
 
@@ -69,7 +69,7 @@ char * string_in (const char * s1, const char * s2)
 	return ret_val;
 }
 
-char * s_gets (char * st, int n)
+char * s_gets(char * st, int n)
 {
 	char * ret_val;
 
