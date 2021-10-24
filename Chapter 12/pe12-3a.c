@@ -7,9 +7,9 @@ gcc exercise3.c pe12-3a.c -o exercise3 -Wall */
 ./exercise3 */
 #include <stdio.h>		/* for scanf(), printf() */
 
-static void get_info (int, double *, double *);		// this function declaration is needed
+static void get_info(int, double *, double *);		// this function declaration is needed
 
-int set_mode (int mode, int prev_mode)
+int set_mode(int mode, int prev_mode)
 {
 	int res_mode = mode;
 
@@ -25,7 +25,7 @@ int set_mode (int mode, int prev_mode)
 	return res_mode;
 }
 
-static void get_info (int mode, double * distance, double * consumption)
+static void get_info(int mode, double * distance, double * consumption)
 {
 	if (0 == mode)
 	{
@@ -43,7 +43,7 @@ static void get_info (int mode, double * distance, double * consumption)
 	}
 }
 
-void show_info (int mode)
+void show_info(int mode)
 {
 	double distance, consumption;
 

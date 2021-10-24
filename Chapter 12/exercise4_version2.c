@@ -1,9 +1,9 @@
 /* exercise4_version2.c -- Chapter 12 */
 #include <stdio.h>
 
-int native_count (void);
+int native_count(void);
 
-int main (void)
+int main(void)
 {
 	int i;
 	int num;
@@ -19,7 +19,7 @@ int main (void)
 	return 0;
 }
 
-int native_count (void)
+int native_count(void)
 {
 	static int ct = 0;
 

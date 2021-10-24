@@ -4,7 +4,7 @@
 
 #define SIZE 40
 
-int main (void)
+int main(void)
 {
 	int i;
 	int num;
@@ -13,7 +13,7 @@ int main (void)
 
 	printf("Enter words number: ");
 	scanf("%d", &num);
-	words = (char **) malloc(num * sizeof(char *));
+	words = (char **) malloc(num * sizeof(char *));		// ??
 	
 	printf("Now enter %d words:\n", num);
 	for (i = 0; i < num; i++)
@@ -23,11 +23,11 @@ int main (void)
 		words[i] = temp;
 	}
 
-	puts("Here are words you entered:");
+	printf("Here are all %d words you entered:\n", num);
 	for (i = 0; i < num; i++)
 		puts(words[i]);
 
-	free(words);	/* <==> free(temp); for all earlier used temp varables */
+	free(words);	// <==> free(temp); for all earlier used temp varables
 	
 	return 0;
 }

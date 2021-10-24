@@ -4,11 +4,10 @@
 gcc exercise6.c support6.c -o exercise6 -Wall */
 /* then launch:
 ./exercise6 */
-
 #include <stdio.h>		// for printf()
 
 // output the number of occurrences of each of the corresponding numbers
-void output_results (int ar[], int n)
+void output_results(int ar[], int n)
 {
 	int i;
 
@@ -17,7 +16,7 @@ void output_results (int ar[], int n)
 }
 
 // zeroing all elements of the array
-void zeroing_arr (int ar[], int n)
+void zeroing_arr(int ar[], int n)
 {
 	int i;
 

@@ -5,12 +5,11 @@ gcc exercise5.c support5.c -o exercise5 -Wall */
 /* then launch:
 ./exercise5 */
 /* stdio.h header file here isn't required */
-
 #include <stdlib.h>		// for srand()
 #include <time.h>		// for time()
 #include "head5.h"
 
-int main (void)
+int main(void)
 {
 	int nums[SIZE];
 

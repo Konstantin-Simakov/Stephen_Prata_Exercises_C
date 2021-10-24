@@ -8,7 +8,7 @@ gcc exercise3.c pe12-3a.c -o exercise3 -Wall */
 #include <stdio.h>
 #include "pe12-3a.h"
 
-int main (void)
+int main(void)
 {
 	int mode;
 	int res_mode = 0;						/* initial value for the res_mode (default) -- for correct job of functions below */

@@ -4,12 +4,11 @@
 gcc exercise6.c support6.c -o exercise6 -Wall */
 /* then launch:
 ./exercise6 */
-
 #include <stdio.h>
 #include <stdlib.h>					// for rand(), srand()
 #include "head6.h"					// for prototypes of according functions which are used in this file
 
-int main (void)
+int main(void)
 {
 	int ar[SIZE] = { 0 };			// seed initialization of all elements of the array to zeros
 	int i;

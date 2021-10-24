@@ -8,12 +8,12 @@ gcc exercise7.c support7.c -o exercise7 -Wall */
 #include <stdlib.h>		/* for rand() */
 
 /* rollem() is required to roll_n_dice() */
-static int rollem (int sides)
+static int rollem(int sides)
 {
 	return rand() % sides + 1;
 }
 
-static int roll_n_dice (int dice, int sides)
+static int roll_n_dice(int dice, int sides)
 {
 	int d;
 	int tot;
@@ -35,7 +35,7 @@ static int roll_n_dice (int dice, int sides)
 	return tot;
 }
 
-void output_tosses (int tosses, int dice, int sides)
+void output_tosses(int tosses, int dice, int sides)
 {
 	int t;
 	int ret_val;

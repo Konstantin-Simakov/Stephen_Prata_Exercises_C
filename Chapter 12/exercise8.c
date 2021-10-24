@@ -2,10 +2,10 @@
 #include <stdio.h>
 #include <stdlib.h>		// for malloc(), free()
 
-int * make_array (int elem, int val);
-void show_array (const int ar[], int n);
+int * make_array(int elem, int val);
+void show_array(const int ar[], int n);
 
-int main (void)
+int main(void)
 {
 	int * pa;
 	int size;
@@ -31,7 +31,7 @@ int main (void)
 	return 0;
 }
 
-int * make_array (int size, int value)
+int * make_array(int size, int value)
 {
 	int * ptr;
 	int i;
@@ -44,7 +44,7 @@ int * make_array (int size, int value)
 	return ptr;
 }
 
-void show_array (const int ar[], int n)
+void show_array(const int ar[], int n)
 {
 	int i;
 

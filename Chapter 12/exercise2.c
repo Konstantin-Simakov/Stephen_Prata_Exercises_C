@@ -8,7 +8,7 @@ gcc exercise2.c pe12-2a.c -o exercise2 -Wall */
 #include <stdio.h>
 #include "pe12-2a.h"
 
-int main (void)
+int main(void)
 {
 	int mode;
 

@@ -9,9 +9,9 @@ gcc exercise7.c support7.c -o exercise7 -Wall */
 #include <time.h>		// for time()
 
 /* tosses output */
-extern void output_tosses (int tosses, int dice, int sides);
+extern void output_tosses(int tosses, int dice, int sides);
 
-int main (void)
+int main(void)
 {
 	int tosses, dice, sides;
 	int status;			// for scanf() return value saving

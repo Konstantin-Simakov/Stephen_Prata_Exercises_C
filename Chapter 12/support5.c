@@ -4,11 +4,10 @@
 gcc exercise5.c support5.c -o exercise5 -Wall */
 /* then launch:
 ./exercise5 */
-
 #include <stdio.h>		// for printf(), putchar()
 #include <stdlib.h>		// for rand()
 
-void init_ar_rand (int ar[], int n)
+void init_ar_rand(int ar[], int n)
 {
 	int i;
 
@@ -16,7 +15,7 @@ void init_ar_rand (int ar[], int n)
 		ar[i] = rand() % 10 + 1;		// random number from 1 to 10
 }
 
-void sort_decsend_nums (int ar[], int num)
+void sort_decsend_nums(int ar[], int num)
 {
 	int top, seed;
 	int temp;
@@ -32,7 +31,7 @@ void sort_decsend_nums (int ar[], int num)
 }
 
 // prints each number in the array on a separate corresponding line
-void output_ar_line (int ar[], int n)
+void output_ar_line(int ar[], int n)
 {
 	int i;
 

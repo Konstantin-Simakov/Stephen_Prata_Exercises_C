@@ -10,7 +10,7 @@ static int mode_input = 0;		/* explicit initialization of the static variable to
 static double distance;			/* implicit initialization of the static variable to a zero */
 static double consumption;		/* implicit initialization of the static variable to a zero */
 
-void set_mode (int mode)
+void set_mode(int mode)
 {
 	if (mode >= 2)						/* automatic variable -- mode */
 	{
@@ -25,7 +25,7 @@ void set_mode (int mode)
 		mode_input = mode;
 }
 
-void get_info (void)
+void get_info(void)
 {
 	if (0 == mode_input)
 	{
@@ -43,7 +43,7 @@ void get_info (void)
 	}
 }
 
-void show_info (void)
+void show_info(void)
 {
 	if (1 == mode_input)
 		printf("Fuel consumption is %.1f mpg.\n", 

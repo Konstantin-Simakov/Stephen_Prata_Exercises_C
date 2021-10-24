@@ -1,9 +1,9 @@
 /* exercise1.c -- Chapter 12 */
 #include <stdio.h>
 
-void critic (int *);
+void critic(int *);
 
-int main (void)
+int main(void)
 {
 	int units = 0;
 
@@ -17,7 +17,7 @@ int main (void)
 	return 0;
 }
 
-void critic (int * punits)
+void critic(int * punits)
 {
 	printf("You were unlucky. Try again.\n");
 	scanf("%d", punits);
