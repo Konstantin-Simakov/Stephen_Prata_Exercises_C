@@ -4,10 +4,10 @@
 
 #define LEN 20
 
-char * s_gets (char *, int);
-void output_str_to_str (FILE * fp1, FILE * fp2);
+char * s_gets(char *, int);
+void output_str_to_str(FILE * fp1, FILE * fp2);
 
-int main (void)
+int main(void)
 {
 	FILE * fp1, * fp2;
 	char fname1_str[LEN], fname2_str[LEN];
@@ -44,7 +44,7 @@ int main (void)
 	return 0;
 }
 
-char * s_gets (char * str, int n)
+char * s_gets(char * str, int n)
 {
 	char * ret_val;
 
@@ -65,7 +65,7 @@ char * s_gets (char * str, int n)
 	return ret_val;
 }
 
-void output_str_to_str (FILE * fp1, FILE * fp2)
+void output_str_to_str(FILE * fp1, FILE * fp2)
 {
 	// An array of sufficient size for the string is required 
 	// to ensure that a newline character is read. (See the code below.)

@@ -9,10 +9,10 @@
 #define COLS 30
 #define MAX  41
 
-void finit_rand_int (int ar[][COLS], int rows, FILE * fp);
-char * s_gets (char *, int);
+void f_init_rand_int(int ar[][COLS], int rows, FILE * fp);
+char * s_gets(char *, int);
 
-int main (void)
+int main(void)
 {
 	int nums[ROWS][COLS];
 	char fname[MAX];
@@ -25,12 +25,12 @@ int main (void)
 		fprintf(stderr, "Cannot open file %s for writing.\n", fname);
 		exit(EXIT_FAILURE);
 	}
-	finit_rand_int(nums, ROWS, fp);
+	f_init_rand_int(nums, ROWS, fp);
 
 	return 0;
 }
 
-void finit_rand_int (int ar[][COLS], int rows, FILE * fp)
+void f_init_rand_int(int ar[][COLS], int rows, FILE * fp)
 {
 	int i, j;
 
@@ -48,7 +48,7 @@ void finit_rand_int (int ar[][COLS], int rows, FILE * fp)
 }
 
 // This function is needed for the file name creating.
-char * s_gets (char * str, int n)
+char * s_gets(char * str, int n)
 {
 	char * ret_val;
 

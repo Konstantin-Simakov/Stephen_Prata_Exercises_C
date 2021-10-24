@@ -5,7 +5,7 @@
 
 #define SIZE (256 + 1)	// By the statement of the problem, none of the lines should exceed 256 bytes.
 
-int main (int argc, char * argv[])
+int main(int argc, char * argv[])
 {
 	FILE * fp;			// for argv[2]
 	char temp[SIZE];

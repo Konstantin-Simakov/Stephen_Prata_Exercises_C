@@ -4,10 +4,9 @@
 #include <ctype.h>		// for toupper()
 
 #define SIZE 40
+char * s_gets(char *, int);
 
-char * s_gets (char *, int);
-
-int main (void)
+int main(void)
 {
 	char fname_src[SIZE], fname_trg[SIZE];
 	FILE * fp_src, * fp_trg;
@@ -41,7 +40,7 @@ int main (void)
 	return 0;
 }
 
-char * s_gets (char * st, int n)
+char * s_gets(char * st, int n)
 {
 	char * ret_val;
 

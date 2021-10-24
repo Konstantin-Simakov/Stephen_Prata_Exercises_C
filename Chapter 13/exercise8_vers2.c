@@ -5,9 +5,9 @@
 
 #define LEN 100
 
-int fsearch_ch (FILE * in, char ch);
+int fsearch_ch(FILE * in, char ch);
 
-int main (int argc, char * argv[])
+int main(int argc, char * argv[])
 {
 	FILE * fp;
 	int i;
@@ -54,7 +54,7 @@ int main (int argc, char * argv[])
 	return 0;
 }
 
-int fsearch_ch (FILE * in, char ch)
+int fsearch_ch(FILE * in, char ch)
 {
 	int count = 0;
 	int temp;

@@ -5,9 +5,9 @@
 #define NAME 41
 #define MAXL 81
 
-char * s_gets (char *, int);
+char * s_gets(char *, int);
 
-int main (void)
+int main(void)
 {
 	FILE * fp;
 	char fname_str[NAME];
@@ -45,7 +45,7 @@ int main (void)
 }
 
 /* This is necessary for input of file name. */
-char * s_gets (char * str, int n)
+char * s_gets(char * str, int n)
 {
 	char * ret_val;
 

@@ -4,9 +4,9 @@
 
 #define SIZE 10
 
-double average (double ar[], int n);
+double average(double ar[], int n);
 
-int main (int argc, char * argv[])
+int main(int argc, char * argv[])
 {
 	FILE * fp;
 	double temp[SIZE];
@@ -45,7 +45,7 @@ int main (int argc, char * argv[])
 	return 0;
 }
 
-double average (double ar[], int n)
+double average(double ar[], int n)
 {
 	double res;
 	int i;

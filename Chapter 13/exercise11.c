@@ -5,7 +5,7 @@
 
 #define MAXL 101
 
-int main (int argc, char * argv[])
+int main(int argc, char * argv[])
 {
 	FILE * fp;
 	char fstring[MAXL];

@@ -8,14 +8,14 @@
 #define COLS 30
 #define MAX  41
 
-void init_array_int_from_file (int ar[][COLS], int rows, FILE * fp);
-void char_convert (char image[][COLS + 1], const int nums[][COLS], int rows);
-void arrays_char_to_strings (char ** image_ptr, const char ar[][COLS + 1], int rows);
-void output_results_in_file (const char ** image_ptr, int rows, FILE * fp);
-void output_results (const char ** image_ptr, int rows);
-char * s_gets (char *, int);
+void init_array_int_from_file(int ar[][COLS], int rows, FILE * fp);
+void char_convert(char image[][COLS + 1], const int nums[][COLS], int rows);
+void arrays_char_to_strings(char ** image_ptr, const char ar[][COLS + 1], int rows);
+void output_results_in_file(const char ** image_ptr, int rows, FILE * fp);
+void output_results(const char ** image_ptr, int rows);
+char * s_gets(char *, int);
 
-int main (void)
+int main(void)
 {
 	int nums[ROWS][COLS];
 	char image[ROWS][COLS + 1];
@@ -48,7 +48,7 @@ int main (void)
 	return 0;
 }
 
-char * s_gets (char * str, int n)
+char * s_gets(char * str, int n)
 {
 	char * ret_val;
 
@@ -69,7 +69,7 @@ char * s_gets (char * str, int n)
 	return ret_val;
 }
 
-void init_array_int_from_file (int ar[][COLS], int rows, FILE * fp)
+void init_array_int_from_file(int ar[][COLS], int rows, FILE * fp)
 {
 	int i, j;
 
@@ -78,7 +78,7 @@ void init_array_int_from_file (int ar[][COLS], int rows, FILE * fp)
 			fscanf(fp, "%d", &ar[i][j]);
 }
 
-void char_convert (char image[][COLS + 1], const int nums[][COLS], int rows)
+void char_convert(char image[][COLS + 1], const int nums[][COLS], int rows)
 {
 	int i, j;
 
@@ -116,7 +116,7 @@ void char_convert (char image[][COLS + 1], const int nums[][COLS], int rows)
 	}
 }
 
-void arrays_char_to_strings (char ** image_ptr, const char image[][COLS + 1], int rows)
+void arrays_char_to_strings(char ** image_ptr, const char ar[][COLS + 1], int rows)
 {
 	int i;
 
@@ -124,7 +124,7 @@ void arrays_char_to_strings (char ** image_ptr, const char image[][COLS + 1], in
 		image_ptr[i] = image[i];
 }
 
-void output_results_in_file (const char ** image_ptr, int rows, FILE * fp)
+void output_results_in_file(const char ** image_ptr, int rows, FILE * fp)
 {
 	int i;
 
@@ -135,7 +135,7 @@ void output_results_in_file (const char ** image_ptr, int rows, FILE * fp)
 	}
 }
 
-void output_results (const char ** image_ptr, int rows)
+void output_results(const char ** image_ptr, int rows)
 {
 	int i;
 

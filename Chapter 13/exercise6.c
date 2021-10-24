@@ -6,11 +6,11 @@
 // Here you can choose any value for LEN consstant.
 #define LEN (11 + 1)	// + 1 -- for the last '\0' character.
 
-void copying_data_3rd (FILE *, FILE *);
-void get_target_file_name (char *, const char *, int);
-char * s_gets (char *, int);
+void copying_data_3rd(FILE *, FILE *);
+void get_target_file_name(char *, const char *, int);
+char * s_gets(char *, int);
 
-int main (void)
+int main(void)
 {
 	FILE * in, * out;
 	char fname_src[LEN], fname_trg[LEN];
@@ -50,7 +50,7 @@ int main (void)
 }
 
 // It is copying data.
-void copying_data_3rd (FILE * out, FILE * in)
+void copying_data_3rd(FILE * out, FILE * in)
 {
 	int count = 0;
 	int ch;
@@ -61,7 +61,7 @@ void copying_data_3rd (FILE * out, FILE * in)
 }
 
 // It is creating of target filename.
-void get_target_file_name (char * str_trg, const char * str_src, int stlen)
+void get_target_file_name(char * str_trg, const char * str_src, int stlen)
 {
 	char * find;
 
@@ -83,7 +83,7 @@ void get_target_file_name (char * str_trg, const char * str_src, int stlen)
 }
 
 // It is more better function than fgets() or gets() all the more.
-char * s_gets (char * st, int n)
+char * s_gets(char * st, int n)
 {
 	char * ret_val;
 

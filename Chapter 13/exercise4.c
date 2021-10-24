@@ -5,7 +5,7 @@
 // Here you can choose any value that is more than 0.
 #define BUFFER 20
 
-int main (int argc, char * argv[])
+int main(int argc, char * argv[])
 {
 	int i;
 	FILE * fp;

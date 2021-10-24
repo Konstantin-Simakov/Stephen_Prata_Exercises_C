@@ -3,10 +3,9 @@
 #include <stdlib.h>						// for exit()
 
 #define SIZE 40
+char * s_gets(char *, int);
 
-char * s_gets (char *, int);
-
-int main (void)
+int main(void)
 {
 	FILE * fp;
 	int ch;
@@ -38,7 +37,7 @@ int main (void)
 }
 
 // It is needed to delete '\n' character.
-char * s_gets (char * st, int n)
+char * s_gets(char * st, int n)
 {
 	char * ret_val;
 

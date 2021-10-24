@@ -5,8 +5,9 @@
 #include <ctype.h>		// for isdigit()
 
 #define ARSIZE 1000
+void set_array_double(double ar[], int n);
 
-int main (int argc, char ** argv)
+int main(int argc, char ** argv)
 {
 	double numbers[ARSIZE];
 	double value;
@@ -64,7 +65,7 @@ int main (int argc, char ** argv)
 	return 0;
 }
 
-void set_array_double (double ar[], int n)
+void set_array_double(double ar[], int n)
 {
 	int i;
 

@@ -5,7 +5,7 @@
 
 #define MAX 41
 
-int main (void)
+int main(void)
 {
 	FILE * fp;
 	char words[MAX];

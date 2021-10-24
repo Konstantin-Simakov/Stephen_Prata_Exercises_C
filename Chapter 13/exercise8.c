@@ -5,9 +5,9 @@
 
 #define LEN 100
 
-int str_search_ch (const char * str, char ch);
+int str_search_ch(const char * str, char ch);
 
-int main (int argc, char * argv[])
+int main(int argc, char * argv[])
 {
 	FILE * fp;
 	char temp_str[LEN];
@@ -60,7 +60,7 @@ int main (int argc, char * argv[])
 	return 0;
 }
 
-int str_search_ch (const char * str, char ch)
+int str_search_ch(const char * str, char ch)
 {
 	int count = 0;
 
