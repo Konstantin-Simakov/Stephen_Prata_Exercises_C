@@ -3,9 +3,9 @@
 #include <string.h>			/* for strlen() */
 #include <math.h>			/* for pow() */
 
-int bin_to_decimal (char *);
+int bin_to_decimal(char *);
 
-int main (void)
+int main(void)
 {
 	char * pbin = "1000010";
 
@@ -14,7 +14,7 @@ int main (void)
 	return 0;
 }
 
-int bin_to_decimal (char * str)
+int bin_to_decimal(char * str)
 {
 	const int MAX_POWER = strlen(str) - 1;
 	int i;

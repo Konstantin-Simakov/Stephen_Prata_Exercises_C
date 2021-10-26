@@ -16,14 +16,14 @@
 #define MULT_ITALIC		0x80000
 #define MULT_UNDER		0x100000
 
-void eatline (void);
-char show_menu (void);
-char show_menu_2 (void);
-unsigned font_id_change (unsigned);
-unsigned size_change (unsigned);
-unsigned align_change (unsigned);
-unsigned bold (unsigned);
-unsigned italic (unsigned);
-unsigned underline (unsigned);
-void output (const unsigned);
-unsigned init (unsigned);
+void eatline(void);
+char show_menu(void);
+char show_menu_2(void);
+unsigned font_id_change(unsigned);
+unsigned size_change(unsigned);
+unsigned align_change(unsigned);
+unsigned bold(unsigned);
+unsigned italic(unsigned);
+unsigned underline(unsigned);
+void output(const unsigned);
+unsigned init(unsigned);

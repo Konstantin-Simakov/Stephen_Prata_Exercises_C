@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include "exercise6_head.h"		/* for struct template */
 
-int main (void)
+int main(void)
 {
 	struct font text = { 1, 12, 0 };	/* remain values are 0 -- off */
 	char choice;

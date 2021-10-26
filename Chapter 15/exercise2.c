@@ -6,15 +6,14 @@
 #include <string.h>			/* for strlen() */
 #include <math.h>			/* for pow(); add "-lm" option during the compilation */
 
-bool is_bin (char * str);
-int bstoi (char *);
-char * itobs (int num, char * str, int n);
+bool is_bin(char * str);
+int bstoi(char *);
+char * itobs(int num, char * str, int n);
 
-int main (int argc, char * argv[])
+int main(int argc, char * argv[])
 {
 	/* here you can change the sizeof() value if you change integer type */
 	const static int SIZE = CHAR_BIT * sizeof(signed char) + 1;
-
 	int num1, num2;
 	char bin_str1[SIZE], bin_str2[SIZE];
 
@@ -61,7 +60,7 @@ int main (int argc, char * argv[])
 	return 0;
 }
 
-bool is_bin (char * str)
+bool is_bin(char * str)
 {
 	bool is_bs = true;
 
@@ -79,10 +78,9 @@ bool is_bin (char * str)
 	return is_bs;
 }
 
-int bstoi (char * str)
+int bstoi(char * str)
 {
 	const int MAX_POWER = strlen(str) - 1;
-	
 	int i;
 	int res;
 
@@ -95,7 +93,7 @@ int bstoi (char * str)
 	return res;
 }
 
-char * itobs (int num, char * str, int n)
+char * itobs(int num, char * str, int n)
 {
 	int i;
 

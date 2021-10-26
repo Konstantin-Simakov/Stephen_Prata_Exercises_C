@@ -5,9 +5,9 @@
 #include <stdbool.h>		/* for bool, true, false */
 #include <math.h>			/* for pow(); add "-lm" option before to compile */
 
-bool bit_include (int num, int pos);
+bool bit_include(int num, int pos);
 
-int main (void)
+int main(void)
 {
 	int num, pos;
 
@@ -22,10 +22,9 @@ int main (void)
 	return 0;
 }
 
-bool bit_include (int num, int pos)
+bool bit_include(int num, int pos)
 {
 	const static int MAX_POS = CHAR_BIT * sizeof(int) - 1;
-	
 	int mask;
 	bool include = false;
 

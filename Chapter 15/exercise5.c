@@ -8,11 +8,11 @@
 /* + 1 -- for '\0' character in the end of the string */
 const static int STLEN = CHAR_BIT * sizeof(short);			/* STLEN -- without '\0' character */
 
-unsigned rotate_left (unsigned num, int n_pos);
-char * itobs (int num, char * str, int n);
-int bstoi (char * str);
+unsigned rotate_left(unsigned num, int n_pos);
+char * itobs(int num, char * str, int n);
+int bstoi(char * str);
 
-int main (void)
+int main(void)
 {
 	unsigned x = 15;
 	char str[STLEN + 1];		
@@ -28,10 +28,10 @@ int main (void)
 	return 0;
 }
 
-unsigned rotate_left (unsigned num, int n_pos)
+unsigned rotate_left(unsigned num, int n_pos)
 {
-	const int MAX_POS = STLEN - 1;		/* (- 1) -- '\0'; (- 1) -- index, not a counter */
-										/* => (- 2) => (STLEN - 2) */
+	/* (- 1) -- '\0'; (- 1) -- index, not a counter => (- 2) => (STLEN - 2) */
+	const int MAX_POS = STLEN - 1;		
 	unsigned temp;
 	int i;
 
@@ -52,7 +52,7 @@ unsigned rotate_left (unsigned num, int n_pos)
 	return num;
 }
 
-char * itobs (int num, char * str, int n)
+char * itobs(int num, char * str, int n)
 {
 	int i;
 
@@ -63,10 +63,9 @@ char * itobs (int num, char * str, int n)
 	return str;
 }
 
-int bstoi (char * str)
+int bstoi(char * str)
 {
 	const int MAX_POWER = strlen(str) - 1;
-	
 	int i;
 	int res;
 

@@ -5,13 +5,13 @@
 #include <ctype.h>			/* for tolower() */
 #include <string.h>			/* for strchr() */
 
-void eatline (void)
+void eatline(void)
 {
 	while (getchar() != '\n')
 		continue;
 }
 
-char show_menu (void)
+char show_menu(void)
 {
 	int ans;
 
@@ -31,7 +31,7 @@ char show_menu (void)
 	return ans;
 }
 
-void font_id_change (struct font * ptext)
+void font_id_change(struct font * ptext)
 {
 	int temp;
 
@@ -49,7 +49,7 @@ void font_id_change (struct font * ptext)
 		puts("Invalid range. Source value won't be changed.");
 }
 
-void size_change (struct font * ptext)
+void size_change(struct font * ptext)
 {
 	int temp;
 
@@ -67,7 +67,7 @@ void size_change (struct font * ptext)
 		puts("Invalid range. Source value won't be changed.");
 }
 
-void align_change (struct font * ptext)
+void align_change(struct font * ptext)
 {
 	char ans;
 
@@ -84,7 +84,7 @@ void align_change (struct font * ptext)
 	}
 }
 
-char show_menu_2 (void)
+char show_menu_2(void)
 {
 	char ans;
 
@@ -103,7 +103,7 @@ char show_menu_2 (void)
 	return ans;
 }
 
-void bold (struct font * ptext)
+void bold(struct font * ptext)
 {
 	if (ptext->bold)
 		ptext->bold = false;
@@ -111,7 +111,7 @@ void bold (struct font * ptext)
 		ptext->bold = true;
 }
 
-void italic (struct font * ptext)
+void italic(struct font * ptext)
 {
 	if (ptext->italic)
 		ptext->italic = false;
@@ -119,7 +119,7 @@ void italic (struct font * ptext)
 		ptext->italic = true;
 }
 
-void underline (struct font * ptext)
+void underline(struct font * ptext)
 {
 	if (ptext->underline)
 		ptext->underline = false;
@@ -127,7 +127,7 @@ void underline (struct font * ptext)
 		ptext->underline = true;
 }
 
-void output_st (const struct font * ptext)
+void output_st(const struct font * ptext)
 {
 	char * str;
 

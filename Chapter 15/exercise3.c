@@ -2,9 +2,9 @@
 #include <stdio.h>
 #include <limits.h>		/* for CHAR_BIT */
 
-int included_bits (int num);
+int included_bits(int num);
 
-int main (void)
+int main(void)
 {
 	int num = 077;		/* you can change this value */
 
@@ -14,10 +14,9 @@ int main (void)
 	return 0;
 }
 
-int included_bits (int num)
+int included_bits(int num)
 {
 	const static int SIZE = CHAR_BIT * sizeof(int);
-
 	int i, count;
 
 	for (i = 0, count = 0; i < SIZE; i++, num >>= 1)

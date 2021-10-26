@@ -6,13 +6,13 @@
 #include <ctype.h>			/* for tolower() */
 #include <string.h>			/* for strchr() */
 
-void eatline (void)
+void eatline(void)
 {
 	while (getchar() != '\n')
 		continue;
 }
 
-char show_menu (void)
+char show_menu(void)
 {
 	int ans;
 
@@ -33,7 +33,7 @@ char show_menu (void)
 }
 
 /* It is assumed that all bits are preset to zero before using init(). */
-unsigned init (unsigned text)
+unsigned init(unsigned text)
 {
 	text |= 1;
 	text |= 12 * MULT_SIZE;		/* == 0xC00 */
@@ -45,7 +45,7 @@ unsigned init (unsigned text)
 	return text;
 }
 
-unsigned font_id_change (unsigned text)
+unsigned font_id_change(unsigned text)
 {
 	int temp;
 
@@ -68,7 +68,7 @@ unsigned font_id_change (unsigned text)
 	return text;
 }
 
-unsigned size_change (unsigned text)
+unsigned size_change(unsigned text)
 {
 	int temp;
 
@@ -91,7 +91,7 @@ unsigned size_change (unsigned text)
 	return text;
 }
 
-unsigned align_change (unsigned text)
+unsigned align_change(unsigned text)
 {
 	char ans;
 
@@ -113,7 +113,7 @@ unsigned align_change (unsigned text)
 	return text;
 }
 
-char show_menu_2 (void)
+char show_menu_2(void)
 {
 	int ans;
 
@@ -132,7 +132,7 @@ char show_menu_2 (void)
 	return ans;
 }
 
-unsigned bold (unsigned text)
+unsigned bold(unsigned text)
 {
 	if (text & MASK_BOLD)
 	{
@@ -148,7 +148,7 @@ unsigned bold (unsigned text)
 	return text;
 }
 
-unsigned italic (unsigned text)
+unsigned italic(unsigned text)
 {
 	if (text & MASK_ITALIC)
 	{
@@ -164,7 +164,7 @@ unsigned italic (unsigned text)
 	return text;
 }
 
-unsigned underline (unsigned text)
+unsigned underline(unsigned text)
 {
 	if (text & MASK_UNDER)
 	{
@@ -180,7 +180,7 @@ unsigned underline (unsigned text)
 	return text;
 }
 
-void output (const unsigned text)
+void output(const unsigned text)
 {
 	char * str;
 	int temp = (text >> 16) & 0x3;		/* 0x3 == 11 (binary) */

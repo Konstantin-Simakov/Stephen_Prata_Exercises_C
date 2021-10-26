@@ -4,9 +4,9 @@
 #include <limits.h>			/* for CHAR_BIT */
 #include <stdbool.h>		/* for bool, true, false */
 
-bool bit_include (int num, int pos);
+bool bit_include(int num, int pos);
 
-int main (void)
+int main(void)
 {
 	int num, pos;
 
@@ -21,10 +21,9 @@ int main (void)
 	return 0;
 }
 
-bool bit_include (int num, int pos)
+bool bit_include(int num, int pos)
 {
 	const static int MAX_POS = CHAR_BIT * sizeof(int) - 1;
-
 	bool include = false;
 
 	if (pos < 0 || pos > MAX_POS)

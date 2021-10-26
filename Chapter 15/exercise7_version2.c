@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include "exercise7_head_version2.h"		/* for struct template */
 
-int main (void)
+int main(void)
 {
 	unsigned int text = 0;
 	char choice;
