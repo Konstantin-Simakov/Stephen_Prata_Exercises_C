@@ -3,7 +3,7 @@
 #include <math.h>		/* for atan(), sin(), cos() */
 #include "exercise3_version2.h"	
 
-int main (void)
+int main(void)
 {
 	Polar_V input;
 	Rect_V result;
@@ -22,7 +22,7 @@ int main (void)
 	return 0;
 }
 
-void polar_to_rect (Rect_V * rv, const Polar_V * pv)
+void polar_to_rect(Rect_V * rv, const Polar_V * pv)
 {
 	const double radians = pv->angle * DEG_TO_RAD;
 

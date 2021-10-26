@@ -7,10 +7,10 @@
 #define SIZE 10
 #define ELEMENTS_PER_LINE 8
 
-void random_samples (int ar[], size_t size, int samples);
-void init_vda (bool ar[], size_t n);
+void random_samples(int ar[], size_t size, int samples);
+void init_vda(bool ar[], size_t n);
 
-int main (void)
+int main(void)
 {
 	int array[SIZE] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 
@@ -20,11 +20,11 @@ int main (void)
 	return 0;
 }
 
-void random_samples (int ar[], size_t size, int samples)
+void random_samples(int ar[], size_t size, int samples)
 {
 	int s, i, index;
-	bool test[size];		/* VDA -- to store the state about whether a given element 
-										of the array has been used or not */
+	bool test[size];		/* VDA -- to store the state about whether a given element  */
+							/*		  of the array has been used or not 				*/
 
 	for (s = 1; s <= samples; s++)
 	{
@@ -50,7 +50,7 @@ void random_samples (int ar[], size_t size, int samples)
 	}
 }
 
-void init_vda (bool ar[], size_t n)
+void init_vda(bool ar[], size_t n)
 {
 	int i;
 

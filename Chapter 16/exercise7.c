@@ -3,10 +3,10 @@
 #include <stdlib.h>		/* for malloc(), free() */
 #include <stdarg.h>		/* to create functions with a variable number of arguments */
 
-void show_array (const double ar[], int n);
-double * new_d_array (int n, ...);
+void show_array(const double ar[], int n);
+double * new_d_array(int n, ...);
 
-int main (void)
+int main(void)
 {
 	double * p1;
 	double * p2;
@@ -23,7 +23,7 @@ int main (void)
 	return 0;
 }
 
-double * new_d_array (int n, ...)
+double * new_d_array(int n, ...)
 {
 	va_list arg_ptr;
 	int i;
@@ -37,7 +37,7 @@ double * new_d_array (int n, ...)
 	return d_ptr;
 }
 
-void show_array (const double ar[], int n)
+void show_array(const double ar[], int n)
 {
 	int i;
 

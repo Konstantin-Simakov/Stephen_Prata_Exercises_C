@@ -2,9 +2,9 @@
 #include <stdio.h>
 #include <time.h>		/* for clock_t, clock(), CLOCKS_PER_SEC */
 
-unsigned long long loop_per_sec (double seconds);
+unsigned long long loop_per_sec(double seconds);
 
-int main (void)
+int main(void)
 {
 	double sec;
 
@@ -19,7 +19,7 @@ int main (void)
 	return 0;
 }
 
-unsigned long long loop_per_sec (double seconds)
+unsigned long long loop_per_sec(double seconds)
 {
 	unsigned long long num = 0;
 

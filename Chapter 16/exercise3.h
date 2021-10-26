@@ -14,6 +14,6 @@ typedef struct polar_v {
 	double angle;
 } Polar_V;
 
-Rect_V polar_to_rect (Polar_V);
+Rect_V polar_to_rect(Polar_V);
 
 #endif

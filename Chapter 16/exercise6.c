@@ -11,10 +11,10 @@ struct names {
 	char last[STLEN];
 };
 
-void show_names (const struct names ar[], int n);
-int comp (const void *, const void *);
+void show_names(const struct names ar[], int n);
+int comp(const void *, const void *);
 
-int main (void)
+int main(void)
 {
 	struct names staff[SIZE] = { 
 		{ "Ted", "Luzkov" },
@@ -34,7 +34,7 @@ int main (void)
 	return 0;
 }
 
-int comp (const void * p1, const void * p2)
+int comp(const void * p1, const void * p2)
 {
 	const struct names * ps1 = (const struct names *) p1;
 	const struct names * ps2 = (const struct names *) p2;
@@ -47,7 +47,7 @@ int comp (const void * p1, const void * p2)
 		return strcmp(ps1->first, ps2->first);
 }
 
-void show_names (const struct names ar[], int n)
+void show_names(const struct names ar[], int n)
 {
 	int i;
 
