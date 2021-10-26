@@ -3,7 +3,7 @@
 #include <string.h>				// for strcmp()
 #include "exercise3_head.h"		// for template of the structure, etc.
 
-int main (void)
+int main(void)
 {
 	struct book library[BOOKS];
 	int stop;

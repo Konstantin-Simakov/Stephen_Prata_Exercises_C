@@ -3,7 +3,7 @@
 #include <stdlib.h>				/* for exit() */
 #include "exercise2_head.h"		/* for template of structure, MONTHS, etc. */
 
-int main (void)
+int main(void)
 {
 	int day;
 	char str_month[LEN];

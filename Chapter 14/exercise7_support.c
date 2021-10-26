@@ -6,7 +6,7 @@
 #include "exercise7_head.h"		/* for structure template */
 
 /* most frequently used own functions */
-char * s_gets (char * str, int n)
+char * s_gets(char * str, int n)
 {
 	char * ret_val;
 
@@ -25,7 +25,7 @@ char * s_gets (char * str, int n)
 	return ret_val;
 }
 
-bool is_empty (struct book * entry)
+bool is_empty(struct book * entry)
 {
 	bool zero = false;
 	struct book temp = { 0 };
@@ -37,14 +37,14 @@ bool is_empty (struct book * entry)
 	return zero;
 }
 
-void eatline (void)
+void eatline(void)
 {
 	while (getchar() != '\n')
 		continue;
 }
 
 /* /////////////////////////////////////////////////////////////////////////////////////// */
-char action (void)
+char action(void)
 {
 	char ans;
 
@@ -66,7 +66,7 @@ char action (void)
 }
 
 /* /////////////////////////////////////////////////////////////////////////////////////// */
-int add_entry (struct book library[], int count)
+int add_entry(struct book library[], int count)
 {
 	puts("Enter new titles:");
 	puts("Press [enter] in the beginning of the line to finish the input.");
@@ -100,7 +100,7 @@ int add_entry (struct book library[], int count)
 }
 
 /* /////////////////////////////////////////////////////////////////////////////////////// */
-void change_entry (struct book library[], int count)
+void change_entry(struct book library[], int count)
 {
 	int num;						/* number of entry; interactively */
 
@@ -134,7 +134,7 @@ void change_entry (struct book library[], int count)
 }
 
 /* using by change_entry(), num is a number of the entry */
-void change (struct book * entry, int num)
+void change(struct book * entry, int num)
 {
 	struct book temp;
 	bool status = true;			/* to choose: copy or not; true -- copy, false -- not */
@@ -184,7 +184,7 @@ void change (struct book * entry, int num)
 	}
 }
 
-char choice2 (void)
+char choice2(void)
 {
 	char ans;
 
@@ -202,7 +202,7 @@ char choice2 (void)
 	return ans;
 }
 
-void struct_cpy (struct book * pstruct1, struct book * pstruct2)
+void struct_cpy(struct book * pstruct1, struct book * pstruct2)
 {
 	strcpy(pstruct1->title, pstruct2->title);
 	strcpy(pstruct1->author, pstruct2->author);
@@ -211,7 +211,7 @@ void struct_cpy (struct book * pstruct1, struct book * pstruct2)
 }
 
 /* /////////////////////////////////////////////////////////////////////////////////////// */
-void delete_entry (struct book library[], int count)
+void delete_entry(struct book library[], int count)
 {
 	int num;						/* number of entry */
 
@@ -256,7 +256,7 @@ void delete_entry (struct book library[], int count)
 		puts("All entries is empty. There is nothing to delete. Choose a) or q)");
 }
 
-void to_empty (struct book * entry)
+void to_empty(struct book * entry)
 {
 	struct book temp = { 0 };
 
@@ -266,7 +266,7 @@ void to_empty (struct book * entry)
 	entry->number = temp.number;
 }
 
-bool is_empty_arr (struct book library[], int n)
+bool is_empty_arr(struct book library[], int n)
 {
 	int i, k;
 	int nums[n];			/* (c99 -- variable length array) */
@@ -292,7 +292,7 @@ bool is_empty_arr (struct book library[], int n)
 	return empty;
 }
 
-int sort_struct_arr (struct book library[], int count)		/* count is a number of elements in the array */
+int sort_struct_arr(struct book library[], int count)		/* count is a number of elements in the array */
 {
 	int i, j;
 	struct book temp;
@@ -317,7 +317,7 @@ int sort_struct_arr (struct book library[], int count)		/* count is a number of 
 	return count;
 }
 
-void set_nums (struct book library[], int count)
+void set_nums(struct book library[], int count)
 {
 	int i;
 
@@ -326,7 +326,7 @@ void set_nums (struct book library[], int count)
 }
 
 /* /////////////////////////////////////////////////////////////////////////////////////// */
-int output_from_file_binary (struct book library[], int n, FILE * fp)
+int output_from_file_binary(struct book library[], int n, FILE * fp)
 {
 	int count = 0;
 
@@ -343,7 +343,7 @@ int output_from_file_binary (struct book library[], int n, FILE * fp)
 	return count;
 }
 
-void output_content (struct book library[], int count)
+void output_content(struct book library[], int count)
 {
 	int i;
 
@@ -353,7 +353,7 @@ void output_content (struct book library[], int count)
 			library[i].number, library[i].title, library[i].author, library[i].value);
 }
 
-void output_to_file (struct book library[], int count, int filecount, FILE * fp)
+void output_to_file(struct book library[], int count, int filecount, FILE * fp)
 {
 	int i;
 

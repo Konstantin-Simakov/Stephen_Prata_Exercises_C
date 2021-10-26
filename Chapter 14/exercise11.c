@@ -6,13 +6,13 @@
 #define NUMS 4
 #define PI 	 3.14159
 
-void init_arr (double [], int);
-void transform (double [], double [], int, double (*) (double));
-double circumference (double);
-double area_circle (double);
-void output_arrs (const double trg[], const double src[], int n);
+void init_arr(double [], int);
+void transform(double [], double [], int, double (*) (double));
+double circumference(double);
+double area_circle(double);
+void output_arrs(const double trg[], const double src[], int n);
 
-int main (void)
+int main(void)
 {
 	double source[SIZE];
 	double target[SIZE];
@@ -43,7 +43,7 @@ int main (void)
 	return 0;
 }
 
-void init_arr (double arr[], int n)
+void init_arr(double arr[], int n)
 {
 	int i;
 
@@ -51,7 +51,7 @@ void init_arr (double arr[], int n)
 		arr[i] = (i + 2) / 3.0;
 }
 
-void transform (double trg[], double src[], int n, double (* pfunc) (double))
+void transform(double trg[], double src[], int n, double (* pfunc) (double))
 {
 	int i;
 
@@ -59,17 +59,17 @@ void transform (double trg[], double src[], int n, double (* pfunc) (double))
 		trg[i] = (*pfunc)(src[i]); 
 }
 
-double circumference (double r)
+double circumference(double r)
 {
 	return 2 * PI * r;
 }
 
-double area_circle (double r)
+double area_circle(double r)
 {
 	return PI * r * r;
 }
 
-void output_arrs (const double target[], const double source[], int n)
+void output_arrs(const double target[], const double source[], int n)
 {
 	int i;
 

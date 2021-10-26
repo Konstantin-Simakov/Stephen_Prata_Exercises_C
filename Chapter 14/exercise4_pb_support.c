@@ -3,7 +3,7 @@
 #include <string.h>	 		// for strchr()
 #include "exercise4_head.h"
 
-char * s_gets (char * str, int n)
+char * s_gets(char * str, int n)
 {
 	char * ret_val, * find;
 
@@ -21,13 +21,13 @@ char * s_gets (char * str, int n)
 	return ret_val;
 }
 
-void eatline (void)
+void eatline(void)
 {
 	while (getchar() != '\n')
 		continue;
 }
 
-int init_struct_arr (struct ssc * date, int n)
+int init_struct_arr(struct ssc * date, int n)
 {
 	int count = 0;
 
@@ -63,7 +63,7 @@ int init_struct_arr (struct ssc * date, int n)
 	return count;
 }
 
-void output_struct (struct ssc date)
+void output_struct(struct ssc date)
 {
 	printf("%s, %s %c%s -- %d\n", date.name.fname, date.name.lname, date.name.patronymic[0], 
 		date.name.patronymic[0] != '\0' ? "." : "", 

@@ -5,7 +5,7 @@
 #include <stdlib.h>				/* for atoi() */
 #include "exercise2_head.h"		/* for template of structure, str_digit(), MIN, MAX */
 
-bool str_digit (const char * str)
+bool str_digit(const char * str)
 {
 	bool is_digit = true;
 
@@ -19,7 +19,7 @@ bool str_digit (const char * str)
 	return is_digit;
 }
 
-int month_sum (const struct months_info * year, int n)
+int month_sum(const struct months_info * year, int n)
 {
 	int subtot, i;
 
@@ -29,7 +29,7 @@ int month_sum (const struct months_info * year, int n)
 	return subtot;
 }
 
-int calc_month_num (const struct months_info * year, int n, const char * str_month)
+int calc_month_num(const struct months_info * year, int n, const char * str_month)
 {
 	int num_month = -1;			/* for error code -- initial value */
 	int i;

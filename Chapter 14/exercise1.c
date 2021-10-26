@@ -18,7 +18,7 @@ const struct month year[MONTHS] = {
 	{.name = "December", .days = 31},
 };
 
-int main (void)
+int main(void)
 {
 	char mon_name[LNAME];
 	int days;

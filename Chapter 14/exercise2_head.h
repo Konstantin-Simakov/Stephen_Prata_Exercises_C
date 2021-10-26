@@ -15,6 +15,6 @@ struct months_info {
 	int number;
 };
 
-bool str_digit (const char * str);
-int month_sum (const struct months_info * year, int n);
-int calc_month_num (const struct months_info * year_info, int n, const char * str_month);
+bool str_digit(const char * str);
+int month_sum(const struct months_info * year, int n);
+int calc_month_num(const struct months_info * year_info, int n, const char * str_month);

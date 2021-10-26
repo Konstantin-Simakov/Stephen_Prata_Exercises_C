@@ -5,23 +5,23 @@
 
 #define SIZE 4
 
-void hello (void) {	puts("Hello!"); }
-void how (void) { puts("How are you?"); }
-void fine (void) { puts("I'm fine!"); }
-void bye (void) { puts("Bye!"); }
+void hello(void) {	puts("Hello!"); }
+void how(void) { puts("How are you?"); }
+void fine(void) { puts("I'm fine!"); }
+void bye(void) { puts("Bye!"); }
 
-void message (void (* pfunc) (void))
+void message(void (* pfunc) (void))
 { 
 	(*pfunc)();
 }
 
-void eatline (void)
+void eatline(void)
 {
 	while (getchar() != '\n')
 		continue;
 }
 
-int showmenu (void)
+int showmenu(void)
 {
 	int ret_val;
 	char ans;
@@ -57,7 +57,7 @@ int showmenu (void)
 	return ret_val;
 }
 
-int main (void)
+int main(void)
 {
 	void (* pfuncs[SIZE]) (void) = { hello, how, fine, bye };
 	int index;

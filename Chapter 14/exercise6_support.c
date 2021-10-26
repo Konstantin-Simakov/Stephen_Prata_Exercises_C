@@ -4,7 +4,7 @@
 #include <stdbool.h>
 #include "exercise6_head.h"
 
-int init_struct_arr (struct player command[], int num, FILE * fp)
+int init_struct_arr(struct player command[], int num, FILE * fp)
 {
 	int count;
 	int i;
@@ -55,7 +55,7 @@ int init_struct_arr (struct player command[], int num, FILE * fp)
 	return count;
 }
 
-void init_average (struct player command[], int n)
+void init_average(struct player command[], int n)
 {
 	int i;
 
@@ -64,7 +64,7 @@ void init_average (struct player command[], int n)
 			command[i].average = (float) (command[i].hit / command[i].run);
 }
 
-struct player sum_struct_arr (struct player command[], int n)
+struct player sum_struct_arr(struct player command[], int n)
 {
 	int i;
 	struct player sum = { 0 };		/* initial values for the structure variable */
@@ -82,7 +82,7 @@ struct player sum_struct_arr (struct player command[], int n)
 	return sum;
 }
 
-void sort_ascend (struct player command[], int n)
+void sort_ascend(struct player command[], int n)
 {
 	int top, seek;
 	struct player temp;
@@ -97,7 +97,7 @@ void sort_ascend (struct player command[], int n)
 			}
 }
 
-void output_struct_arr (const struct player command[], int n)
+void output_struct_arr(const struct player command[], int n)
 {
 	int i;
 	char taverage[LEN];		/* temp average -- for string convertion */
@@ -115,7 +115,7 @@ void output_struct_arr (const struct player command[], int n)
 	}
 }
 
-void output_struct_sum (const struct player * psum)
+void output_struct_sum(const struct player * psum)
 {
 	char taverage[LEN];
 

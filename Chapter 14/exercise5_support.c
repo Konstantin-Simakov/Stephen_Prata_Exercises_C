@@ -4,7 +4,7 @@
 #include <stdlib.h>			// for exit(), EXIT_FAILURE
 #include "exercise5_head.h"
 
-char * s_gets (char * str, int n)
+char * s_gets(char * str, int n)
 {
 	char * ret_val, * find;
 
@@ -22,14 +22,14 @@ char * s_gets (char * str, int n)
 	return ret_val;
 }
 
-void eatline (void)
+void eatline(void)
 {
 	while (getchar() != '\n')
 		continue;
 }
 
 // initial values for grade array
-void init_grades (struct student * person)
+void init_grades(struct student * person)
 {
 	int i;
 
@@ -37,7 +37,7 @@ void init_grades (struct student * person)
 		person->grade[i] = 0.0f;
 }
 
-void average_value (struct student * person)
+void average_value(struct student * person)
 {
 	int i;
 	float sum = 0.0f;
@@ -48,7 +48,7 @@ void average_value (struct student * person)
 	person->average = sum / GRADES;
 }
 
-int init_struct_arr (struct student group[], int num)
+int init_struct_arr(struct student group[], int num)
 {
 	int count = 0;
 	int i; 
@@ -82,7 +82,7 @@ int init_struct_arr (struct student group[], int num)
 	return count;
 }
 
-void output_struct_arr (const struct student group[], int n)
+void output_struct_arr(const struct student group[], int n)
 {
 	int i, j;
 

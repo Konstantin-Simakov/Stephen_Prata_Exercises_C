@@ -14,9 +14,9 @@ struct player {
 	float average;		/* average achievement in softball */
 };
 
-int init_struct_arr (struct player command[], int num, FILE * fp);
-void init_average (struct player command[], int num);
-struct player sum_struct_arr (struct player command[], int n);
-void sort_ascend (struct player command[], int n);
-void output_struct_arr (const struct player command[], int n);
-void output_struct_sum (const struct player * psum);
+int init_struct_arr(struct player command[], int num, FILE * fp);
+void init_average(struct player command[], int num);
+struct player sum_struct_arr(struct player command[], int n);
+void sort_ascend(struct player command[], int n);
+void output_struct_arr(const struct player command[], int n);
+void output_struct_sum(const struct player * psum);

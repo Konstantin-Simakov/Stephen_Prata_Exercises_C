@@ -4,7 +4,7 @@
 #include <string.h>
 #include "exercise7_head.h"
 
-int main (void)
+int main(void)
 {
 	struct book library[MAXBKS];
 	FILE * fp;

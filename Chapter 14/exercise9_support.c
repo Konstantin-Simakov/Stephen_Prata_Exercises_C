@@ -4,13 +4,13 @@
 #include <ctype.h>				/* for tolower() */
 #include "exercise9_head.h"
 
-void eatline (void)
+void eatline(void)
 {
 	while (getchar() != '\n')
 		continue;
 }
 
-int showmenu1 (void)
+int showmenu1(void)
 {
 	int res;
 
@@ -28,7 +28,7 @@ int showmenu1 (void)
 	return res;
 }
 
-char showmenu2 (void)
+char showmenu2(void)
 {
 	char ans;
 
@@ -53,7 +53,7 @@ char showmenu2 (void)
 }
 
 /* p. a) */
-void show_free_num (struct seat aircraft[], int n)
+void show_free_num(struct seat aircraft[], int n)
 {
 	int i, sum;
 
@@ -65,7 +65,7 @@ void show_free_num (struct seat aircraft[], int n)
 }
 
 /* p. b) */
-void show_free_list (struct seat aircraft[], int n)
+void show_free_list(struct seat aircraft[], int n)
 {
 	int i;
 
@@ -76,7 +76,7 @@ void show_free_list (struct seat aircraft[], int n)
 	printf("\b\b.\n");
 }
 
-void struct_cpy_arr (struct seat * temp, struct seat * aircraft, int n)
+void struct_cpy_arr(struct seat * temp, struct seat * aircraft, int n)
 {
 	int i;
 
@@ -89,7 +89,7 @@ void struct_cpy_arr (struct seat * temp, struct seat * aircraft, int n)
 	}
 }
 
-void sort_alph (struct seat arr[], int n)
+void sort_alph(struct seat arr[], int n)
 {
 	int top, seek;
 	struct seat temp;
@@ -104,7 +104,7 @@ void sort_alph (struct seat arr[], int n)
 			}
 }
 
-void show_book_alph (struct seat aircraft[], int n)
+void show_book_alph(struct seat aircraft[], int n)
 {
 	int i;
 	struct seat temp[n];
@@ -120,7 +120,7 @@ void show_book_alph (struct seat aircraft[], int n)
 				temp[i].passenger.fname, temp[i].passenger.lname);
 }
 
-void book_seat (struct seat aircraft[], int n)
+void book_seat(struct seat aircraft[], int n)
 {
 	int num;		/* the number of desired (booked) seat */
 
@@ -146,7 +146,7 @@ void book_seat (struct seat aircraft[], int n)
 	eatline();
 }
 
-void confirm_book (struct seat aircraft[], int n)
+void confirm_book(struct seat aircraft[], int n)
 {
 	int num;
 
@@ -177,7 +177,7 @@ void confirm_book (struct seat aircraft[], int n)
 	eatline();
 }
 
-void cancel_book_seat (struct seat aircraft[], int n)
+void cancel_book_seat(struct seat aircraft[], int n)
 {
 	int num;		/* the number of desired (cancel booked) seat */
 
@@ -203,7 +203,7 @@ void cancel_book_seat (struct seat aircraft[], int n)
 	eatline();
 }
 
-void output_from_file (struct seat aircraft[], int n, FILE * fp)
+void output_from_file(struct seat aircraft[], int n, FILE * fp)
 {
 	int i = 0;
 	char * pstr;
@@ -235,7 +235,7 @@ void output_from_file (struct seat aircraft[], int n, FILE * fp)
 	}
 }
 
-void output_to_file (struct seat aircraft[], int n, FILE * fp)
+void output_to_file(struct seat aircraft[], int n, FILE * fp)
 {
 	const char * pstr;
 	int i;

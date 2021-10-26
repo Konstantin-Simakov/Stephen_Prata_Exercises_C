@@ -3,7 +3,7 @@
 #include <string.h>				// for strchr()
 #include "exercise3_head.h"		// for template of the structure
 
-char * s_gets (char * str, int n)
+char * s_gets(char * str, int n)
 {
 	char * ret_val, * find;
 
@@ -21,14 +21,14 @@ char * s_gets (char * str, int n)
 	return ret_val;
 }
 
-void eatline (void)
+void eatline(void)
 {
 	while (getchar() != '\n')
 		continue;
 }
 
 // returns the number of successfully read structures
-int init_struct_arr (struct book lib[], int num)		// num is a number of elements in the structure array
+int init_struct_arr(struct book lib[], int num)		// num is a number of elements in the structure array
 {
 	int count = 0;		// the number of successfully read structures
 
@@ -50,7 +50,7 @@ int init_struct_arr (struct book lib[], int num)		// num is a number of elements
 	return count;
 }
 
-void sort_struct_title (struct book lib[], int n)
+void sort_struct_title(struct book lib[], int n)
 {
 	int top, seek;
 	struct book temp;
@@ -65,7 +65,7 @@ void sort_struct_title (struct book lib[], int n)
 			}
 }
 
-void sort_struct_value (struct book lib[], int n)
+void sort_struct_value(struct book lib[], int n)
 {
 	int top, seek;
 	struct book temp;
@@ -80,7 +80,7 @@ void sort_struct_value (struct book lib[], int n)
 			}
 }
 
-void output_struct_arr (const struct book lib[], int n)
+void output_struct_arr(const struct book lib[], int n)
 {
 	int i;
 

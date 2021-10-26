@@ -13,4 +13,4 @@ struct month {
 
 extern const struct month year[];		/* the size of link array is optional */
 
-int total_days (const char *);			/* uses the global array upper (named year) */
+int total_days(const char *);			/* uses the global array upper (named year) */

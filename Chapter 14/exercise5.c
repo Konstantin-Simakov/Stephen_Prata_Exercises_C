@@ -1,7 +1,7 @@
 // exercise5.c -- Chapter 14 
 #include "exercise5_head.h"
 
-int main (void)
+int main(void)
 {
 	struct student group[CSIZE];		// group consists of CSIZE students
 	int stop;

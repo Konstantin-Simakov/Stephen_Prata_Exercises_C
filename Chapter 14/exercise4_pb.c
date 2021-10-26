@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include "exercise4_pb_head.h"
 
-int main (void)
+int main(void)
 {
 	struct ssc dates[MEMBERS];
 	int stop;

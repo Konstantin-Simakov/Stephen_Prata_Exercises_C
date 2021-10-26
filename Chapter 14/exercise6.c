@@ -3,7 +3,7 @@
 #include <stdlib.h>					/* for exit, EXIT_FAILURE */
 #include "exercise6_head.h"
 
-int main (void)
+int main(void)
 {
 	struct player command[PLAYERS] = { 0 };
 	struct player sum;

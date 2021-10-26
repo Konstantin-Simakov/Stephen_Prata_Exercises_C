@@ -3,7 +3,7 @@
 #include <stdlib.h>			/* for exit() */
 #include "exercise8_head.h"
 
-int main (void)
+int main(void)
 {
 	struct seat aircraft[SEATS] = {
 		{ 1, 	true, 	{"Ivan", 	"Ivanov"} 		}, 

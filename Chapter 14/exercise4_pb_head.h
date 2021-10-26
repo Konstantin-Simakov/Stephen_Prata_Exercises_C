@@ -14,7 +14,7 @@ struct ssc {
 	struct full_name name;
 };
 
-char * s_gets (char * str, int n);
-int init_struct_arr (struct ssc * date, int n);
-void output_struct (struct ssc date);
-void eatline (void);
+char * s_gets(char * str, int n);
+int init_struct_arr(struct ssc * date, int n);
+void output_struct(struct ssc date);
+void eatline(void);

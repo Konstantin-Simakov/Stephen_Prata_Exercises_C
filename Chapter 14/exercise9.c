@@ -4,7 +4,7 @@
 #include <stdlib.h>			/* for exit() */
 #include "exercise9_head.h"
 
-int main (void)
+int main(void)
 {
 	struct seat aircraft[FLIGHTS][SEATS] = {
 		{	/* 1 */
@@ -71,7 +71,7 @@ int main (void)
 	int i;
 	struct seat * p_air;
 
-	if ((fp = fopen("aircraft.dat", "r+b")) == NULL)			/* correct mode (good)! */
+	if ((fp = fopen("aircraft2.dat", "r+b")) == NULL)			/* correct mode (good)! */
 	{
 		fputs("There is no \"aircraft.dat\" file in this directory.\n", stderr);
 		exit(EXIT_FAILURE);

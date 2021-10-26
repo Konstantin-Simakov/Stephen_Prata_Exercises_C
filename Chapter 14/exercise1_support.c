@@ -4,7 +4,7 @@
 #include "exercise1_head.h"		/* here is the global array named year */
 #include <string.h>				/* for strcmp(), strchr() */
 
-int total_days (const char * str)
+int total_days(const char * str)
 {
 	int sum, i, j;
 

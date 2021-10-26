@@ -15,9 +15,9 @@ struct student {
 	float average;			// for average total number of grades
 };
 
-char * s_gets (char * str, int n);
-void eatline (void);
-void init_grades (struct student * person);
-void average_value (struct student * person);
-int init_struct_arr (struct student group[], int n);
-void output_struct_arr (const struct student group[], int n);
+char * s_gets(char * str, int n);
+void eatline(void);
+void init_grades(struct student * person);
+void average_value(struct student * person);
+int init_struct_arr(struct student group[], int n);
+void output_struct_arr(const struct student group[], int n);
