@@ -4,31 +4,31 @@
 #include "exercise4.h"
 
 /* local (static) functions */
-static void copy_to_node (Node * pn, Item my_item);
-static void copy_to_item (Item * pi, Node * pn);
+static void copy_to_node(Node * pn, Item my_item);
+static void copy_to_item(Item * pi, Node * pn);
 
-void initialize_queue (Queue * pq)
+void initialize_queue(Queue * pq)
 {
 	pq->front = pq->rear = NULL;
 	pq->items = 0;
 }
 
-bool queue_is_full (const Queue * pq)
+bool queue_is_full(const Queue * pq)
 {
 	return MAXQUEUE == pq->items;
 }
 
-bool queue_is_empty (const Queue * pq)
+bool queue_is_empty(const Queue * pq)
 {
 	return 0 == pq->items;
 }
 
-int queue_item_count (const Queue * pq)
+int queue_item_count(const Queue * pq)
 {
 	return pq->items;
 }
 
-bool en_queue (Queue * pq, Item my_item)
+bool en_queue(Queue * pq, Item my_item)
 {
 	Node * pnew;
 	bool ret_val;
@@ -60,7 +60,7 @@ bool en_queue (Queue * pq, Item my_item)
 	return ret_val;
 }
 
-bool de_queue (Item * pitem, Queue * pq)
+bool de_queue(Item * pitem, Queue * pq)
 {
 	Node * pt;									/* temporary pointer */
 	bool ret_val;
@@ -86,7 +86,7 @@ bool de_queue (Item * pitem, Queue * pq)
 }
 
 /* emptying of the queue */
-void empty_the_queue (Queue * pq)
+void empty_the_queue(Queue * pq)
 {
 	Item dummy;									/* dummy variable -- for de_queue() correct working */
 
@@ -94,7 +94,7 @@ void empty_the_queue (Queue * pq)
 		de_queue(&dummy, pq);
 }
 
-void traverse_q (const Queue * pq, void (* pfun) (Item))
+void traverse_q(const Queue * pq, void (* pfun)(Item))
 {
 	Node * current = pq->front;
 
@@ -108,12 +108,12 @@ void traverse_q (const Queue * pq, void (* pfun) (Item))
 
 /* local (static) functions */
 
-static void copy_to_node (Node * pn, Item my_item)
+static void copy_to_node(Node * pn, Item my_item)
 {
 	pn->item = my_item;
 }
 
-static void copy_to_item (Item * pi, Node * pn)
+static void copy_to_item(Item * pi, Node * pn)
 {
 	*pi = pn->item;
 }

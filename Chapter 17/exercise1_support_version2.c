@@ -5,18 +5,18 @@
 #include "exercise1_version2.h"
 
 /* prototype of static (local) function */
-static void copy_to_node (Node * pnode, Item input);
-static void reverse (const Node * current, void (* pfun) (Item output));
+static void copy_to_node(Node * pnode, Item input);
+static void reverse(const Node * current, void (* pfun)(Item output));
 
 /* interface functions */
 /* sets the list to empty state */
-void initialize_list (List * plist)
+void initialize_list(List * plist)
 {
 	*plist = NULL;
 }
 
 /* returns true, if the list is empty */
-bool list_is_empty (const List * plist)
+bool list_is_empty(const List * plist)
 {
 	bool ret_val;
 
@@ -29,7 +29,7 @@ bool list_is_empty (const List * plist)
 }
 
 /* returns true, if the list is full */
-bool list_is_full (const List * plist)
+bool list_is_full(const List * plist)
 {
 	Node * pt;
 	bool full;
@@ -45,7 +45,7 @@ bool list_is_full (const List * plist)
 }
 
 /* returns the number of nodes */
-unsigned int list_item_count (const List * plist)
+unsigned int list_item_count(const List * plist)
 {
 	unsigned int count = 0;
 	Node * pnode = *plist;		/* setting to the beginning of the list */
@@ -61,7 +61,7 @@ unsigned int list_item_count (const List * plist)
 
 /* creates a node for storing the element and adds it to the end 				*/
 /* of the list specified by a variable of the plist type (slow implementation) 	*/
-bool add_item (List * plist, Item item)
+bool add_item(List * plist, Item item)
 {
 	Node * pnew;
 	Node * current = *plist;
@@ -92,7 +92,7 @@ bool add_item (List * plist, Item item)
 
 /* visits each node from "head" to "tail" of the list 	*/
 /* and performs the function pointed to by pfun 		*/
-void traverse_direct (const List * plist, void (* pfun) (Item output))
+void traverse_direct(const List * plist, void (* pfun)(Item output))
 {
 	Node * pnode = *plist;			/* setting to the beginning of the list */
 
@@ -105,7 +105,7 @@ void traverse_direct (const List * plist, void (* pfun) (Item output))
 
 /* visits each node from "tail" to "head" of the list 	*/
 /* and performs the function pointed to by pfun 		*/
-void traverse_reverse (const List * plist, void (* pfun) (Item output))
+void traverse_reverse(const List * plist, void (* pfun)(Item output))
 {
 	if (*plist != NULL)
 		reverse(*plist, pfun);
@@ -113,7 +113,7 @@ void traverse_reverse (const List * plist, void (* pfun) (Item output))
 
 /* freeing memory allocated to by function malloc(), */
 /* sets pointer of the list to NULL */
-void empty_the_list (List * plist)
+void empty_the_list(List * plist)
 {
 	Node * psave;
 
@@ -129,13 +129,13 @@ void empty_the_list (List * plist)
 /* definition of the static (local for this source file) function */
 
 /* copies element to a node */
-static void copy_to_node (Node * pnode, Item input)
+static void copy_to_node(Node * pnode, Item input)
 {
 	pnode->item = input;			/* copying of the structure */
 }
 
 /* reverse the order of traversing the linked list (recursively) */
-static void reverse (const Node * current, void (* pfun) (Item output))
+static void reverse(const Node * current, void (* pfun)(Item output))
 {
 	if (current != NULL)
 	{

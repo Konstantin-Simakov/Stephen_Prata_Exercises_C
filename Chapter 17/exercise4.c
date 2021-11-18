@@ -8,10 +8,10 @@
 
 #define MIN_PER_HR 60.0			/* constant of double type!			*/
 
-bool new_customer (double x);	/* have a new customer? 			*/
-Item customer_time (long when);	/* setting of customer parameters 	*/
+bool new_customer(double x);	/* have a new customer? 			*/
+Item customer_time(long when);	/* setting of customer parameters 	*/
 
-int main (void)
+int main(void)
 {
 	Queue line1, line2;
 	Item temp;					/* data about a new customer 										*/
@@ -125,7 +125,7 @@ int main (void)
 
 /* x is the average time between arrival of customers in minutes */
 /* returns true if customer appears during this minute (cycle) */
-bool new_customer (double x)
+bool new_customer(double x)
 {
 	bool is_here;
 
@@ -141,7 +141,7 @@ bool new_customer (double x)
 /* the function returns structure Item with arrival time 	*/
 /* set to when and served time 								*/
 /* set to random value from the range from 1 to 3 			*/
-Item customer_time (long when)
+Item customer_time(long when)
 {
 	Item cust;
 

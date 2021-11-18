@@ -13,25 +13,25 @@ typedef struct pair {
 } Pair;
 
 /* prototypes of local (static) functions */
-static Trnode * make_node (const Item * pi);
-static bool to_left (const Item * i1, const Item * i2);
-static bool to_right (const Item * i1, const Item * i2);
-static void add_node (Trnode * new_node, Trnode * root);
-static void in_order (const Trnode * root, void (* pfun) (Item output));
-static Pair seek_node (const Tree * ptree, const Item * pi);
-static void delete_node (Trnode ** ptr);
-static void delete_all_nodes (Trnode * root);
+static Trnode * make_node(const Item * pi);
+static bool to_left(const Item * i1, const Item * i2);
+static bool to_right(const Item * i1, const Item * i2);
+static void add_node(Trnode * new_node, Trnode * root);
+static void in_order(const Trnode * root, void (* pfun)(Item output));
+static Pair seek_node(const Tree * ptree, const Item * pi);
+static void delete_node(Trnode ** ptr);
+static void delete_all_nodes(Trnode * root);
 
 
 /* function definitions */
 
-void initialize_tree (Tree * ptree)
+void initialize_tree(Tree * ptree)
 {
 	ptree->root = NULL;
 	ptree->size = 0;
 }
 
-bool tree_is_empty (const Tree * ptree)
+bool tree_is_empty(const Tree * ptree)
 {
 	bool ret_val;
 
@@ -43,7 +43,7 @@ bool tree_is_empty (const Tree * ptree)
 	return ret_val;
 }
 
-bool tree_is_full (const Tree * ptree)
+bool tree_is_full(const Tree * ptree)
 {
 	Trnode * check;
 	bool ret_val;
@@ -58,12 +58,12 @@ bool tree_is_full (const Tree * ptree)
 	return ret_val;
 }
 
-int tree_item_count (const Tree * ptree)
+int tree_item_count(const Tree * ptree)
 {
 	return ptree->size;
 }
 
-bool add_item (Tree * ptree, const Item * pi)
+bool add_item(Tree * ptree, const Item * pi)
 {
 	Trnode * new_node;
 	bool ret_val;
@@ -102,12 +102,12 @@ bool add_item (Tree * ptree, const Item * pi)
 	return ret_val;
 }
 
-Trnode * in_tree (const Tree * ptree, const Item * pi)
+Trnode * in_tree(const Tree * ptree, const Item * pi)
 {
 	return seek_node(ptree, pi).child;
 }
 
-bool delete_item (Tree * ptree, const Item * pi)
+bool delete_item(Tree * ptree, const Item * pi)
 {
 	Pair look;
 	bool ret_val;
@@ -136,13 +136,13 @@ bool delete_item (Tree * ptree, const Item * pi)
 	return ret_val;
 }
 
-void traverse (const Tree * ptree, void (* pfun) (Item my_item))
+void traverse(const Tree * ptree, void (* pfun)(Item my_item))
 {
 	if (ptree != NULL)
 		in_order(ptree->root, pfun);
 }
 
-void delete_all (Tree * ptree)
+void delete_all(Tree * ptree)
 {
 	if (ptree != NULL)
 		delete_all_nodes(ptree->root);
@@ -152,7 +152,7 @@ void delete_all (Tree * ptree)
 
 /* definition of local (static) functions */
 
-static void in_order (const Trnode * root, void (* pfun) (Item))
+static void in_order(const Trnode * root, void (* pfun)(Item))
 {
 	if (root != NULL)
 	{
@@ -162,7 +162,7 @@ static void in_order (const Trnode * root, void (* pfun) (Item))
 	}
 }
 
-static void delete_all_nodes (Trnode * root)
+static void delete_all_nodes(Trnode * root)
 {
 	Trnode * pright;
 
@@ -176,7 +176,7 @@ static void delete_all_nodes (Trnode * root)
 	}
 }
 
-static void add_node (Trnode * root, Trnode * new_node)
+static void add_node(Trnode * root, Trnode * new_node)
 {
 	if (to_left(&new_node->item, &root->item))
 	{
@@ -199,7 +199,7 @@ static void add_node (Trnode * root, Trnode * new_node)
 	}
 }
 
-static bool to_left (const Item * i1, const Item * i2)
+static bool to_left(const Item * i1, const Item * i2)
 {
 	bool ret_val;
 
@@ -211,7 +211,7 @@ static bool to_left (const Item * i1, const Item * i2)
 	return ret_val;
 }
 
-static bool to_right (const Item * i1, const Item * i2)
+static bool to_right(const Item * i1, const Item * i2)
 {
 	bool ret_val;
 
@@ -223,7 +223,7 @@ static bool to_right (const Item * i1, const Item * i2)
 	return ret_val;
 }
 
-static Trnode * make_node (const Item * pi)
+static Trnode * make_node(const Item * pi)
 {
 	Trnode * new_node;
 
@@ -240,7 +240,7 @@ static Trnode * make_node (const Item * pi)
 }
 
 /* look.child is the item you are looking for */
-static Pair seek_node (const Tree * ptree, const Item * pi)
+static Pair seek_node(const Tree * ptree, const Item * pi)
 {
 	Pair look;
 
@@ -268,7 +268,7 @@ static Pair seek_node (const Tree * ptree, const Item * pi)
 
 /* ptr is the address of the parent node pointing		*/
 /* to the target (child) node (the node to be removed)	*/
-static void delete_node (Trnode ** ptr)
+static void delete_node(Trnode ** ptr)
 {
 	Trnode * temp;
 

@@ -6,15 +6,15 @@
 #include "exercise5.h"
 
 /* local (static) function prototypes */
-static void copy_to_node (Node * pn, const Item * pi);
-static void copy_to_item (Item * pi, const Node * pn);
+static void copy_to_node(Node * pn, const Item * pi);
+static void copy_to_item(Item * pi, const Node * pn);
 
-void stack_initialize (Stack * ps)
+void stack_initialize(Stack * ps)
 {
 	ps->head = ps->tail = NULL;
 }
 
-bool stack_is_full (const Stack * ps)
+bool stack_is_full(const Stack * ps)
 {
 	bool full;
 	Node * pnode;
@@ -29,7 +29,7 @@ bool stack_is_full (const Stack * ps)
 	return full;
 }
 
-bool stack_is_empty (const Stack * ps)
+bool stack_is_empty(const Stack * ps)
 {
 	bool empty;
 
@@ -41,7 +41,7 @@ bool stack_is_empty (const Stack * ps)
 	return empty;
 }
 
-bool push (Stack * ps, Item * input)
+bool push(Stack * ps, Item * input)
 {
 	bool ret_val;
 	Node * pnode;
@@ -71,7 +71,7 @@ bool push (Stack * ps, Item * input)
 	return ret_val;
 }
 
-bool pop (Stack * ps, Item * pitem)
+bool pop(Stack * ps, Item * pitem)
 {
 	bool ret_val;
 	Node * temp, * prev;
@@ -103,7 +103,7 @@ bool pop (Stack * ps, Item * pitem)
 	return ret_val;
 }
 
-void empty_the_stack (Stack * ps)
+void empty_the_stack(Stack * ps)
 {
 	Item dummy;
 
@@ -114,12 +114,12 @@ void empty_the_stack (Stack * ps)
 
 /* local (static) functions */
 
-static void copy_to_node (Node * pn, const Item * pi)
+static void copy_to_node(Node * pn, const Item * pi)
 {
 	pn->item = *pi;
 }
 
-static void copy_to_item (Item * pi, const Node * pn)
+static void copy_to_item(Item * pi, const Node * pn)
 {
 	*pi = pn->item;
 }

@@ -29,24 +29,24 @@ typedef struct tree {
 /* operation:		initialization of tree with empty content 			*/
 /* preconditions:	ptree points to the tree 							*/
 /* postconditions:	ptree sets to empty			 						*/
-void initialize_tree (Tree * ptree);
+void initialize_tree(Tree * ptree);
 
 /* operation:		determining if the tree is empty					*/
 /* preconditions:	ptree points to the tree 							*/
 /* postconditions:	the function returns true if the tree 				*/
 /*					is empty and false otherwise						*/
-bool tree_is_empty (const Tree * ptree);
+bool tree_is_empty(const Tree * ptree);
 
 /* operation:		determining if the tree is full						*/
 /* preconditions:	ptree points to the tree 							*/
 /* postconditions:	the function returns true if the tree 				*/
 /* 					is full and false otherwise							*/
-bool tree_is_full (const Tree * ptree);
+bool tree_is_full(const Tree * ptree);
 
 /* operation:		determining the number of items in the tree 		*/
 /* preconditions:	ptree points to the tree 							*/
 /* postconditions:	the function returns the number of items			*/
-int tree_item_count (const Tree * ptree);
+int tree_item_count(const Tree * ptree);
 
 /* operation:		adding item to the tree 							*/
 /* preconditions:	pi is the address of the added item 				*/
@@ -54,7 +54,7 @@ int tree_item_count (const Tree * ptree);
 /* postconditions:	if possible, the function adds item 				*/
 /* 					to the tree and returns true; 						*/
 /* 					otherwise it returns false 							*/
-bool add_item (Tree * ptree, const Item * pi);
+bool add_item(Tree * ptree, const Item * pi);
 
 /* operation:		searching for an item in the tree 					*/
 /* preconditions:	pi points to an item 								*/
@@ -62,7 +62,7 @@ bool add_item (Tree * ptree, const Item * pi);
 /* postconditions:	the function returns a pointer to the node 		 	*/
 /* 					that contains the given item; 						*/
 /*					if this item */
-Trnode * in_tree (const Tree * ptree, const Item * pi);
+Trnode * in_tree(const Tree * ptree, const Item * pi);
 
 /* operation:		deleting an item from the tree 						*/
 /* preconditions:	pi is the address of deleted item 					*/
@@ -70,7 +70,7 @@ Trnode * in_tree (const Tree * ptree, const Item * pi);
 /* postconditions:	if possible, the function deletes the item 			*/
 /* 					from the tree and returns true; 					*/
 /* 					otherwise the function returns false 				*/
-bool delete_item (Tree * ptree, const Item * pi);
+bool delete_item(Tree * ptree, const Item * pi);
 
 /* operation:		application of pointed function to every item 		*/
 /*					in the tree 										*/
@@ -79,11 +79,11 @@ bool delete_item (Tree * ptree, const Item * pi);
 /*					an Item argument and has no return value 			*/
 /* postconditions:	the function specified with pfun is executed once 	*/
 /*					for each item in the tree 							*/
-void traverse (const Tree * ptree, void (* pfun) (Item output));
+void traverse(const Tree * ptree, void (* pfun)(Item output));
 
 /* operation:		deleting all items from the tree 					*/
 /* preconditions:	ptree points to initialized tree 					*/
 /* postconditions:	the tree is empty 									*/
-void delete_all (Tree * ptree);
+void delete_all(Tree * ptree);
 
 #endif				/* is it necessarily! */

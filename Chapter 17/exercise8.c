@@ -6,20 +6,20 @@
 #include "exercise8.h"
 
 /* user (global) function prototypes 				*/
-void eatline (void);
-char menu (void);
-void add_pet (Tree * ptree);
-void drop_pet (Tree * ptree);
-void show_pets (const Tree * ptree);
-void find_pet (const Tree * ptree);
-void print_item (Item output);
-void upper_case (char * str);
-char * s_gets (char * str, int n);
+void eatline(void);
+char menu(void);
+void add_pet(Tree * ptree);
+void drop_pet(Tree * ptree);
+void show_pets(const Tree * ptree);
+void find_pet(const Tree * ptree);
+void print_item(Item output);
+void upper_case(char * str);
+char * s_gets(char * str, int n);
 
 /* local (static) function prototypes 				*/
-static void output_pets (const Trnode * pnode);
+static void output_pets(const Trnode * pnode);
 
-int main (void)
+int main(void)
 {
 	Tree pets;
 	char choice;
@@ -49,13 +49,13 @@ int main (void)
 	return 0;
 }
 
-void eatline (void)
+void eatline(void)
 {
 	while (getchar() != '\n')
 		continue;
 }
 
-char menu (void)
+char menu(void)
 {
 	int ch;
 
@@ -79,7 +79,7 @@ char menu (void)
 	return ch;
 }
 
-void add_pet (Tree * ptree)
+void add_pet(Tree * ptree)
 {
 	Item temp;
 
@@ -103,7 +103,7 @@ void add_pet (Tree * ptree)
 	}
 }
 
-void show_pets (const Tree * ptree)
+void show_pets(const Tree * ptree)
 {
 	if (tree_is_empty(ptree))
 		puts("There are no records.");
@@ -111,13 +111,13 @@ void show_pets (const Tree * ptree)
 		traverse(ptree, print_item);
 }
 
-void print_item (Item output)
+void print_item(Item output)
 {
 	printf("Animal: %-19s Kind: %-19s\n", 
 		output.petname, output.petkind);
 }
 
-void find_pet (const Tree * ptree)
+void find_pet(const Tree * ptree)
 {
 	Item temp;
 	Trnode * find;
@@ -139,7 +139,7 @@ void find_pet (const Tree * ptree)
 	}
 }
 
-void drop_pet (Tree * ptree)
+void drop_pet(Tree * ptree)
 {
 	Item temp;
 
@@ -163,7 +163,7 @@ void drop_pet (Tree * ptree)
 	}
 }
 
-void upper_case (char * str)
+void upper_case(char * str)
 {
 	while (*str)
 	{
@@ -172,7 +172,7 @@ void upper_case (char * str)
 	}
 }
 
-char * s_gets (char * str, int n)
+char * s_gets(char * str, int n)
 {
 	char * ret_val;
 	char * find;
@@ -191,7 +191,7 @@ char * s_gets (char * str, int n)
 }
 
 /* used with find_pet() user function only	*/
-static void output_pets (const Trnode * pnode)
+static void output_pets(const Trnode * pnode)
 {
 	int i;
 

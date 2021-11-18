@@ -8,7 +8,7 @@
 /* interface functions */
 
 /* sets the list to empty state (<=> sets any value of the list to oh) */
-void initialize_list (List * plist)
+void initialize_list(List * plist)
 {
 	int i, j;
 
@@ -22,25 +22,25 @@ void initialize_list (List * plist)
 }
 
 /* returns true, if the list is empty */
-bool list_is_empty (const List * plist)
+bool list_is_empty(const List * plist)
 {
 	return 0 == plist->items ? true : false;
 }
 
 /* returns true, if the list is full */
-bool list_is_full (const List * plist)
+bool list_is_full(const List * plist)
 {
 	return MAXSIZE == plist->items ? true : false;
 }
 
 /* returns the number of items */
-unsigned int list_item_count (const List * plist)
+unsigned int list_item_count(const List * plist)
 {
 	return plist->items;
 }
 
 /* adds new item to the end of a list (so as a list is the array of structures) */
-bool add_item (List * plist, Item input)
+bool add_item(List * plist, Item input)
 {
 	bool ret_val;
 
@@ -57,7 +57,7 @@ bool add_item (List * plist, Item input)
 }
 
 /* visits each node and performs the function pointed to by pfun */
-void traverse (const List * plist, void (* pfun) (Item))
+void traverse(const List * plist, void (* pfun)(Item))
 {
 	int i;
 
@@ -66,7 +66,7 @@ void traverse (const List * plist, void (* pfun) (Item))
 }
 
 /* empties the list <=> peforms initialization of the list (in this case) */
-void empty_the_list (List * plist)
+void empty_the_list(List * plist)
 {
 	initialize_list(plist);
 }

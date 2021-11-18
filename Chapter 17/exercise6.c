@@ -5,9 +5,9 @@
 #define SIZE 10
 
 /* note: the first argument must be a sorted array! */
-bool binary_search (int arr_sorted[], int num, int seek);
+bool binary_search(int arr_sorted[], int num, int seek);
 
-int main (void)
+int main(void)
 {
 	/* sequential natural series from 1 to 10 */
 	int array[SIZE] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
@@ -28,7 +28,7 @@ int main (void)
 	return 0;
 }
 
-bool binary_search (int arr[], int n, int seek)
+bool binary_search(int arr[], int n, int seek)
 {
 	bool is_here = false;
 	int left = 0;

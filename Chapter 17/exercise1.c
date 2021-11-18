@@ -5,11 +5,11 @@
 #include <stdlib.h>						/* prototype for exit(), EXIT_FAILURE 	*/
 #include "exercise1.h"					/* definition of List, Item 			*/
 
-void displaying (const List * plist);
-void showmovies (Item my_item);			/* Item is a structure 					*/
-char * s_gets (char * str, int n);
+void displaying(const List * plist);
+void showmovies(Item my_item);			/* Item is a structure 					*/
+char * s_gets(char * str, int n);
 
-int main (void)
+int main(void)
 {
 	List movies;
 	Item temp;
@@ -53,7 +53,7 @@ int main (void)
 	return 0;
 }
 
-void displaying (const List * plist)
+void displaying(const List * plist)
 {
 	if (list_is_empty(plist))
 		puts("There is no input data.");		/* on the screen or another output file */
@@ -68,12 +68,12 @@ void displaying (const List * plist)
 	printf("You have entered %u movie(s).\n", list_item_count(plist));
 }
 
-void showmovies (Item my_item)
+void showmovies(Item my_item)
 {
 	printf("Film: %s  Raiting: %d\n", my_item.title, my_item.raiting);
 }
 
-char * s_gets (char * str, int n)
+char * s_gets(char * str, int n)
 {
 	char * ret_val;
 	char * find;

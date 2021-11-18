@@ -25,19 +25,19 @@ typedef struct stack {
 /* operation:		stack initialization	 							*/
 /* preconditions:	ps points to the stack 								*/
 /* postconditions:	the stack has initialized with empty value 			*/
-void stack_initialize (Stack * ps);
+void stack_initialize(Stack * ps);
 
 /* operation:		checking if the stack is full 						*/
 /* preconditions:	ps points to a previously initialized stack			*/
 /* postconditions:	the function returns true if the stack is full;		*/
 /* 					otherwise, it returns false 						*/
-bool stack_is_full (const Stack * ps);
+bool stack_is_full(const Stack * ps);
 
 /* operation:		checking if the stack is empty 						*/
 /* preconditions:	ps points to a previously initialized stack			*/
 /* postconditions:	the function returns true if the stack is empty; 	*/
 /* 					otherwise, it returns false 						*/
-bool stack_is_empty (const Stack * ps);
+bool stack_is_empty(const Stack * ps);
 
 /* operation:		pushes an item to a stack 							*/
 /* preconditions:	ps points to a previously initialized stack 		*/
@@ -47,7 +47,7 @@ bool stack_is_empty (const Stack * ps);
 /* 					of the stack and the function returns true;			*/
 /* 					otherwise, the stack remains unchanged  			*/
 /* 					and the function returns false 						*/
-bool push (Stack * ps, Item * input);
+bool push(Stack * ps, Item * input);
 
 /* operation:		deletes an item from the top of the stack 			*/
 /* preconditions:	ps points to a previously initialized stack 		*/
@@ -59,12 +59,12 @@ bool push (Stack * ps, Item * input);
 /* 					(and the function also returns true)			 	*/
 /* 					if the stack was empty from the beginning, 			*/
 /* 					it remains unchanged and the function returns false */
-bool pop (Stack * ps, Item * pitem);
+bool pop(Stack * ps, Item * pitem);
 
 /* operation:		empty the stack 									*/
 /* preconditions:	ps points to initialized stack 						*/
 /* postconditions:	deletes all content of the stack 					*/
 /*					and sets the stack to the empty state				*/
-void empty_the_stack (Stack * ps);
+void empty_the_stack(Stack * ps);
 
 #endif

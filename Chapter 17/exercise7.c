@@ -8,13 +8,13 @@
 #include <ctype.h>			/* for tolower() 					*/
 #include "exercise7.h"		/* for WRDLEN == 20, traverse()		*/
 
-void eat_line (void);
-char show_menu (void);
-void word_list (const Tree * ptree);
-void one_word_info (Item output);
-void word_and_times (const Tree * ptree);
+void eat_line(void);
+char show_menu(void);
+void word_list(const Tree * ptree);
+void one_word_info(Item output);
+void word_and_times(const Tree * ptree);
 
-int main (void)
+int main(void)
 {
 	FILE * fp;
 	Item temp;
@@ -54,7 +54,7 @@ int main (void)
 
 /* prints the (sorted) contents of a binary search tree 	*/
 /* note: the binary search tree sorts the items on its own!	*/
-void word_list (const Tree * ptree)
+void word_list(const Tree * ptree)
 {
 	if (tree_is_empty(ptree))
 		fputs("The text is empty!\n", stderr);
@@ -66,12 +66,12 @@ void word_list (const Tree * ptree)
 	}
 }
 
-void one_word_info (Item output)
+void one_word_info(Item output)
 {
 	printf("word: %-*s\t times: %d\n", WRDLEN, output.word, output.num);
 }
 
-void word_and_times (const Tree * ptree)
+void word_and_times(const Tree * ptree)
 {
 	Item temp;
 	Trnode * find;
@@ -96,7 +96,7 @@ void word_and_times (const Tree * ptree)
 	}
 }
 
-char show_menu (void)
+char show_menu(void)
 {
 	int res;		/* if EOF is entered, the program should recognize it 	*/
 
@@ -115,7 +115,7 @@ char show_menu (void)
 	return res;		/* implicit type conversion to char 					*/
 }
 
-void eat_line (void)
+void eat_line(void)
 {
 	while (getchar() != '\n')
 		continue;

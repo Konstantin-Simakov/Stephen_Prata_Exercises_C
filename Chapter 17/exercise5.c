@@ -4,7 +4,7 @@
 #include "exercise5.h"
 #include <stdlib.h>
 
-int main (void)
+int main(void)
 {
 	Stack string;
 	Item ch;		/* there is Item type == char type in this program */
