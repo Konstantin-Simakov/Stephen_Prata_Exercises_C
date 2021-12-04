@@ -1,8 +1,7 @@
 /* exercise1_support.c */
 /* compile with "exercise1_support.c" source file */
-
-#include "exercise1_head.h"		/* here is the global array named year */
 #include <string.h>				/* for strcmp(), strchr() */
+#include "exercise1_head.h"		/* here is the global array named year */
 
 int total_days(const char * str)
 {

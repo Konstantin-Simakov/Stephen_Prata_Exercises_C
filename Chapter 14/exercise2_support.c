@@ -5,19 +5,7 @@
 #include <stdlib.h>				/* for atoi() */
 #include "exercise2_head.h"		/* for template of structure, str_digit(), MIN, MAX */
 
-bool str_digit(const char * str)
-{
-	bool is_digit = true;
-
-	while (*str)
-		if (!isdigit(*str++))
-		{
-			is_digit = false;
-			break;
-		}
-
-	return is_digit;
-}
+static bool str_digit(const char * str);
 
 int month_sum(const struct months_info * year, int n)
 {
@@ -46,4 +34,18 @@ int calc_month_num(const struct months_info * year, int n, const char * str_mont
 			}
 
 	return num_month;
+}
+
+static bool str_digit(const char * str)
+{
+	bool is_digit = true;
+
+	while (*str)
+		if (!isdigit(*str++))
+		{
+			is_digit = false;
+			break;
+		}
+
+	return is_digit;
 }

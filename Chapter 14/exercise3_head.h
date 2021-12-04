@@ -10,8 +10,6 @@ struct book {
 	float value;
 };
 
-char * s_gets(char * str, int n);
-void eatline(void);
 int init_struct_arr(struct book lib[], int n);
 void sort_struct_title(struct book lib[], int n);
 void sort_struct_value(struct book lib[], int n);

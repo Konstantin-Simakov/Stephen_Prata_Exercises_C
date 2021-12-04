@@ -3,29 +3,8 @@
 #include <string.h>				// for strchr()
 #include "exercise3_head.h"		// for template of the structure
 
-char * s_gets(char * str, int n)
-{
-	char * ret_val, * find;
-
-	ret_val = fgets(str, n, stdin);
-	if (ret_val)
-	{
-		find = strchr(str, '\n');
-		if (find)
-			*find = '\0';
-		else
-			while (getchar() != '\n')
-				continue;
-	}
-
-	return ret_val;
-}
-
-void eatline(void)
-{
-	while (getchar() != '\n')
-		continue;
-}
+static char * s_gets(char * str, int n);
+static void eatline(void);
 
 // returns the number of successfully read structures
 int init_struct_arr(struct book lib[], int num)		// num is a number of elements in the structure array
@@ -93,4 +72,28 @@ void output_struct_arr(const struct book lib[], int n)
 	}
 	else
 		puts("There are no books in your library.");
+}
+
+static char * s_gets(char * str, int n)
+{
+	char * ret_val, * find;
+
+	ret_val = fgets(str, n, stdin);
+	if (ret_val)
+	{
+		find = strchr(str, '\n');
+		if (find)
+			*find = '\0';
+		else
+			while (getchar() != '\n')
+				continue;
+	}
+
+	return ret_val;
+}
+
+static void eatline(void)
+{
+	while (getchar() != '\n')
+		continue;
 }

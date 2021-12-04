@@ -5,25 +5,14 @@
 #include <stdbool.h>
 #include "exercise7_head.h"		/* for structure template */
 
-/* most frequently used own functions */
-char * s_gets(char * str, int n)
-{
-	char * ret_val;
-
-	ret_val = fgets(str, n, stdin);
-	if (ret_val)
-	{
-		while (*str != '\n' && *str != '\0')
-			str++;
-		if ('\n' == *str)
-			*str = '\0';
-		else
-			while (getchar() != '\n')
-				continue;
-	}
-
-	return ret_val;
-}
+/* local (static) function prototypes for this source file */
+static void eatline(void);
+static bool is_empty_arr(struct book library[], int n);
+static char * s_gets(char * str, int n);
+static char choice2(void);
+static void struct_cpy(struct book * pstruct1, struct book * pstruct2);
+static void change(struct book * entry, int num);
+static void to_empty(struct book * entry);
 
 bool is_empty(struct book * entry)
 {
@@ -37,13 +26,6 @@ bool is_empty(struct book * entry)
 	return zero;
 }
 
-void eatline(void)
-{
-	while (getchar() != '\n')
-		continue;
-}
-
-/* /////////////////////////////////////////////////////////////////////////////////////// */
 char action(void)
 {
 	char ans;
@@ -133,83 +115,6 @@ void change_entry(struct book library[], int count)
 		puts("All entries is empty. There is nothing to change. Choose a) or q)");
 }
 
-/* using by change_entry(), num is a number of the entry */
-void change(struct book * entry, int num)
-{
-	struct book temp;
-	bool status = true;			/* to choose: copy or not; true -- copy, false -- not */
-
-	struct_cpy(&temp, entry);
-	switch (choice2())
-	{
-		case '1': puts("Enter the title to this entry:");
-			if (s_gets(temp.title, LEN) == NULL || is_empty(&temp))
-			{
-				puts("An invalid value was entered for title of the book.");
-				puts("Source structure won't be changed.");
-				status = false;
-			}
-			break;
-		case '2': puts("Enter the author's name:");
-			if (s_gets(temp.author, LEN) == NULL || is_empty(&temp))
-			{
-				puts("An invalid value was entered for author's name.");
-				puts("Source structure won't be changed.");
-				status = false;
-			}
-			break;
-		case '3': puts("Enter the value of this book:");
-			if (scanf("%f", &temp.value) != 1)
-			{
-				puts("An invalid value was entered for value of the book.");
-				puts("Source structure won't be changed.");
-				status = false;
-			}
-			else if (temp.value < 0.0f)
-			{
-				puts("Invalid range for value of the book.");
-				puts("Source structure won't be changed.");
-				status = false;
-			}
-			eatline();
-			break;
-		default : puts("Error 2");
-				status = false;
-	}
-
-	if (status)
-	{
-		struct_cpy(entry, &temp);
-		printf("The entry %d has been changed successfully.\n", num);
-	}
-}
-
-char choice2(void)
-{
-	char ans;
-
-	puts("What structure field do you want to change?");
-	puts("1) title  	2) ahour's name     3) value of the book");
-	ans = getchar();
-	eatline();
-	while (strchr("123", ans) == NULL)
-	{
-		puts("Incorrect number entered. Try again:");
-		ans = getchar();
-		eatline();
-	}
-
-	return ans;
-}
-
-void struct_cpy(struct book * pstruct1, struct book * pstruct2)
-{
-	strcpy(pstruct1->title, pstruct2->title);
-	strcpy(pstruct1->author, pstruct2->author);
-	pstruct1->value = pstruct2->value;
-	pstruct1->number = pstruct2->number;
-}
-
 /* /////////////////////////////////////////////////////////////////////////////////////// */
 void delete_entry(struct book library[], int count)
 {
@@ -254,42 +159,6 @@ void delete_entry(struct book library[], int count)
 	}
 	else
 		puts("All entries is empty. There is nothing to delete. Choose a) or q)");
-}
-
-void to_empty(struct book * entry)
-{
-	struct book temp = { 0 };
-
-	strcpy(entry->title, temp.title);
-	strcpy(entry->author, temp.author);
-	entry->value = temp.value;
-	entry->number = temp.number;
-}
-
-bool is_empty_arr(struct book library[], int n)
-{
-	int i, k;
-	int nums[n];			/* (c99 -- variable length array) */
-	bool empty = true;		/* default value */
-
-	/* default values for the nums array */
-	for (k = 0; k < n; k++)
-		nums[k] = 0;
-
-	for (k = 0, i = 0; i < n; i++)
-		if (!is_empty(&library[i]))
-			nums[k++] = i + 1;
-	
-	if (nums[0] != 0)
-	{
-		empty = false;
-		printf("The next number of entries of the array is non-empty: ");
-		for (i = 0; i < k; i++)
-			printf("%d, ", nums[i]);
-		printf("\b\b.\n");
-	}
-
-	return empty;
 }
 
 int sort_struct_arr(struct book library[], int count)		/* count is a number of elements in the array */
@@ -373,4 +242,145 @@ void output_to_file(struct book library[], int count, int filecount, FILE * fp)
 		fwrite(library, sizeof(struct book), count, fp);
 	else
 		fwrite(library, sizeof(struct book), filecount, fp);
+}
+
+
+/* local (static) function definition */
+
+static void eatline(void)
+{
+	while (getchar() != '\n')
+		continue;
+}
+
+/* using by change_entry(), num is a number of the entry */
+static void change(struct book * entry, int num)
+{
+	struct book temp;
+	bool status = true;			/* to choose: copy or not; true -- copy, false -- not */
+
+	struct_cpy(&temp, entry);
+	switch (choice2())
+	{
+		case '1': puts("Enter the title to this entry:");
+			if (s_gets(temp.title, LEN) == NULL || is_empty(&temp))
+			{
+				puts("An invalid value was entered for title of the book.");
+				puts("Source structure won't be changed.");
+				status = false;
+			}
+			break;
+		case '2': puts("Enter the author's name:");
+			if (s_gets(temp.author, LEN) == NULL || is_empty(&temp))
+			{
+				puts("An invalid value was entered for author's name.");
+				puts("Source structure won't be changed.");
+				status = false;
+			}
+			break;
+		case '3': puts("Enter the value of this book:");
+			if (scanf("%f", &temp.value) != 1)
+			{
+				puts("An invalid value was entered for value of the book.");
+				puts("Source structure won't be changed.");
+				status = false;
+			}
+			else if (temp.value < 0.0f)
+			{
+				puts("Invalid range for value of the book.");
+				puts("Source structure won't be changed.");
+				status = false;
+			}
+			eatline();
+			break;
+		default : puts("Error 2");
+				status = false;
+	}
+
+	if (status)
+	{
+		struct_cpy(entry, &temp);
+		printf("The entry %d has been changed successfully.\n", num);
+	}
+}
+
+static bool is_empty_arr(struct book library[], int n)
+{
+	int i, k;
+	int nums[n];			/* (c99 -- variable length array) */
+	bool empty = true;		/* default value */
+
+	/* default values for the nums array */
+	for (k = 0; k < n; k++)
+		nums[k] = 0;
+
+	for (k = 0, i = 0; i < n; i++)
+		if (!is_empty(&library[i]))
+			nums[k++] = i + 1;
+	
+	if (nums[0] != 0)
+	{
+		empty = false;
+		printf("The next number of entries of the array is non-empty: ");
+		for (i = 0; i < k; i++)
+			printf("%d, ", nums[i]);
+		printf("\b\b.\n");
+	}
+
+	return empty;
+}
+
+static char * s_gets(char * str, int n)
+{
+	char * ret_val;
+
+	ret_val = fgets(str, n, stdin);
+	if (ret_val)
+	{
+		while (*str != '\n' && *str != '\0')
+			str++;
+		if ('\n' == *str)
+			*str = '\0';
+		else
+			while (getchar() != '\n')
+				continue;
+	}
+
+	return ret_val;
+}
+
+static char choice2(void)
+{
+	char ans;
+
+	puts("What structure field do you want to change?");
+	puts("1) title  	2) ahour's name     3) value of the book");
+	ans = getchar();
+	eatline();
+	while (strchr("123", ans) == NULL)
+	{
+		puts("Incorrect number entered. Try again:");
+		ans = getchar();
+		eatline();
+	}
+
+	return ans;
+}
+
+static void struct_cpy(struct book * pstruct1, struct book * pstruct2)
+{
+	strcpy(pstruct1->title, pstruct2->title);
+	strcpy(pstruct1->author, pstruct2->author);
+	pstruct1->value = pstruct2->value;
+	pstruct1->number = pstruct2->number;
+}
+
+static void to_empty(struct book * entry)
+{
+	struct book temp = { 0 };
+
+	strcpy(entry->title, temp.title);
+	strcpy(entry->author, temp.author);
+	entry->value = temp.value;
+	entry->number = temp.number;
 }

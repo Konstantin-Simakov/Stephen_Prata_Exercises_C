@@ -4,11 +4,9 @@
 #include <ctype.h>				/* for tolower() */
 #include "exercise8_head.h"
 
-void eatline(void)
-{
-	while (getchar() != '\n')
-		continue;
-}
+static void eatline(void);
+static void struct_cpy_arr(struct seat * temp, struct seat * aircraft, int n);
+static void sort_alph(struct seat arr[], int n);
 
 char showmenu(void)
 {
@@ -57,7 +55,7 @@ void show_free_list(struct seat aircraft[], int n)
 	printf("\b\b.\n");
 }
 
-void struct_cpy_arr(struct seat * temp, struct seat * aircraft, int n)
+static void struct_cpy_arr(struct seat * temp, struct seat * aircraft, int n)
 {
 	int i;
 
@@ -70,7 +68,7 @@ void struct_cpy_arr(struct seat * temp, struct seat * aircraft, int n)
 	}
 }
 
-void sort_alph(struct seat arr[], int n)
+static void sort_alph(struct seat arr[], int n)
 {
 	int top, seek;
 	struct seat temp;
@@ -186,4 +184,10 @@ void output_to_file(struct seat aircraft[], int n, FILE * fp)
 	}
 
 	fwrite(aircraft, sizeof(struct seat), n, fp);
+}
+
+static void eatline(void)
+{
+	while (getchar() != '\n')
+		continue;
 }

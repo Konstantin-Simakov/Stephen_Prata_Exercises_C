@@ -4,49 +4,10 @@
 #include <stdlib.h>			// for exit(), EXIT_FAILURE
 #include "exercise5_head.h"
 
-char * s_gets(char * str, int n)
-{
-	char * ret_val, * find;
-
-	ret_val = fgets(str, n, stdin);
-	if (ret_val)
-	{
-		find = strchr(str, '\n');
-		if (find)
-			*find = '\0';
-		else
-			while (getchar() != '\n')
-				continue;
-	}
-
-	return ret_val;
-}
-
-void eatline(void)
-{
-	while (getchar() != '\n')
-		continue;
-}
-
-// initial values for grade array
-void init_grades(struct student * person)
-{
-	int i;
-
-	for (i = 0; i < GRADES; i++)
-		person->grade[i] = 0.0f;
-}
-
-void average_value(struct student * person)
-{
-	int i;
-	float sum = 0.0f;
-
-	for (i = 0; i < GRADES; i++)
-		sum += person->grade[i];
-	
-	person->average = sum / GRADES;
-}
+static char * s_gets(char * str, int n);
+static void eatline(void);
+static void init_grades(struct student * person);
+static void average_value(struct student * person);
 
 int init_struct_arr(struct student group[], int num)
 {
@@ -97,4 +58,48 @@ void output_struct_arr(const struct student group[], int n)
 			printf("%6.2f ", group[i].grade[j]);
 		printf("%14.2f\n", group[i].average);
 	}
+}
+
+static char * s_gets(char * str, int n)
+{
+	char * ret_val, * find;
+
+	ret_val = fgets(str, n, stdin);
+	if (ret_val)
+	{
+		find = strchr(str, '\n');
+		if (find)
+			*find = '\0';
+		else
+			while (getchar() != '\n')
+				continue;
+	}
+
+	return ret_val;
+}
+
+static void eatline(void)
+{
+	while (getchar() != '\n')
+		continue;
+}
+
+// initial values for grade array
+static void init_grades(struct student * person)
+{
+	int i;
+
+	for (i = 0; i < GRADES; i++)
+		person->grade[i] = 0.0f;
+}
+
+static void average_value(struct student * person)
+{
+	int i;
+	float sum = 0.0f;
+
+	for (i = 0; i < GRADES; i++)
+		sum += person->grade[i];
+	
+	person->average = sum / GRADES;
 }

@@ -3,29 +3,8 @@
 #include <string.h>	 		// for strchr()
 #include "exercise4_head.h"
 
-char * s_gets(char * str, int n)
-{
-	char * ret_val, * find;
-
-	ret_val = fgets(str, n, stdin);
-	if (ret_val != NULL)
-	{
-		find = strchr(str, '\n');
-		if (find != NULL)
-			*find = '\0';
-		else	// if (find == NULL) <=> '\n' is not found => '\0' will be found
-			while (getchar() != '\n')
-				continue;
-	}
-
-	return ret_val;
-}
-
-void eatline(void)
-{
-	while (getchar() != '\n')
-		continue;
-}
+static char * s_gets(char * str, int n);
+static void eatline(void);
 
 int init_struct_arr(struct ssc * date, int n)
 {
@@ -68,4 +47,28 @@ void output_struct(struct ssc date)
 	printf("%s, %s %c%s -- %d\n", date.name.fname, date.name.lname, date.name.patronymic[0], 
 		date.name.patronymic[0] != '\0' ? "." : "", 
 		date.num);
+}
+
+static char * s_gets(char * str, int n)
+{
+	char * ret_val, * find;
+
+	ret_val = fgets(str, n, stdin);
+	if (ret_val != NULL)
+	{
+		find = strchr(str, '\n');
+		if (find != NULL)
+			*find = '\0';
+		else	// if (find == NULL) <=> '\n' is not found => '\0' will be found
+			while (getchar() != '\n')
+				continue;
+	}
+
+	return ret_val;
+}
+
+static void eatline(void)
+{
+	while (getchar() != '\n')
+		continue;
 }

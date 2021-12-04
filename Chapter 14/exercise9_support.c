@@ -4,11 +4,9 @@
 #include <ctype.h>				/* for tolower() */
 #include "exercise9_head.h"
 
-void eatline(void)
-{
-	while (getchar() != '\n')
-		continue;
-}
+static void eatline(void);
+static void struct_cpy_arr(struct seat * temp, struct seat * aircraft, int n);
+static void sort_alph(struct seat arr[], int n);
 
 int showmenu1(void)
 {
@@ -74,34 +72,6 @@ void show_free_list(struct seat aircraft[], int n)
 		if (!aircraft[i].book)
 			printf("%d, ", aircraft[i].number);
 	printf("\b\b.\n");
-}
-
-void struct_cpy_arr(struct seat * temp, struct seat * aircraft, int n)
-{
-	int i;
-
-	for (i = 0; i < n; i++)
-	{
-		temp[i].number = aircraft[i].number;
-		temp[i].book = aircraft[i].book;
-		strcpy(temp[i].passenger.fname, aircraft[i].passenger.fname);
-		strcpy(temp[i].passenger.lname, aircraft[i].passenger.lname);
-	}
-}
-
-void sort_alph(struct seat arr[], int n)
-{
-	int top, seek;
-	struct seat temp;
-
-	for (top = 0; top < n - 1; top++)
-		for (seek = top + 1; seek < n; seek++)
-			if (strcmp(arr[top].passenger.lname, arr[seek].passenger.lname) > 0)
-			{
-				temp = arr[top];
-				arr[top] = arr[seek];
-				arr[seek] = temp;
-			}
 }
 
 void show_book_alph(struct seat aircraft[], int n)
@@ -177,7 +147,7 @@ void confirm_book(struct seat aircraft[], int n)
 	eatline();
 }
 
-void cancel_book_seat(struct seat aircraft[], int n)
+void cancel_book(struct seat aircraft[], int n)
 {
 	int num;		/* the number of desired (cancel booked) seat */
 
@@ -261,4 +231,38 @@ void output_to_file(struct seat aircraft[], int n, FILE * fp)
 	}
 
 	fwrite(aircraft, sizeof(struct seat), n, fp);
+}
+
+static void eatline(void)
+{
+	while (getchar() != '\n')
+		continue;
+}
+
+static void struct_cpy_arr(struct seat * temp, struct seat * aircraft, int n)
+{
+	int i;
+
+	for (i = 0; i < n; i++)
+	{
+		temp[i].number = aircraft[i].number;
+		temp[i].book = aircraft[i].book;
+		strcpy(temp[i].passenger.fname, aircraft[i].passenger.fname);
+		strcpy(temp[i].passenger.lname, aircraft[i].passenger.lname);
+	}
+}
+
+static void sort_alph(struct seat arr[], int n)
+{
+	int top, seek;
+	struct seat temp;
+
+	for (top = 0; top < n - 1; top++)
+		for (seek = top + 1; seek < n; seek++)
+			if (strcmp(arr[top].passenger.lname, arr[seek].passenger.lname) > 0)
+			{
+				temp = arr[top];
+				arr[top] = arr[seek];
+				arr[seek] = temp;
+			}
 }

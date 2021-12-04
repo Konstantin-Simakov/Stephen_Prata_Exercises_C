@@ -1,4 +1,5 @@
 // exercise4_pb_head.h
+
 #define LEN 20
 #define MEMBERS 5
 
@@ -14,7 +15,5 @@ struct ssc {
 	struct full_name name;
 };
 
-char * s_gets(char * str, int n);
 int init_struct_arr(struct ssc * date, int n);
 void output_struct(struct ssc date);
-void eatline(void);

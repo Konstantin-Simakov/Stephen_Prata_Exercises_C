@@ -114,7 +114,7 @@ int main(void)
 					break;
 				case 'e' : confirm_book(p_air, SEATS);
 					break;
-				case 'f' : cancel_book_seat(p_air, SEATS);
+				case 'f' : cancel_book(p_air, SEATS);
 					break;
 				default : puts("Error 2");
 			}
