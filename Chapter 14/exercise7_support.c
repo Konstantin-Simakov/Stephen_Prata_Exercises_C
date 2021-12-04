@@ -115,7 +115,6 @@ void change_entry(struct book library[], int count)
 		puts("All entries is empty. There is nothing to change. Choose a) or q)");
 }
 
-/* /////////////////////////////////////////////////////////////////////////////////////// */
 void delete_entry(struct book library[], int count)
 {
 	int num;						/* number of entry */
@@ -194,7 +193,6 @@ void set_nums(struct book library[], int count)
 		library[i].number = i + 1;
 }
 
-/* /////////////////////////////////////////////////////////////////////////////////////// */
 int output_from_file_binary(struct book library[], int n, FILE * fp)
 {
 	int count = 0;
