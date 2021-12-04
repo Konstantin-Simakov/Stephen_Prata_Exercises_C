@@ -35,7 +35,7 @@ int main(void)
 			"an abbreviation consists of 3 letters or a number.\n");
 		printf("Year is some integer number.\n"								/* message: year */
 			"(If you want to enter a year BC, enter a negative number for the year.)\n");
-		exit(EXIT_FAILURE);													/* exit from the program */
+		exit(EXIT_FAILURE);										/* exit from the program */
 	}
 
 	/* month string processing */
