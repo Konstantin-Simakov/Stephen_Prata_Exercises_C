@@ -47,7 +47,6 @@ char action(void)
 	return ans;
 }
 
-/* /////////////////////////////////////////////////////////////////////////////////////// */
 int add_entry(struct book library[], int count)
 {
 	puts("Enter new titles:");
@@ -81,7 +80,6 @@ int add_entry(struct book library[], int count)
 	return count;
 }
 
-/* /////////////////////////////////////////////////////////////////////////////////////// */
 void change_entry(struct book library[], int count)
 {
 	int num;						/* number of entry; interactively */
