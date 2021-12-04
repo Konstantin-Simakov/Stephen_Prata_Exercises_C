@@ -241,7 +241,7 @@ void output_to_file(struct book library[], int count, int filecount, FILE * fp)
 }
 
 
-/* local (static) function definition */
+/* local (static) function definitions */
 
 static void eatline(void)
 {
