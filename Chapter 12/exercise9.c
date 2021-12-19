@@ -27,7 +27,7 @@ int main(void)
 	for (i = 0; i < num; i++)
 		puts(words[i]);
 
-	free(words);	// <==> free(temp); for all earlier used temporary variables
+	free(words);	// <==> free(temp); for all earlier used temp variables
 	
 	return 0;
 }
