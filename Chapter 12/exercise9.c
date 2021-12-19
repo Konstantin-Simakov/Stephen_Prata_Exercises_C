@@ -1,9 +1,12 @@
 /* exercise9.c -- Chapter 12 */
-#include <stdio.h>		/* for printf(), getchar(), puts(), scanf()	 */
-#include <stdlib.h>		/* for malloc(), free() 			 */
-#include <string.h>		/* for strlen(), strcpy()			 */
+#include <stdio.h>		/* for printf(), getchar(), puts(), scanf() 	*/
+#include <stdlib.h>		/* for malloc(), free() 			*/
+#include <string.h>		/* for strlen(), strcpy()			*/
 
 #define SIZE 40
+
+void displaying(char * strs[], int n);
+void freeing(char * strs[], int n);
 
 int main(void)
 {
@@ -16,7 +19,7 @@ int main(void)
 	printf("Enter words number: ");
 	scanf("%d", &num);
 	words = (char **) malloc(num * sizeof(char *));		/* ??? */
-
+	
 	printf("Now enter these %d words:\n", num);
 	for (i = 0; i < num; i++)
 	{
@@ -25,13 +28,30 @@ int main(void)
 		strcpy(word, temp);		
 		words[i] = word;
 	}
-
+	
 	printf("Here are all %d words you entered:\n", num);
-	for (i = 0; i < num; i++)
-		puts(words[i]);
+	displaying(words, num);
 
-	free(words);	/* <==> free(word); for all previously created 	*/
-			/* 	dynamic char arrays named word		*/
+	freeing(words, num);
 
 	return 0;
+}
+
+/* display dynamic array of strings (array of (char *)) 	*/
+void displaying(char * strs[], int n)
+{
+	int i;
+
+	for (i = 0; i < n; i++)
+		puts(strs[i]);
+}
+
+/* free dynamic allocated memory 				*/
+void freeing(char * strs[], int n)
+{
+	int i;
+
+	for (i = 0; i < n; i++)
+		free(strs[i]);
+	free(strs);
 }
