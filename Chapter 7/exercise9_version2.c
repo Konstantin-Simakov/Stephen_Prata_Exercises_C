@@ -2,11 +2,11 @@
 #include <stdio.h>
 #include <stdbool.h>							// for bool variable
 
-unsigned prime_num(unsigned num_prime);			// n is the number of a number that is prime
+unsigned prime_num(unsigned num_prime);					// n is the number of a number that is prime
 
 int main(void)
 {
-	unsigned num_prime;							// the number of a number that is prime
+	unsigned num_prime;						// the number of a number that is prime
 
 	printf("Enter a positive integer number "
 		"(or q to finish the program):\n");
@@ -23,29 +23,29 @@ int main(void)
 	return 0;
 }
 
-unsigned prime_num(unsigned num_prime)			// n is the number of a number that is prime
+unsigned prime_num(unsigned num_prime)					// n is the number of a number that is prime
 {
 	unsigned number;
 	unsigned div;
 	unsigned count;
 	bool is_prime;
 
-	number = 2 - 1;								// it should be so
+	number = 2 - 1;							// it should be so
 	count = 1;
 
 	while (count <= num_prime)
 	{
-		number++;								// pass over all numbers to upper
-		is_prime = true;						// initially the flag is set to true...
-	
+		is_prime = true;					// initially the flag is set to true...
+		number++;						// pass over all numbers to upper
+			
 		for (div = 2; (div * div) <= number; div++)
 			if (number % div == 0)				// if at least 1 divisor was found for the number number,
-				is_prime = false;				// then such a number is not prime
+				is_prime = false;			// then such a number is not prime
 		
-		if (is_prime)							// if the number is prime
+		if (is_prime)						// if the number is prime
 		{
-			// printf("%u\t", number);				// output this prime number (optional)
-			count++;							// count prime number
+			// printf("%u\t", number);			// output this prime number (optional)
+			count++;					// count prime number
 		}
 	}
 	// putchar('\n');
