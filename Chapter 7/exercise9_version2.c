@@ -23,7 +23,6 @@ int main(void)
 	return 0;
 }
 
-// In details:
 unsigned prime_num(unsigned num_prime)			// n is the number of a number that is prime
 {
 	unsigned number;
@@ -53,29 +52,3 @@ unsigned prime_num(unsigned num_prime)			// n is the number of a number that is 
 
 	return number;
 }
-
-/* Or briefly:
-unsigned prime_number(unsigned n_prime)
-{
-	unsigned num;
-	unsigned div;
-	unsigned count;
-	bool is_prime;
-
-	for (num = 2, count = 1; count < n_prime; ++num)
-	{
-		for (is_prime = true, div = 2; div * div <= num; ++div)
-		{
-			if (num % div == 0)
-			{
-				is_prime = false;
-				break;
-			}
-		}
-		if (is_prime)
-			++count;
-	}
-
-	return num;
-}
-*/
