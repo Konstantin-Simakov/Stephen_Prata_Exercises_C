@@ -51,14 +51,14 @@ unsigned long prime_number(unsigned n_prime)
 bool is_prime(unsigned num)
 {
 	unsigned div;
-	bool is_prime = true;
+	bool prime = true;
 
 	for (div = 2; div * div <= num; div++)
 		if (num % div == 0)
 		{
-			is_prime = false;
+			prime = false;
 			break;
 		}
 
-	return is_prime;
+	return prime;
 }
