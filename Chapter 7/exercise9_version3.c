@@ -1,4 +1,4 @@
-/* exercise9_version3.c -- testing the program searching nth prime number */
+/* exercise9_version3.c -- the program searching nth prime number 	*/
 #include <stdio.h>
 #include <stdbool.h>				/* for bool, true, false */
 
