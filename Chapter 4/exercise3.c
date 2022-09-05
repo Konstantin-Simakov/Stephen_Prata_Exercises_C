@@ -6,7 +6,7 @@ int main(void)
 	float number_fl = 0.0f;
 
 	printf("Please, enter a float number:\n");
-	scanf("%g", &number_fl);					/* or %g */
+	scanf("%f", &number_fl);					/* or %g */
 
 	printf("OK. Your float number is %+.3f or %+.3e.\n", number_fl, number_fl);
 

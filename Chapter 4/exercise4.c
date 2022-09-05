@@ -4,7 +4,7 @@
 int main(void)
 {
 	char name[30];
-	float growth = 0.0F;
+	float growth = 0.0f;
 
 	printf("Please, enter your growth (in cm) and name:\n");
 
