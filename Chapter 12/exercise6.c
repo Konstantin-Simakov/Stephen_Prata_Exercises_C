@@ -10,7 +10,7 @@ gcc exercise6.c support6.c -o exercise6 -Wall */
 
 int main(void)
 {
-	int ar[SIZE] = {0};				// seed initialization of all elements of the array to zeros
+	int ar[SIZE] = { 0 };				// seed initialization of all elements of the array to zeros
 	int i;
 	int r;
 	int s;							// for seed of the srand()
