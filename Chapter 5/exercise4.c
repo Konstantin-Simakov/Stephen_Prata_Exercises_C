@@ -1,7 +1,7 @@
 /* exercise4.c -- Chapter 5 */
 #include <stdio.h>
 
-const float FOOT_CM = 30.48f; 	// cm number per one foot
+const float FOOT_CM = 30.48f; 		// cm number per one foot
 const int FOOT_INCH = 12;		// ineches number per one foot
 
 int main(void)
