@@ -3,7 +3,7 @@
 
 int main(void)
 {
-	double sec_year = 3.156e+7;
+	double sec_year = 3.156E+7;
 	short int years = 0;
 
 	printf("Please, enter your old in years: ");

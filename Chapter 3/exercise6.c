@@ -3,7 +3,7 @@
 
 int main(void)
 {
-	long double weight_m0 = 3.0e-23;	// gram
+	long double weight_m0 = 3.0e-23L;	// gram
 	short int weight_water = 950;		// gram; short int type is allowed
 	float quatre_volume = 0.0f;			// (N) - quatre amount
 
