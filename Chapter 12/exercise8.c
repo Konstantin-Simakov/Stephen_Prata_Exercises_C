@@ -24,7 +24,7 @@ int main(void)
 			free(pa);
 		}
 
-		printf("Enter elements number (< 1 to finish): ");
+		printf("Enter elements number (<= 0 or q to finish): ");
 	}
 	puts("The program has been completed.");
 	
