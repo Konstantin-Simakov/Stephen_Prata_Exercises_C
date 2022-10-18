@@ -2,8 +2,8 @@
 #include <stdio.h>
 #include <stdlib.h>		// for malloc(), free()
 
-int * make_array(int elem, int val);
-void show_array(const int ar[], int n);
+int * make_array(int size, int val);
+void show_array(const int arr[], int n);
 
 int main(void)
 {
@@ -39,18 +39,18 @@ int * make_array(int size, int value)
 	ptr = (int *) malloc(size * sizeof(int));		// memory allocate
 
 	for (i = 0; i < size; i++)
-		ptr[i] = value;								// assign to every element of the array with the same value
+		ptr[i] = value;					// assign to every element of the array with the same value
 
 	return ptr;
 }
 
-void show_array(const int ar[], int n)
+void show_array(const int arr[], int n)
 {
 	int i;
 
 	for (i = 0; i < n; i++)
 	{
-		printf("%d ", ar[i]);
+		printf("%d ", arr[i]);
 		if (i % 8 == 8 - 1)		// i -- is a variable by index (m by count == m - 1 by index) 
 			putchar('\n');
 	}
