@@ -19,13 +19,13 @@ int main(void)
 	return 0;
 }
 
-void ch_col_row(char ch, int row, int col)
+void ch_col_row(char ch, int rows, int cols)
 {
 	int i, j;
 
-	for (i = 1; i <= row; i++)
+	for (i = 1; i <= rows; i++)
 	{
-		for (j = 1; j <= col; j++)
+		for (j = 1; j <= cols; j++)
 			putchar(ch);
 		putchar('\n');
 	}
