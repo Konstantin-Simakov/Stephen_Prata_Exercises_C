@@ -4,11 +4,11 @@
 
 int main(void)
 {
-	struct ssc dates[MEMBERS];
-	int stop;
+    struct ssc dates[MEMBERS];
+    int stop;
 
-	stop = init_struct_arr(dates, MEMBERS);
-	output_struct_arr(dates, stop);
-	
-	return 0;
+    stop = init_struct_arr(dates, MEMBERS);
+    output_struct_arr(dates, stop);
+    
+    return 0;
 }

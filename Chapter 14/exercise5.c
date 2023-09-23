@@ -3,11 +3,11 @@
 
 int main(void)
 {
-	struct student group[CSIZE];		// group consists of CSIZE students
-	int stop;
+    struct student group[CSIZE];        // group consists of CSIZE students
+    int stop;
 
-	stop = init_struct_arr(group, CSIZE);
-	output_struct_arr(group, stop);
+    stop = init_struct_arr(group, CSIZE);
+    output_struct_arr(group, stop);
 
-	return 0;
+    return 0;
 }

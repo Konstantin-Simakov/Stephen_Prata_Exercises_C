@@ -5,8 +5,8 @@
 
 inline static void eatline(void)
 {
-	while (getchar() != '\n')
-		continue;
+    while (getchar() != '\n')
+        continue;
 }
 
 #endif
