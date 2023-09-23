@@ -6,26 +6,26 @@ void ic(void);
 
 int main(void)
 {
-	br();				/* line 1 */
-	printf(", ");
-	ic();
-	printf("\n");
+    br();               /* line 1 */
+    printf(", ");
+    ic();
+    printf("\n");
 
-	ic();				/* line 2 */
-	printf("\n");
+    ic();               /* line 2 */
+    printf("\n");
 
-	br();				/* line 3 */
-	printf("\n");
+    br();               /* line 3 */
+    printf("\n");
 
-	return 0;
+    return 0;
 }
 
 void br(void)
 {
-	printf("Brazilia, Russia");
+    printf("Brazilia, Russia");
 }
 
 void ic(void)
 {
-	printf("India, China");
+    printf("India, China");
 }

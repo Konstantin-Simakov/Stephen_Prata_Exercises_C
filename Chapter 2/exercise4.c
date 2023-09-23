@@ -6,25 +6,25 @@ void deny(void);
 
 int main(void)
 {
-	jolly();
-	jolly();
-	jolly();
-	
-	deny();
+    jolly();
+    jolly();
+    jolly();
+    
+    deny();
 
-	return 0;
+    return 0;
 }
 
 void jolly(void)
 {
-	printf("He is a jolly fellow!\n");
+    printf("He is a jolly fellow!\n");
 
-	return;
+    return;
 }
 
 void deny(void)
 {
-	printf("Nobody can deny it!\n");
+    printf("Nobody can deny it!\n");
 
-	return;
+    return;
 }

@@ -5,15 +5,15 @@ void warning(void);
 
 int main(void)
 {
-	warning();
+    warning();
 
-	return 0;
+    return 0;
 }
 
 void warning(void)
 {
-	printf("\a");
-	printf("Frightened by the sudden sound Vika screamed:\n");
-	printf("\"In the name of all stars, what was that!\"\n");
-	/* All these print statements can be placed directly into the main() function */
+    printf("\a");
+    printf("Frightened by the sudden sound Vika screamed:\n");
+    printf("\"In the name of all stars, what was that!\"\n");
+    /* All these print statements can be placed directly into the main() function */
 }

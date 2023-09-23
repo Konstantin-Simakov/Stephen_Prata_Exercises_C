@@ -5,22 +5,22 @@ void smiling(void);
 
 int main(void)
 {
-	smiling();
-	smiling();
-	smiling();
-	printf("\n");
+    smiling();
+    smiling();
+    smiling();
+    printf("\n");
 
-	smiling();
-	smiling();
-	printf("\n");
+    smiling();
+    smiling();
+    printf("\n");
 
-	smiling();
-	printf("\n");
+    smiling();
+    printf("\n");
 
-	return 0;
+    return 0;
 }
 
 void smiling(void)
 {
-	printf("Smiling! ");
+    printf("Smiling! ");
 }

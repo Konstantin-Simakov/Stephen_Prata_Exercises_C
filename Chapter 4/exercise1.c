@@ -3,13 +3,13 @@
 
 int main(void)
 {
-	char name[25];
-	char family[30];
+    char name[25];
+    char family[30];
 
-	printf("Please, enter your name and surname:\n");
-	scanf("%s %s", name, family);
+    printf("Please, enter your name and surname:\n");
+    scanf("%s %s", name, family);
 
-	printf("Good. You called %s %s.\n", family, name);
+    printf("Good. You called %s %s.\n", family, name);
 
-	return 0;
+    return 0;
 }

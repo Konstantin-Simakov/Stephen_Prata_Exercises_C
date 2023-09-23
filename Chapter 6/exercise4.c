@@ -5,19 +5,19 @@ otherwise you should look at the 2nd version of this program (in this directory)
 using the scanf () and printf () functions... */
 #include <stdio.h>
 
-#define R_AND_C 6		/* the number of rows and columns in the program ouput */
+#define R_AND_C 6       /* the number of rows and columns in the program ouput */
 
 int main(void)
 {
-	int i, j;
-	char ch = 'A';
+    int i, j;
+    char ch = 'A';
 
-	for (i = 0; i < R_AND_C; i++)
-	{
-		for (j = 0; j <= i; j++)
-			printf("%c", ch++);
-		printf("\n");
-	}
+    for (i = 0; i < R_AND_C; i++)
+    {
+        for (j = 0; j <= i; j++)
+            printf("%c", ch++);
+        printf("\n");
+    }
 
-	return 0;
+    return 0;
 }

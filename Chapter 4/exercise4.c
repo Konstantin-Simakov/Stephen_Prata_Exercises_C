@@ -3,16 +3,16 @@
 
 int main(void)
 {
-	char name[30];
-	float growth = 0.0f;
+    char name[30];
+    float growth = 0.0f;
 
-	printf("Please, enter your growth (in cm) and name:\n");
+    printf("Please, enter your growth (in cm) and name:\n");
 
-	scanf("%f %s", &growth, name);
+    scanf("%f %s", &growth, name);
 
-	growth = growth / 100;
+    growth = growth / 100;
 
-	printf("\n%s, your growth is %.3f metres.\n", name, growth);
+    printf("\n%s, your growth is %.3f metres.\n", name, growth);
 
-	return 0;
+    return 0;
 }

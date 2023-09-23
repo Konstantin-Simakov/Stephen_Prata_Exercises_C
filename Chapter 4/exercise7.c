@@ -4,21 +4,21 @@
 
 int main(void)
 {
-	double doub = 1.0 / 3.0;
-	float fl = 1.0f / 3.0f;
+    double doub = 1.0 / 3.0;
+    float fl = 1.0f / 3.0f;
 
-	printf("\nOutput:\n");
-	printf("---------------------------------------\n");
-	/* table header */
-	printf("%-20s %-20s\n", "double", "float");
-	/* the table itself */	
-	printf("%-20.4f %-20.4f\n", doub, fl);
-	printf("%-20.12f %-20.12f\n", doub, fl);
-	printf("%-20.16f %-20.16f\n", doub, fl);
-	printf("---------------------------------------\n");
-	printf("DBL_DIG = %d, FLT_DIG = %d.\n", DBL_DIG, FLT_DIG);
+    printf("\nOutput:\n");
+    printf("---------------------------------------\n");
+    /* table header */
+    printf("%-20s %-20s\n", "double", "float");
+    /* the table itself */  
+    printf("%-20.4f %-20.4f\n", doub, fl);
+    printf("%-20.12f %-20.12f\n", doub, fl);
+    printf("%-20.16f %-20.16f\n", doub, fl);
+    printf("---------------------------------------\n");
+    printf("DBL_DIG = %d, FLT_DIG = %d.\n", DBL_DIG, FLT_DIG);
 
-	/* Conclusion: the derived values are inconsistent. */
+    /* Conclusion: the derived values are inconsistent. */
 
-	return 0;
+    return 0;
 }
