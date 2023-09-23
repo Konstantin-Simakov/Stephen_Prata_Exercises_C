@@ -3,12 +3,12 @@
 
 int main(void)
 {
-	int count = 0;
+    int count = 0;
 
-	printf("Enter the text or <Ctrl+D> to finish the program:\n");
-	while (getchar() != EOF)
-		count++;
-	printf("The number of all characters is %d.\n", count);
+    printf("Enter the text or <Ctrl+D> to finish the program:\n");
+    while (getchar() != EOF)
+        count++;
+    printf("The number of all characters is %d.\n", count);
 
-	return 0;
+    return 0;
 }

@@ -10,21 +10,21 @@ gcc exercise2.c pe12-2a.c -o exercise2 -Wall */
 
 int main(void)
 {
-	int mode;
+    int mode;
 
-	printf("Enter 0 for metric mode or 1 for American mode: ");
-	scanf("%d", &mode);
-	while (mode >= 0)
-	{
-		set_mode(mode);
-		get_info();
-		show_info();
+    printf("Enter 0 for metric mode or 1 for American mode: ");
+    scanf("%d", &mode);
+    while (mode >= 0)
+    {
+        set_mode(mode);
+        get_info();
+        show_info();
 
-		printf("Enter 0 for metric mode or 1 for American mode "
-			" (-1 to finish): ");
-		scanf("%d", &mode);
-	}
-	printf("The program has been compldeted.\n");
-	
-	return 0;
+        printf("Enter 0 for metric mode or 1 for American mode "
+            " (-1 to finish): ");
+        scanf("%d", &mode);
+    }
+    printf("The program has been compldeted.\n");
+    
+    return 0;
 }

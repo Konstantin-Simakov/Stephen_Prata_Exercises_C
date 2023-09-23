@@ -5,24 +5,24 @@ void larger_of(double * x, double * y);
 
 int main(void)
 {
-	double x, y;
+    double x, y;
 
-	x = 5.0;
-	y = 6.0;				/* y is more than x */
+    x = 5.0;
+    y = 6.0;                /* y is more than x */
 
-	printf("Firstly x = %.2f, y = %.2f\n", x, y);
+    printf("Firstly x = %.2f, y = %.2f\n", x, y);
 
-	larger_of(&x, &y);		/* assigns y value to x */
+    larger_of(&x, &y);      /* assigns y value to x */
 
-	printf("Now x = %.2f, y = %.2f\n", x, y);
-	
-	return 0;
+    printf("Now x = %.2f, y = %.2f\n", x, y);
+    
+    return 0;
 }
 
 void larger_of(double * x, double * y)
 {
-	if (*x < *y)
-		*x = *y;
-	else
-		*y = *x;
+    if (*x < *y)
+        *x = *y;
+    else
+        *y = *x;
 }

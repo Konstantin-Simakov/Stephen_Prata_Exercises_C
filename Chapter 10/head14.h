@@ -1,5 +1,5 @@
-/* head14.h -- 	header file for exercise14.c;
-				processing arrays by using arrays of variable length; */
+/* head14.h --  header file for exercise14.c;
+                processing arrays by using arrays of variable length; */
 #define ROWS 3
 #define COLS 5
 

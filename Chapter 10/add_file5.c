@@ -3,33 +3,33 @@
 
 double difference(double x, double y)
 {
-	return x - y;
+    return x - y;
 }
 
 double biggest(double ar[], int n)
 {
-	int i;
-	double max;
+    int i;
+    double max;
 
-	max = ar[0];
+    max = ar[0];
 
-	for (i = 1; i < n; i++)
-		if (max < ar[i])
-			max = ar[i];
+    for (i = 1; i < n; i++)
+        if (max < ar[i])
+            max = ar[i];
 
-	return max;
+    return max;
 }
 
 double smallest(double ar[], int n)
 {
-	int i;
-	double min;
+    int i;
+    double min;
 
-	min = ar[0];
+    min = ar[0];
 
-	for (i = 1; i < n; i++)
-		if (min > ar[i])
-			min = ar[i];
+    for (i = 1; i < n; i++)
+        if (min > ar[i])
+            min = ar[i];
 
-	return min;
+    return min;
 }

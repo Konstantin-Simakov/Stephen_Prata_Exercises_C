@@ -5,20 +5,20 @@ void critic(int *);
 
 int main(void)
 {
-	int units = 0;
+    int units = 0;
 
-	printf("How many does the small keg of butter weigh?\n");
-	scanf("%d", &units);
+    printf("How many does the small keg of butter weigh?\n");
+    scanf("%d", &units);
 
-	while (units != 56)
-		critic(&units);
-	printf("You knew it!\n");
+    while (units != 56)
+        critic(&units);
+    printf("You knew it!\n");
 
-	return 0;
+    return 0;
 }
 
 void critic(int * punits)
 {
-	printf("You were unlucky. Try again.\n");
-	scanf("%d", punits);
+    printf("You were unlucky. Try again.\n");
+    scanf("%d", punits);
 }
