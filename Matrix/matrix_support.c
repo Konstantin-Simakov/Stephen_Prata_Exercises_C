@@ -2,13 +2,13 @@
 // Here is supposed 2-dimension array is called matrix. 
 
 #include <stdio.h>
-#include <stdlib.h>				// For rand(), malloc(), free(), exit(), EXIT_FAILURE
-#include <string.h>				// For memcpy()
-#include "matrix.h"				// For prototypes and constants
+#include <stdlib.h>             // For rand(), malloc(), free(), exit(), EXIT_FAILURE
+#include <string.h>             // For memcpy()
+#include "matrix.h"             // For prototypes and constants
 
-static const int WIDTH = 5;		// Output width in printf() for element of any matrix		
-static const int LOW = -50;		// Low side of a random range 						
-static const int HIGH = 50;		// High side of a random range
+static const int WIDTH = 5;     // Output width in printf() for element of any matrix       
+static const int LOW = -50;     // Low side of a random range                       
+static const int HIGH = 50;     // High side of a random range
 
 // Local function prototypes:
 static void swap_int(int * a, int * b);
@@ -21,24 +21,24 @@ static void swap(void * a, void * b, size_t size);
 
 void init_regular(int matrix[][COLS], int rows)
 {
-	int i, j;
+    int i, j;
 
-	for (i = 0; i < rows; i++)
-		for (j = 0; j < COLS; j++)
-			matrix[i][j] = rand() % (HIGH - LOW + 1) + LOW;
+    for (i = 0; i < rows; i++)
+        for (j = 0; j < COLS; j++)
+            matrix[i][j] = rand() % (HIGH - LOW + 1) + LOW;
 }
 
 void print_regular(int matrix[][COLS], int rows)
 {
-	int i, j;
+    int i, j;
 
-	puts("Regular:");
-	for (i = 0; i < rows; i++)
-	{
-		for (j = 0;j < COLS; j++)
-			printf("%*d", WIDTH, matrix[i][j]);
-		putchar('\n');
-	}
+    puts("Regular:");
+    for (i = 0; i < rows; i++)
+    {
+        for (j = 0;j < COLS; j++)
+            printf("%*d", WIDTH, matrix[i][j]);
+        putchar('\n');
+    }
 }
 
 // ----------------------------------------------------------------------------
@@ -47,31 +47,31 @@ void print_regular(int matrix[][COLS], int rows)
 
 void swap_rows_regular(int matrix[][COLS], int rows, int row_1, int row_2)
 {
-	if (row_1 < 1 || row_1 > rows || 
-		row_2 < 1 || row_2 > rows)
-	{
-		fputs("Error: incorrect input rows value for swap_rows_regular().\n", 
-			stderr);
-		exit(EXIT_FAILURE);
-	}
+    if (row_1 < 1 || row_1 > rows || 
+        row_2 < 1 || row_2 > rows)
+    {
+        fputs("Error: incorrect input rows value for swap_rows_regular().\n", 
+            stderr);
+        exit(EXIT_FAILURE);
+    }
 
-	swap(matrix + (row_1 - 1), matrix + (row_2 - 1), COLS * sizeof(int));
+    swap(matrix + (row_1 - 1), matrix + (row_2 - 1), COLS * sizeof(int));
 }
 
 void swap_cols_regular(int matrix[][COLS], int rows, int col_1, int col_2)
 {
-	int i;
+    int i;
 
-	if (col_1 < 1 || col_1 > COLS ||
-		col_2 < 1 || col_2 > COLS)
-	{
-		fputs("Error: incorrect input columns value for swap_cols_regular().\n", 
-			stderr);
-		exit(EXIT_FAILURE);
-	}
+    if (col_1 < 1 || col_1 > COLS ||
+        col_2 < 1 || col_2 > COLS)
+    {
+        fputs("Error: incorrect input columns value for swap_cols_regular().\n", 
+            stderr);
+        exit(EXIT_FAILURE);
+    }
 
-	for (i = 0; i < rows; i++)
-		swap_int(&matrix[i][col_1 - 1], &matrix[i][col_2 - 1]);
+    for (i = 0; i < rows; i++)
+        swap_int(&matrix[i][col_1 - 1], &matrix[i][col_2 - 1]);
 }
 
 // ----------------------------------------------------------------------------
@@ -80,45 +80,45 @@ void swap_cols_regular(int matrix[][COLS], int rows, int col_1, int col_2)
 
 int ** create_dynamic(int rows, int cols)
 {
-	int i;
-	int ** matrix;
+    int i;
+    int ** matrix;
 
-	matrix = (int **) malloc(sizeof(int *) * rows);
-	for (i = 0; i < rows; i++)
-		matrix[i] = (int *) malloc(sizeof(int) * cols);
+    matrix = (int **) malloc(sizeof(int *) * rows);
+    for (i = 0; i < rows; i++)
+        matrix[i] = (int *) malloc(sizeof(int) * cols);
 
-	return matrix;
+    return matrix;
 }
 
 void init_dynamic(int ** matrix, int rows, int cols)
 {
-	int i, j;
+    int i, j;
 
-	for (i = 0; i < rows; i++)
-		for (j = 0; j < cols; j++)
-			matrix[i][j] = rand() % (HIGH - LOW + 1) + LOW;
+    for (i = 0; i < rows; i++)
+        for (j = 0; j < cols; j++)
+            matrix[i][j] = rand() % (HIGH - LOW + 1) + LOW;
 }
 
 void print_dynamic(int ** matrix, int rows, int cols)
 {
-	int i, j;
+    int i, j;
 
-	puts("Dynamic:");
-	for (i = 0; i < rows; i++)
-	{
-		for (j = 0; j < cols; j++)
-			printf("%*d", WIDTH, matrix[i][j]);
-		putchar('\n');
-	}
+    puts("Dynamic:");
+    for (i = 0; i < rows; i++)
+    {
+        for (j = 0; j < cols; j++)
+            printf("%*d", WIDTH, matrix[i][j]);
+        putchar('\n');
+    }
 }
 
 void delete_dynamic(int ** arr, int rows, int cols)
 {
-	int i;
+    int i;
 
-	for (i = 0; i < rows; i++)
-		free(arr[i]);
-	free(arr);
+    for (i = 0; i < rows; i++)
+        free(arr[i]);
+    free(arr);
 }
 
 // ----------------------------------------------------------------------------
@@ -127,55 +127,55 @@ void delete_dynamic(int ** arr, int rows, int cols)
 
 void transpose_dynamic(int *** matrix, int * rows, int * cols)
 {
-	int i, j;
+    int i, j;
 
-	if (*rows != *cols)
-	{
-		// Swap row and column values
-		swap_int(rows, cols);	
+    if (*rows != *cols)
+    {
+        // Swap row and column values
+        swap_int(rows, cols);   
 
-		int ** new_matrix = create_dynamic(*rows, *cols);
-		for (i = 0; i < *rows; i++)
-			for (j = 0; j < *cols; j++)
-				new_matrix[i][j] = (*matrix)[j][i];
-		free(*matrix);
+        int ** new_matrix = create_dynamic(*rows, *cols);
+        for (i = 0; i < *rows; i++)
+            for (j = 0; j < *cols; j++)
+                new_matrix[i][j] = (*matrix)[j][i];
+        free(*matrix);
 
-		*matrix = new_matrix;
-	}
-	else
-	{
-		for (i = 0; i < *rows; i++)
-			for (j = i + 1; j < *cols; j++)
-				swap_int(&(*matrix)[i][j], &(*matrix)[j][i]);
-	}
+        *matrix = new_matrix;
+    }
+    else
+    {
+        for (i = 0; i < *rows; i++)
+            for (j = i + 1; j < *cols; j++)
+                swap_int(&(*matrix)[i][j], &(*matrix)[j][i]);
+    }
 }
 
 void swap_rows_dynamic(int ** matrix, int rows, int row_1, int row_2)
 {
-	if (row_1 < 1 || row_1 > rows || 
-		row_2 < 1 || row_2 > rows)
-	{
-		fputs("Error: incorrect input rows value for swap_rows_dynamic().\n", stderr);
-		exit(EXIT_FAILURE);
-	}
+    if (row_1 < 1 || row_1 > rows || 
+        row_2 < 1 || row_2 > rows)
+    {
+        fputs("Error: incorrect input rows value for swap_rows_dynamic().\n", stderr);
+        exit(EXIT_FAILURE);
+    }
 
-	swap_ptr(matrix + (row_1 - 1), matrix + (row_2 - 1));
+    swap_ptr(matrix + (row_1 - 1), matrix + (row_2 - 1));
 }
 
 void swap_cols_dynamic(int ** matrix, int rows, int cols, int col_1, int col_2)
 {
-	int i;
+    int i;
 
-	if (col_1 < 1 || col_1 > cols ||
-		col_2 < 1 || col_2 > cols)
-	{
-		fputs("Error: incorrect input columns value for swap_cols_dynamic().\n", 
-			stderr);
-		exit(EXIT_FAILURE);
-	}
+    if (col_1 < 1 || col_1 > cols ||
+        col_2 < 1 || col_2 > cols)
+    {
+        fputs("Error: incorrect input columns value for swap_cols_dynamic().\n", 
+            stderr);
+        exit(EXIT_FAILURE);
+    }
 
-	for (i = 0; i < rows; i++)
-		swap_int(&matrix[i][col_1 - 1], &matrix[i][col_2 - 1]);
+    for (i = 0; i < rows; i++)
+        swap_int(&matrix[i][col_1 - 1], &matrix[i][col_2 - 1]);
 }
 
 // ----------------------------------------------------------------------------
@@ -183,36 +183,36 @@ void swap_cols_dynamic(int ** matrix, int rows, int cols, int col_1, int col_2)
 // ----------------------------------------------------------------------------
 
 int * create_linear(int rows, int cols)
-{	
-	return (int *) malloc(sizeof(int) * rows * cols);
+{   
+    return (int *) malloc(sizeof(int) * rows * cols);
 }
 
 void init_linear(int * matrix, int rows, int cols)
 {
-	int i, j;
+    int i, j;
 
-	for (i = 0; i < rows; i++)
-		for (j = 0; j < cols; j++)
-			matrix[i * cols + j] = rand() % (HIGH - LOW + 1) + LOW;
+    for (i = 0; i < rows; i++)
+        for (j = 0; j < cols; j++)
+            matrix[i * cols + j] = rand() % (HIGH - LOW + 1) + LOW;
 }
 
 void print_linear(int * matrix, int rows, int cols)
 {
-	int i, j;
+    int i, j;
 
-	puts("Linear:");
-	for (i = 0; i < rows; i++)
-	{
-		for (j = 0; j < cols; j++)
-			printf("%*d", WIDTH, matrix[i * cols + j]);
-		putchar('\n');
-	}
+    puts("Linear:");
+    for (i = 0; i < rows; i++)
+    {
+        for (j = 0; j < cols; j++)
+            printf("%*d", WIDTH, matrix[i * cols + j]);
+        putchar('\n');
+    }
 
 }
 
 void delete_linear(int * arr, int rows, int cols)
 {
-	free(arr);
+    free(arr);
 }
 
 // ----------------------------------------------------------------------------
@@ -221,33 +221,33 @@ void delete_linear(int * arr, int rows, int cols)
 
 static void swap_int(int * a, int * b)
 {
-	swap(a, b, sizeof *a);
+    swap(a, b, sizeof *a);
 
-/*	int temp; 
+/*  int temp; 
 
-	temp = *a;
-	*a = *b;
-	*b = temp;  
+    temp = *a;
+    *a = *b;
+    *b = temp;  
 */}
 
 static void swap_ptr(int ** a, int ** b)
 {
-	swap(a, b, sizeof *a);
-	
-/*	int * temp;
+    swap(a, b, sizeof *a);
+    
+/*  int * temp;
 
-	temp = *a;
-	*a = *b;
-	*b = temp;  
+    temp = *a;
+    *a = *b;
+    *b = temp;  
 */}
 
 static void swap(void * a, void * b, size_t size)
 {
-	void * temp = malloc(size);
+    void * temp = malloc(size);
 
-	memcpy(temp, a, size);
-	memcpy(a, b, size);
-	memcpy(b, temp, size);
+    memcpy(temp, a, size);
+    memcpy(a, b, size);
+    memcpy(b, temp, size);
 
-	free(temp);
+    free(temp);
 }

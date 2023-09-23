@@ -1,11 +1,11 @@
-// matrix.h -- header file for matrix_support.c 		 
+// matrix.h -- header file for matrix_support.c          
 // Here is supposed 2-dimension array is called matrix.  
 
 #ifndef MATRIX_H_
 #define MATRIX_H_
 
-#define ROWS 5						// The number of rows in the allocating matrix 		
-#define COLS 6						// The number of columns in the allocating matrix 	
+#define ROWS 5                      // The number of rows in the allocating matrix      
+#define COLS 6                      // The number of columns in the allocating matrix   
 
 // Function prototypes for a regular matrix:
 /*_________________________________________________________________________*/
@@ -41,4 +41,4 @@ void print_linear(int * matrix, int rows, int cols);
 void delete_linear(int * matrix, int rows, int cols);
 /*_________________________________________________________________________*/
 
-#endif		// For MATRIX_H_
+#endif      // For MATRIX_H_
