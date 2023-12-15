@@ -18,11 +18,12 @@ bool analyze_str(const char * math_str, int * left_operand, int * right_operand,
 	char * end = NULL;
 	bool success = false;
 	
+	// 0xffffffff
 	// Hexadecimal numeric system processing.
 	if ('0' == ptr[0] && ('x' == ptr[1] || 'X' == ptr[1]))
 	{
 		*base = 16;
-		*left_operand = strtol(ptr + 2, &end, *base);
+		*left_operand = my_strtol(ptr + 2, &end, *base);
 		// If the *end character is a math operation character.
 		if (strchr(BINARY_OPERATIONS, *end))
 		{
@@ -30,7 +31,7 @@ bool analyze_str(const char * math_str, int * left_operand, int * right_operand,
 			ptr = ++end;
 			if ('0' == ptr[0] && ('x' == ptr[1] || 'X' == ptr[1]))
 			{
-				*right_operand = strtol(ptr + 2, &end, *base);
+				*right_operand = my_strtol(ptr + 2, &end, *base);
 			}
 		}
 	}
@@ -38,7 +39,7 @@ bool analyze_str(const char * math_str, int * left_operand, int * right_operand,
 	else if ('0' == ptr[0])
 	{
 		*base = 8;
-		*left_operand = strtol(ptr + 1, &end, *base);
+		*left_operand = my_strtol(ptr + 1, &end, *base);
 		// If the *end character is a math operation character.
 		if (strchr(BINARY_OPERATIONS, *end))
 		{
@@ -46,7 +47,7 @@ bool analyze_str(const char * math_str, int * left_operand, int * right_operand,
 			ptr = ++end;
 			if ('0' == ptr[0])
 			{
-				*right_operand = strtol(ptr + 1, &end, *base);
+				*right_operand = my_strtol(ptr + 1, &end, *base);
 			}
 		}
 	}
@@ -54,7 +55,7 @@ bool analyze_str(const char * math_str, int * left_operand, int * right_operand,
 	else if ('1' == ptr[0])
 	{
 		*base = 2;
-		*left_operand = strtol(ptr, &end, *base);
+		*left_operand = my_strtol(ptr, &end, *base);
 		// If the *end character is a math operation character.
 		if (strchr(BINARY_OPERATIONS, *end))
 		{
@@ -62,7 +63,7 @@ bool analyze_str(const char * math_str, int * left_operand, int * right_operand,
 			ptr = ++end;
 			if ('1' == ptr[0])
 			{
-				*right_operand = strtol(ptr, &end, *base);
+				*right_operand = my_strtol(ptr, &end, *base);
 			}
 		}
 	}
@@ -74,19 +75,19 @@ bool analyze_str(const char * math_str, int * left_operand, int * right_operand,
 		if ('0' == ptr[1] && ('x' == ptr[2] || 'X' == ptr[2]))
 		{
 			*base = 16;
-			*left_operand = strtol(ptr + 3, &end, *base);
+			*left_operand = my_strtol(ptr + 3, &end, *base);
 		}
 		// Then octal operand follows.
 		else if ('0' == ptr[1])
 		{
 			*base = 8;
-			*left_operand = strtol(ptr + 2, &end, *base);
+			*left_operand = my_strtol(ptr + 2, &end, *base);
 		}
 		// Then binary operand follows.
 		else if ('1' == ptr[1])
 		{
 			*base = 2;
-			*left_operand = strtol(ptr + 1, &end, *base);
+			*left_operand = my_strtol(ptr + 1, &end, *base);
 		}
 		*right_operand = 0;
 	}
@@ -97,6 +98,80 @@ bool analyze_str(const char * math_str, int * left_operand, int * right_operand,
 	}
 
 	return success;
+}
+
+long my_strtol(const char * str, char ** endptr, int base) 
+{
+    int digit = 0;
+    int sign = 1;
+    long result = 0;
+    int i = 0;
+
+    // Skip leading whitespaces.
+    while (isspace(str[i]))
+    {
+        ++i;
+    }
+
+    // Check the sign of the number.
+    if ('-' == str[i]) 
+    {
+        sign = -1;
+        ++i;
+    } 
+    else if ('+' == str[i]) 
+    {
+        ++i;
+    }
+
+    // Convert the string into the number.
+    while (str[i] != '\0')
+    {
+        if (isdigit(str[i])) 
+        {
+            digit = str[i] - '0';
+        } 
+        else if (isalpha(str[i]))
+        {
+            if (isupper(str[i])) 
+            {
+                digit = str[i] - 'A' + 10;
+            }
+            else 
+            {
+                digit = str[i] - 'a' + 10;
+            }
+        } 
+        else 
+        {
+            break;
+        }
+        if (digit >= base) 
+        {
+            break;
+        }
+
+        result = result * base + digit;
+        i++;
+    }
+
+    // Set the *endptr to the end part of the string after the conversion.
+    *endptr = (char *) &str[i];
+
+    return sign * result;
+}
+
+int substrlen(const char * str, int base)
+{
+	int count = 0;
+
+	while (*str)
+	{
+		if (2 == base && '1' == *str)
+		{
+
+		}
+	}
 }
 
 int calc_strexpr(int left_operand, int right_operand, char operation)
@@ -194,9 +269,10 @@ void display_binary(unsigned decimal)
 
 void display_instruct(void)
 {
-	puts("Enter a math expression in any from these number systems: "
+	puts("Enter a math expression in any from these number systems:\n"
 		"binary, octal, hexadecimal.");
-	puts("Enter an empty line to quit.");
+	puts("The bases of the number systems of the operands must match.");
+	puts("Enter an empty line to quit.\n");
 }
 
 // String processing functions.

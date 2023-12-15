@@ -10,9 +10,7 @@
 #include <math.h>
 #include <stdbool.h>
 
-#define SIZE (32 + 1)
-#define FULL_SIZE (2 * SIZE)
-#define ZERO_CODE '0'
+#define SIZE 200
 #define BINARY_OPERATIONS "+-*/%^|&"
 #define BITWISE_BIN_OPERATIONS "&|^"
 
@@ -30,8 +28,8 @@ int binary_invert(int x);
 // String functions.
 void delete_spaces(char * str);
 char * s_gets(char * str, int n);
-// Binary functions.
-// int to_decimal(const char * binary_seq);
+long my_strtol(const char * str, char ** endptr, int base);
+// Main functions.
 bool analyze_str(const char * math_strexpr, int * left_operand, int * right_operand, 
 	char * operation, int * base);
 int calc_strexpr(int left_operand, int right_operand, char operation);

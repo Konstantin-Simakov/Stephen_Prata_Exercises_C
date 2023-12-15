@@ -9,7 +9,7 @@
 
 int main(void)
 {
-	char math_str[FULL_SIZE];
+	char math_str[SIZE];
 	int left_operand, right_operand;
 	char operation;
 	int base;
@@ -17,7 +17,7 @@ int main(void)
 
 	display_instruct();
 	puts("\nEnter a math expression.");
-	while (s_gets(math_str, FULL_SIZE + 1) && math_str[0])
+	while (s_gets(math_str, SIZE) && math_str[0])
 	{
 		delete_spaces(math_str);
 		if (!analyze_str(math_str, &left_operand, &right_operand, &operation, &base))
