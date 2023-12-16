@@ -1,5 +1,5 @@
-You must have pre-installed the 'gcc' compiler and 'make' utitlity in Linux or Mac OS
-and only 'gcc' compiler in Windows.
+You must have pre-installed 'gcc' compiler and 'make' utitlity in Linux or Mac OS
+or only 'gcc' compiler in Windows.
 
 To run the program, use the following commands while in the project directory:
 
