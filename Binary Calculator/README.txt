@@ -9,7 +9,7 @@ To run the program, use the following commands while in the project directory:
 On Linux in Terminal:
 $ bash bin_calc.sh
 
-On Mac Os in Terminal:
+On macOS in Terminal:
 % make && make run && make clean
 
 On Windows in Command line:
