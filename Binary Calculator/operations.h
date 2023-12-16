@@ -15,16 +15,6 @@
 #define BITWISE_BIN_OPERATIONS "&|^"
 
 // Function prototypes.
-// Math functions.
-int sum(int a, int b);
-int subtract(int a, int b);
-int multiplicate(int a, int b);
-int divide(int a, int b);
-int div_module(int a, int b);
-unsigned binary_and(unsigned a, unsigned b);
-unsigned binary_or(unsigned a, unsigned b);
-unsigned binary_xor(unsigned a, unsigned b);
-int binary_invert(int x);
 // String functions.
 void delete_spaces(char * str);
 char * s_gets(char * str, int n);

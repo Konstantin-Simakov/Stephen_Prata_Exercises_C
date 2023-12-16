@@ -1,6 +1,6 @@
-# Makefile for the 'lab2' project.
+# Makefile for the 'Binary Calculator' project.
 
-EXECUTABLE = lab2
+EXECUTABLE = bin_calc
 
 .PHONY: all clean run
 # Phony purposes.

@@ -18,7 +18,6 @@ bool analyze_str(const char * math_str, int * left_operand, int * right_operand,
 	char * end = NULL;
 	bool success = false;
 	
-	// 0xffffffff
 	// Hexadecimal numeric system processing.
 	if ('0' == ptr[0] && ('x' == ptr[1] || 'X' == ptr[1]))
 	{
@@ -269,10 +268,31 @@ void display_binary(unsigned decimal)
 
 void display_instruct(void)
 {
-	puts("Enter a math expression in any from these number systems:\n"
-		"binary, octal, hexadecimal.");
-	puts("The bases of the number systems of the operands must match.");
-	puts("Enter an empty line to quit.\n");
+	putchar('\n');
+	puts("\t\t\tThe \'Binary Calculator\' program.\n");
+
+	puts("\tThe calculator is developed for the standard sign integer data type.");
+	puts("\tIt doesn\'t support the common decimal radix in input,");
+	puts("\tbut in output it displays the result in decimal radix as well.");
+	puts("\t(In parentheses.)\n");
+
+	puts("\tEnter a math expression in binary, octal or hexadecimal radix ");
+	puts("\tin following form:");
+	puts("\t<number> <operation> <number> [Enter] for binary operators and");
+	puts("\t~<number> [Enter] for inevertion operator.");
+	puts("\tPermissible binary operators are: +, -, *, /, %, &, ^, |.\n");
+	
+	puts("\tThe radix of the operands must match in the math expression.");
+	puts("\tIf the numbers are in binary radix, they must be started with \'1\'.");
+	puts("\tIf the numbers are in octal radix, they must be started with \'0\'.");
+	puts("\tIf the numbers are in hexadecimal radix,");
+	puts("\tthey must be started with \'0x\' or with \'0X\'.\n");
+	
+	puts("\tAdditional whitespaces in math expression are skipped.");
+	puts("\tIn other cases the program will display the same error message:");
+	puts("\t\"Incorrect data input.\".\n");
+	
+	puts("\tEntering an EMPTY LINE will quit the program.\n");
 }
 
 // String processing functions.
@@ -309,9 +329,8 @@ void delete_spaces(char * str)
 
 char * s_gets(char * str, int n)
 {
-	char * ret_val;
+	char * ret_val = fgets(str, n, stdin);
 
-	ret_val = fgets(str, n, stdin);
 	if (ret_val)
 	{
 		while (*str && *str != '\n')
@@ -333,50 +352,4 @@ char * s_gets(char * str, int n)
 	}
 
 	return ret_val;
-}
-
-// Math functions.
-int sum(int a, int b)
-{
-	return a + b;
-}
-
-int subtract(int a, int b)
-{
-	return a - b;
-}
-
-int multiplicate(int a, int b)
-{
-	return a * b;
-}
-
-int divide(int a, int b)
-{
-	return a / b;
-}
-
-int div_module(int a, int b)
-{
-	return a % b;
-}
-
-unsigned binary_and(unsigned a, unsigned b)
-{
-	return a & b;
-}
-
-unsigned binary_or(unsigned a, unsigned b)
-{
-	return a | b;
-}
-
-unsigned binary_xor(unsigned a, unsigned b)
-{
-	return a ^ b;
-}
-
-int binary_invert(int x)
-{
-	return ~x;
 }
