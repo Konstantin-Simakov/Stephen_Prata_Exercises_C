@@ -10,7 +10,7 @@ On Linux in Terminal:
 $ bash bin_calc.sh
 
 On Mac Os in Terminal:
-$ make && make run && make clean
+% make && make run && make clean
 
 On Windows in Command line:
 > gcc calculator.c operations.c -o bin_calc.exe
