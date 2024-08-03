@@ -1,7 +1,7 @@
 /* exercise4.c -- Chapter 5 */
 #include <stdio.h>
 
-const float INCH_CM = 2.54f;                    // cm number per one inche
+const float INCH_CM = 2.54f;                    // cm number per one inch
 const int FOOT_INCH = 12;                       // inches number per one foot
 const float FOOT_CM = INCH_CM * FOOT_INCH;      // cm number per one foot
 
