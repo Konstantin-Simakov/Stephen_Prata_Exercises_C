@@ -1,7 +1,7 @@
 You must have pre-installed the 'gcc' compiler and the 'make' utility on Linux or macOS,
 or only the 'gcc' compiler with set the 'PATH' variable environment for it on Windows.
 
-Detailed technical specifications in Russian are located in the corresponding .docx file.
+Detailed technical specifications in Russian are located in the correspoonding .pdf file.
 However, the program still displays basic instructions when launched.
 
 To run the program, use the following commands while in the project directory:
