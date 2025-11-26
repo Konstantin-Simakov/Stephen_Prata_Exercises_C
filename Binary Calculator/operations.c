@@ -160,19 +160,6 @@ long my_strtol(const char * str, char ** endptr, int base)
     return sign * result;
 }
 
-int substrlen(const char * str, int base)
-{
-	int count = 0;
-
-	while (*str)
-	{
-		if (2 == base && '1' == *str)
-		{
-
-		}
-	}
-}
-
 int calc_strexpr(int left_operand, int right_operand, char operation)
 {
 	int result = 0;
